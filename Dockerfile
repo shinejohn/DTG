@@ -62,9 +62,8 @@ RUN pnpm install --frozen-lockfile --prod --filter web...
 COPY --from=builder --chown=nodejs:nodejs /app/apps/web/build ./apps/web/build
 COPY --from=builder --chown=nodejs:nodejs /app/apps/web/public ./apps/web/public
 
-# Copy environment files (if they exist)
-COPY --from=builder --chown=nodejs:nodejs /app/apps/web/.env* ./apps/web/ || true
-COPY --from=builder --chown=nodejs:nodejs /app/.env* ./ || true
+# Copy environment files (if they exist) - Docker doesn't support optional copying
+# Environment files should be provided at runtime or via build args instead of filesystem copy
 
 # Switch to node user
 USER nodejs
