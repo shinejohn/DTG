@@ -10,7 +10,7 @@ interface User {
   lastActive: string;
   profileImage?: string;
 }
-export default function UserManagement() {
+export function UserManagement() {
   const [users, setUsers] = useState<User[]>([{
     id: 'u1',
     name: 'Sarah Johnson',
