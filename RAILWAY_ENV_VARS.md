@@ -1,6 +1,11 @@
 # Railway Environment Variables
 
-Add these environment variables to your Railway project:
+Add these environment variables to your Railway project.
+
+## CRITICAL - Must Fix These First:
+
+1. **VITE_LANGUAGE_PRIORITY** - Currently empty (""), MUST be set to: `application`
+2. **EMAIL_SENDER** - Required for email functionality, set to: `noreply@dtg.com`
 
 ## Quick Copy Format
 

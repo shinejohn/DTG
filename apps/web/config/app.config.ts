@@ -64,14 +64,14 @@ const AppConfigSchema = z
   );
 
 const appConfig = AppConfigSchema.parse({
-  name: import.meta.env.VITE_PRODUCT_NAME,
-  title: import.meta.env.VITE_SITE_TITLE,
-  description: import.meta.env.VITE_SITE_DESCRIPTION,
-  url: import.meta.env.VITE_SITE_URL,
-  locale: import.meta.env.VITE_DEFAULT_LOCALE,
-  theme: import.meta.env.VITE_DEFAULT_THEME_MODE,
-  themeColor: import.meta.env.VITE_THEME_COLOR,
-  themeColorDark: import.meta.env.VITE_THEME_COLOR_DARK,
+  name: import.meta.env.VITE_PRODUCT_NAME || 'DTG',
+  title: import.meta.env.VITE_SITE_TITLE || 'Downtown Guide - Your Local Business Guide',
+  description: import.meta.env.VITE_SITE_DESCRIPTION || 'Discover local businesses, events, and deals in your downtown area',
+  url: import.meta.env.VITE_SITE_URL || 'https://dtg.up.railway.app',
+  locale: import.meta.env.VITE_DEFAULT_LOCALE || 'en',
+  theme: import.meta.env.VITE_DEFAULT_THEME_MODE || 'light',
+  themeColor: import.meta.env.VITE_THEME_COLOR || '#ffffff',
+  themeColorDark: import.meta.env.VITE_THEME_COLOR_DARK || '#0a0a0a',
   production,
 });
 
