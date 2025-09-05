@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { StarIcon, MapPinIcon, HeartIcon, ExternalLinkIcon } from 'lucide-react';
 import { Badge } from '../ui/Badge';
 export interface BusinessCardProps {

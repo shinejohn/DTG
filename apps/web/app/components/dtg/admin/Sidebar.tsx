@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { UsersIcon, BuildingIcon, MessageSquareIcon, BarChart2Icon, ServerIcon, ShieldIcon, SettingsIcon, HomeIcon, BellIcon, FlagIcon, ImageIcon, ListIcon, HistoryIcon, GlobeIcon, PaletteIcon } from 'lucide-react';
 interface AdminSidebarProps {
   activePanel?: string;

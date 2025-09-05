@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { UserIcon, StarIcon, MapPinIcon, CheckIcon, MessageSquareIcon } from 'lucide-react';
 
 // Sample data - in a real app, this would come from an API

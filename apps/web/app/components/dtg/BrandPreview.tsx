@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, Fragment } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { Footer } from './Footer';
 import { useBrand } from './contexts/BrandContext';
 import { CalendarIcon, MapPinIcon, ClockIcon, SearchIcon, StarIcon, TrendingUpIcon, MessageCircleIcon, UserIcon, BellIcon, MenuIcon, ChevronRightIcon, ChevronLeftIcon, HeartIcon, CheckIcon, NewspaperIcon, ShoppingBagIcon, UtensilsIcon, MusicIcon, CoffeeIcon, BuildingIcon, TagIcon, GlassWaterIcon } from 'lucide-react';

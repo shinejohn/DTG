@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { UtensilsIcon, ShoppingBagIcon, BriefcaseIcon, CalendarIcon, GlassWaterIcon, HeartIcon, ShoppingCartIcon, MusicIcon } from 'lucide-react';
 import { useBrand } from './contexts/BrandContext';
 export default function CategorySection() {
