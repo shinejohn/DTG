@@ -12,7 +12,7 @@
   },
   "scripts": {
     "turbo": "turbo",
-    "postinstall": "manypkg fix",
+    "postinstall": "command -v manypkg >/dev/null 2>&1 && manypkg fix || true",
     "build": "turbo build --cache-dir=.turbo",
     "clean": "git clean -xdf node_modules dist",
     "clean:workspaces": "turbo clean",
