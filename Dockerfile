@@ -1,4 +1,4 @@
-# Build stage
+# Build stage - Updated to remove debug lines
 FROM node:20-alpine AS builder
 
 # Enable corepack for pnpm
