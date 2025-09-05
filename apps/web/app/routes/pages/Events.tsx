@@ -5,6 +5,7 @@ import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Header } from '@/components/dtg/Header';
 import { Footer } from '@/components/dtg/Footer';
 import { CalendarIcon, SearchIcon, FilterIcon, ChevronDownIcon, ClockIcon, MapPinIcon, UsersIcon, TagIcon } from 'lucide-react';
+import { Link } from 'react-router';
 import { EventsCalendar } from '@/components/dtg/EventsCalendar';
 const allEventItems = [{
   id: 101,

@@ -2,8 +2,8 @@ import type { Route } from './+types/route';
 import React, { useEffect, useState } from 'react';
 import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '../../../components/Header';
-import { Footer } from '../../../components/Footer';
+import { Header } from '../../../../components/dtg/Header';
+import { Footer } from '../../../../components/dtg/Footer';
 import { BuildingIcon, PhoneIcon, MailIcon, GlobeIcon, MapPinIcon, ClockIcon, ImageIcon, MenuIcon, CheckIcon, XIcon, PlusIcon, TrashIcon, SaveIcon, ChevronRightIcon, InfoIcon, AlertTriangleIcon, UploadIcon, InstagramIcon, FacebookIcon, TwitterIcon, LinkedinIcon, YoutubeIcon, TagIcon, WifiIcon, CreditCardIcon, AccessibilityIcon, UtensilsIcon, CoffeeIcon, BeerIcon, MusicIcon, TvIcon, DollarSignIcon, HashIcon, CheckCircleIcon } from 'lucide-react';
 // Types
 interface Business {

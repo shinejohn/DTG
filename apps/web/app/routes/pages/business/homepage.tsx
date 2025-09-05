@@ -1,6 +1,6 @@
 import type { Route } from './+types/route';
 import React, { useEffect, useState } from 'react';
-import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
+import { json, useLoaderData, useRouteError, isRouteErrorResponse, useNavigate } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { MapPinIcon, PhoneIcon, MailIcon, GlobeIcon, ClockIcon, StarIcon, CheckIcon, CalendarIcon, CameraIcon, FacebookIcon, InstagramIcon, ChevronRightIcon, ChevronLeftIcon, ArrowRightIcon, MenuIcon, XIcon, MessageSquareIcon, UtensilsIcon, UserIcon } from 'lucide-react';
 // Using the same mock data from the business detail page

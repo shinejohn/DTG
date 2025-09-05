@@ -1,8 +1,8 @@
 import type { Route } from './+types/route';
 import React, { useEffect, useState } from 'react';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
-import { PlanUpgradeButton } from '../../components/PlanUpgradeButton';
+import { Header } from '../../../components/dtg/Header';
+import { Footer } from '../../../components/dtg/Footer';
+import { PlanUpgradeButton } from '../../../components/dtg/PlanUpgradeButton';
 import {
   LayoutDashboardIcon,
   BuildingIcon,
@@ -867,7 +867,8 @@ export default function BusinessDashboard() {
                     </div>
                     <div
                       className={`flex items-center mt-2 text-sm ${metric.change > 0 ? 'text-green-600' : metric.change < 0 ? 'text-red-600' : 'text-gray-500'} `}
-                    >span>
+                    >
+                      <span>
                         {metric.change > 0 ? '+' : ''} {metric.change}%
                       </span>
                       <span className="text-gray-500 ml-1">
@@ -1918,7 +1919,7 @@ export default function BusinessDashboard() {
                       </div>
                       <div
                         className={`flex items-center mt-2 text-sm ${metric.change > 0 ? 'text-green-600' : metric.change < 0 ? 'text-red-600' : 'text-gray-500'} `}
-                      >span>
+                      ><span>
                           {metric.change > 0 ? '+' : ''} {metric.change}%
                         </span>
                         <span className="text-gray-500 ml-1">

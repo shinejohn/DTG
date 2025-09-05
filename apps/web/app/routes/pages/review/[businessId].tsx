@@ -1,9 +1,9 @@
 import type { Route } from './+types/route';
 import React, { useEffect, useState, memo } from 'react';
-import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
+import { json, useLoaderData, useRouteError, isRouteErrorResponse, useNavigate } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
+import { Header } from '../../../components/dtg/Header';
+import { Footer } from '../../../components/dtg/Footer';
 import { StarIcon, CameraIcon, TagIcon, EyeIcon, LockIcon, XIcon, PlusIcon, AlertCircleIcon, CalendarIcon, ChevronDownIcon, CheckIcon } from 'lucide-react';
 // Types
 interface Business {

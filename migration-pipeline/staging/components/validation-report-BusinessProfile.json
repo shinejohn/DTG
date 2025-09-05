@@ -1,0 +1,64 @@
+{
+  "file": "BusinessProfile.tsx",
+  "timestamp": "2025-09-05T09:52:08.859Z",
+  "status": "FAILED",
+  "stats": {
+    "totalIssues": 7,
+    "errors": 3,
+    "warnings": 2,
+    "autoFixable": 4
+  },
+  "issues": [
+    {
+      "type": "MISSING_REQUIRED_EXPORT",
+      "export": "loader",
+      "severity": "error"
+    },
+    {
+      "type": "MISSING_REQUIRED_EXPORT",
+      "export": "default",
+      "severity": "error"
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 147,
+      "statement": "console.error(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 269,
+      "statement": "console.error(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 280,
+      "statement": "console.log(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 298,
+      "statement": "console.log(",
+      "autoFix": true
+    },
+    {
+      "type": "MISSING_LOADER",
+      "severity": "error",
+      "message": "React Router 7 route files must export a loader function"
+    }
+  ],
+  "warnings": [
+    {
+      "type": "MISSING_RECOMMENDED_EXPORT",
+      "export": "ErrorBoundary",
+      "message": "Consider adding 'ErrorBoundary' export for better error handling and SEO"
+    },
+    {
+      "type": "MISSING_RECOMMENDED_EXPORT",
+      "export": "meta",
+      "message": "Consider adding 'meta' export for better error handling and SEO"
+    }
+  ]
+}

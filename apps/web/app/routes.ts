@@ -76,7 +76,6 @@ const teamAccountLayout = layout('routes/home/account/layout.tsx', [
 const dtgLayout = layout('routes/pages/layout.tsx', [
   // Main DTG app routes
   route('dtg', 'routes/pages/Home.tsx'),
-  route('dtg/app', 'routes/pages/App.tsx'),
   route('dtg/search', 'routes/pages/Search.tsx'),
   route('dtg/explore', 'routes/pages/Explore.tsx'),
   route('dtg/deals', 'routes/pages/Deals.tsx'),

@@ -1,0 +1,665 @@
+{
+  "timestamp": "2025-09-05T09:52:18.833Z",
+  "totalFiles": 130,
+  "stages": {
+    "stage1": {
+      "processed": 129,
+      "errors": 0
+    },
+    "stage2": {
+      "processed": 129,
+      "errors": 0
+    },
+    "stage3": {
+      "processed": 3,
+      "errors": 127
+    },
+    "stage4": {
+      "processed": 130,
+      "errors": 0
+    }
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "stage": 3,
+      "file": "App.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/App.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/BrandPreview.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/BrandPreview.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/BusinessProfile.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/BusinessProfile.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/CategorySection.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/CategorySection.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/CitySearchBar.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/CitySearchBar.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/CommunityActivity.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/CommunityActivity.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/CommunityHero.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/CommunityHero.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/CommunitySelector.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/CommunitySelector.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ErrorBoundary.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ErrorBoundary.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/EventsCalendar.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/EventsCalendar.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/FeaturedPlaces.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/FeaturedPlaces.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/FloatingNavigation.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/FloatingNavigation.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/Footer.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/Footer.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/Header.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/Header.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/Hero.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/Hero.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/Icon.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/Icon.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/Layout.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/Layout.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/MetaTags.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/MetaTags.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/NewsAndEvents.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/NewsAndEvents.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/NextLink.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/NextLink.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/PlanUpgradeButton.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/PlanUpgradeButton.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/SEOContent.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/SEOContent.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/SocialShareModal.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/SocialShareModal.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/TrendingNow.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/TrendingNow.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/admin/Analytics.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/admin/Analytics.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/admin/BrandConfiguration.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/admin/BrandConfiguration.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/admin/BusinessManagement.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/admin/BusinessManagement.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/admin/ContentModeration.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/admin/ContentModeration.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/admin/Sidebar.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/admin/Sidebar.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/admin/SystemHealth.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/admin/SystemHealth.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/admin/UserManagement.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/admin/UserManagement.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/business/BusinessCard.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/business/BusinessCard.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/layout/PageLayout.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/layout/PageLayout.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/layouts/AdminLayout.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/layouts/AdminLayout.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/review/ReviewCard.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/review/ReviewCard.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/rewards/AchievementCard.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/rewards/AchievementCard.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/search/FilterControls.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/search/FilterControls.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Alert.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Alert.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Avatar.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Avatar.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Badge.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Badge.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Button.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Button.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Card.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Card.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/EmptyState.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/EmptyState.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Input.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Input.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Modal.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Modal.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Pagination.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Pagination.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Rating.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Rating.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Skeleton.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Skeleton.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Spinner.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Spinner.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Tabs.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Tabs.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/Typography.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/Typography.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/ui/index.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/ui/index.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/wallet/WalletCoupon.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/wallet/WalletCoupon.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "components/wallet/WalletCouponExample.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/components/wallet/WalletCouponExample.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "contexts/AppContext.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/contexts/AppContext.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "contexts/AppState.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/contexts/AppState.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "contexts/BrandContext.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/contexts/BrandContext.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "hooks/index.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/hooks/index.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "hooks/useAsync.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/hooks/useAsync.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "hooks/useDebounce.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/hooks/useDebounce.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "hooks/useForm.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/hooks/useForm.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "hooks/useLocalStorage.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/hooks/useLocalStorage.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "hooks/useMediaQuery.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/hooks/useMediaQuery.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "hooks/useOnClickOutside.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/hooks/useOnClickOutside.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "index.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/index.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Achievements.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Achievements.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Billing.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Billing.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (37:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Challenges.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Challenges.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/DealDetail.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/DealDetail.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:20)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Deals.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Deals.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/EventDetail.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/EventDetail.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:20)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Events.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Events.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Explore.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Explore.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (6:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Favorites.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Favorites.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "pages/ForgotPassword.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/ForgotPassword.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Home.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Home.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Leaderboards.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Leaderboards.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Login.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Login.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/News.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/News.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/NewsDetail.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/NewsDetail.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:20)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Pricing.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Pricing.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (45:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Referrals.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Referrals.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Register.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Register.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/ResetPassword.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/ResetPassword.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Rewards.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Rewards.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Search.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Search.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'useNavigate' has already been declared. (5:22)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Settings.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Settings.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/Trending.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/Trending.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/VerifyEmail.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/VerifyEmail.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/account/Deactivate.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/account/Deactivate.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/account/Language.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/account/Language.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'useNavigate' has already been declared. (5:15)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/admin/brand-config.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/admin/brand-config.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "pages/admin/index.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/admin/index.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "pages/admin/moderation.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/admin/moderation.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: 'Failed to parse file: Unterminated string constant. (118:9)',\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/admin/notifications.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/admin/notifications.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "pages/billing/AddPaymentMethod.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/billing/AddPaymentMethod.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/[slug].tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/[slug].tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'useNavigate' has already been declared. (5:20)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/analytics.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/analytics.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (8:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/coupons.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/coupons.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/dashboard/LoyaltyMembers.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/dashboard/LoyaltyMembers.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/dashboard.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/dashboard.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (55:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/events.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/events.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (8:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/homepage.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/homepage.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'useNavigate' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/integrations.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/integrations.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (8:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/loyalty.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/loyalty.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (7:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/profile/edit.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/profile/edit.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (8:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/business/promotions.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/business/promotions.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (8:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/profile/Rewards.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/profile/Rewards.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/profile/[username].tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/profile/[username].tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:20)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/profile/edit.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/profile/edit.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'useNavigate' has already been declared. (5:15)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/review/[businessId].tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/review/[businessId].tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:20)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/security/ActiveSessions.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/security/ActiveSessions.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/security/ChangePassword.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/security/ChangePassword.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "pages/security/TwoFactorAuth.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/pages/security/TwoFactorAuth.tsx\" --fix\nFailed to parse file\n[\n  {\n    type: 'PARSE_ERROR',\n    message: \"Failed to parse file: Identifier 'Link' has already been declared. (5:9)\",\n    severity: 'error'\n  }\n]\n"
+    },
+    {
+      "stage": 3,
+      "file": "services/BrandService.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/services/BrandService.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "services/BrandService.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/services/BrandService.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "services/CommunityService.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/services/CommunityService.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "services/CommunityService.tsx",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/services/CommunityService.tsx\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "services/businessService.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/services/businessService.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "types/business.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/types/business.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "utils/core/api.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/utils/core/api.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "utils/core/formatting.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/utils/core/formatting.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "utils/core/index.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/utils/core/index.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "utils/core/storage.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/utils/core/storage.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "utils/core/validation.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/utils/core/validation.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "utils/dateUtils.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/utils/dateUtils.ts\" --fix"
+    },
+    {
+      "stage": 3,
+      "file": "utils/errorHandling.ts",
+      "error": "Command failed: node \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/scripts/validate-rr7-conversion.js\" \"/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/migration-pipeline/staging/utils/errorHandling.ts\" --fix"
+    }
+  ],
+  "summary": {
+    "totalProcessed": 391,
+    "totalErrors": 127,
+    "successRate": "67.52"
+  }
+}

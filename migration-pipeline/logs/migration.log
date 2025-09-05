@@ -1,0 +1,143 @@
+{"timestamp":"2025-09-05T09:52:08.459Z","level":"INFO","message":"Loaded analysis for 130 files","data":null}
+{"timestamp":"2025-09-05T09:52:08.460Z","level":"INFO","message":"🚀 Starting automated migration pipeline","data":null}
+{"timestamp":"2025-09-05T09:52:08.466Z","level":"INFO","message":"Found 130 source files","data":null}
+{"timestamp":"2025-09-05T09:52:08.466Z","level":"INFO","message":"Processing 130 files in 13 batches","data":null}
+{"timestamp":"2025-09-05T09:52:08.466Z","level":"INFO","message":"=== Starting Stage 1: Mock Data Removal ===","data":null}
+{"timestamp":"2025-09-05T09:52:08.509Z","level":"INFO","message":"Stage 1 complete: 129 processed, 0 errors","data":null}
+{"timestamp":"2025-09-05T09:52:08.509Z","level":"INFO","message":"=== Starting Stage 2: React Router 7 Conversion ===","data":null}
+{"timestamp":"2025-09-05T09:52:08.533Z","level":"INFO","message":"Stage 2 complete: 129 processed, 0 errors","data":null}
+{"timestamp":"2025-09-05T09:52:08.533Z","level":"INFO","message":"=== Starting Stage 3: Quality Validation ===","data":null}
+{"timestamp":"2025-09-05T09:52:08.654Z","level":"WARN","message":"Stage 3 validation issues in App.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:08.770Z","level":"WARN","message":"Stage 3 validation issues in components/BrandPreview.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:08.885Z","level":"WARN","message":"Stage 3 validation issues in components/BusinessProfile.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:08.975Z","level":"WARN","message":"Stage 3 validation issues in components/CategorySection.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.061Z","level":"WARN","message":"Stage 3 validation issues in components/CitySearchBar.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.142Z","level":"WARN","message":"Stage 3 validation issues in components/CommunityActivity.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.227Z","level":"WARN","message":"Stage 3 validation issues in components/CommunityHero.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.313Z","level":"WARN","message":"Stage 3 validation issues in components/CommunitySelector.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.396Z","level":"WARN","message":"Stage 3 validation issues in components/ErrorBoundary.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.504Z","level":"WARN","message":"Stage 3 validation issues in components/EventsCalendar.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.589Z","level":"WARN","message":"Stage 3 validation issues in components/FeaturedPlaces.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.678Z","level":"WARN","message":"Stage 3 validation issues in components/FloatingNavigation.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.754Z","level":"WARN","message":"Stage 3 validation issues in components/Footer.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.834Z","level":"WARN","message":"Stage 3 validation issues in components/Header.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.907Z","level":"WARN","message":"Stage 3 validation issues in components/Hero.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:09.984Z","level":"WARN","message":"Stage 3 validation issues in components/Icon.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.063Z","level":"WARN","message":"Stage 3 validation issues in components/Layout.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.140Z","level":"WARN","message":"Stage 3 validation issues in components/MetaTags.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.219Z","level":"WARN","message":"Stage 3 validation issues in components/NewsAndEvents.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.293Z","level":"WARN","message":"Stage 3 validation issues in components/NextLink.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.376Z","level":"WARN","message":"Stage 3 validation issues in components/PlanUpgradeButton.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.468Z","level":"WARN","message":"Stage 3 validation issues in components/SEOContent.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.549Z","level":"WARN","message":"Stage 3 validation issues in components/SocialShareModal.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.627Z","level":"WARN","message":"Stage 3 validation issues in components/TrendingNow.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.718Z","level":"WARN","message":"Stage 3 validation issues in components/admin/Analytics.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.829Z","level":"WARN","message":"Stage 3 validation issues in components/admin/BrandConfiguration.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:10.927Z","level":"WARN","message":"Stage 3 validation issues in components/admin/BusinessManagement.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.023Z","level":"WARN","message":"Stage 3 validation issues in components/admin/ContentModeration.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.106Z","level":"WARN","message":"Stage 3 validation issues in components/admin/Sidebar.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.194Z","level":"WARN","message":"Stage 3 validation issues in components/admin/SystemHealth.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.294Z","level":"WARN","message":"Stage 3 validation issues in components/admin/UserManagement.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.382Z","level":"WARN","message":"Stage 3 validation issues in components/business/BusinessCard.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.463Z","level":"WARN","message":"Stage 3 validation issues in components/layout/PageLayout.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.536Z","level":"WARN","message":"Stage 3 validation issues in components/layouts/AdminLayout.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.616Z","level":"WARN","message":"Stage 3 validation issues in components/review/ReviewCard.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.708Z","level":"WARN","message":"Stage 3 validation issues in components/rewards/AchievementCard.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.802Z","level":"WARN","message":"Stage 3 validation issues in components/search/FilterControls.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.887Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Alert.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:11.968Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Avatar.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.045Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Badge.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.121Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Button.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.198Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Card.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.276Z","level":"WARN","message":"Stage 3 validation issues in components/ui/EmptyState.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.354Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Input.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.436Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Modal.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.520Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Pagination.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.604Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Rating.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.688Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Skeleton.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.763Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Spinner.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.842Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Tabs.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.921Z","level":"WARN","message":"Stage 3 validation issues in components/ui/Typography.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:12.997Z","level":"WARN","message":"Stage 3 validation issues in components/ui/index.ts","data":null}
+{"timestamp":"2025-09-05T09:52:13.086Z","level":"WARN","message":"Stage 3 validation issues in components/wallet/WalletCoupon.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:13.165Z","level":"WARN","message":"Stage 3 validation issues in components/wallet/WalletCouponExample.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:13.246Z","level":"WARN","message":"Stage 3 validation issues in contexts/AppContext.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:13.323Z","level":"WARN","message":"Stage 3 validation issues in contexts/AppState.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:13.412Z","level":"WARN","message":"Stage 3 validation issues in contexts/BrandContext.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:13.484Z","level":"WARN","message":"Stage 3 validation issues in hooks/index.ts","data":null}
+{"timestamp":"2025-09-05T09:52:13.562Z","level":"WARN","message":"Stage 3 validation issues in hooks/useAsync.ts","data":null}
+{"timestamp":"2025-09-05T09:52:13.639Z","level":"WARN","message":"Stage 3 validation issues in hooks/useDebounce.ts","data":null}
+{"timestamp":"2025-09-05T09:52:13.721Z","level":"WARN","message":"Stage 3 validation issues in hooks/useForm.ts","data":null}
+{"timestamp":"2025-09-05T09:52:13.800Z","level":"WARN","message":"Stage 3 validation issues in hooks/useLocalStorage.ts","data":null}
+{"timestamp":"2025-09-05T09:52:13.876Z","level":"WARN","message":"Stage 3 validation issues in hooks/useMediaQuery.ts","data":null}
+{"timestamp":"2025-09-05T09:52:13.950Z","level":"WARN","message":"Stage 3 validation issues in hooks/useOnClickOutside.ts","data":null}
+{"timestamp":"2025-09-05T09:52:14.025Z","level":"WARN","message":"Stage 3 validation issues in index.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.095Z","level":"WARN","message":"Stage 3 validation issues in pages/Achievements.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.168Z","level":"WARN","message":"Stage 3 validation issues in pages/Billing.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.240Z","level":"WARN","message":"Stage 3 validation issues in pages/Challenges.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.308Z","level":"WARN","message":"Stage 3 validation issues in pages/DealDetail.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.381Z","level":"WARN","message":"Stage 3 validation issues in pages/Deals.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.454Z","level":"WARN","message":"Stage 3 validation issues in pages/EventDetail.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.521Z","level":"WARN","message":"Stage 3 validation issues in pages/Events.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.590Z","level":"WARN","message":"Stage 3 validation issues in pages/Explore.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.699Z","level":"WARN","message":"Stage 3 validation issues in pages/Favorites.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.768Z","level":"WARN","message":"Stage 3 validation issues in pages/ForgotPassword.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.859Z","level":"WARN","message":"Stage 3 validation issues in pages/Home.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.926Z","level":"WARN","message":"Stage 3 validation issues in pages/Leaderboards.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:14.995Z","level":"WARN","message":"Stage 3 validation issues in pages/Login.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.061Z","level":"WARN","message":"Stage 3 validation issues in pages/News.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.128Z","level":"WARN","message":"Stage 3 validation issues in pages/NewsDetail.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.193Z","level":"WARN","message":"Stage 3 validation issues in pages/Pricing.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.263Z","level":"WARN","message":"Stage 3 validation issues in pages/Referrals.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.330Z","level":"WARN","message":"Stage 3 validation issues in pages/Register.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.399Z","level":"WARN","message":"Stage 3 validation issues in pages/ResetPassword.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.471Z","level":"WARN","message":"Stage 3 validation issues in pages/Rewards.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.543Z","level":"WARN","message":"Stage 3 validation issues in pages/Search.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.615Z","level":"WARN","message":"Stage 3 validation issues in pages/Settings.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.686Z","level":"WARN","message":"Stage 3 validation issues in pages/Trending.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.753Z","level":"WARN","message":"Stage 3 validation issues in pages/VerifyEmail.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:15.981Z","level":"WARN","message":"Stage 3 validation issues in pages/account/Deactivate.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.049Z","level":"WARN","message":"Stage 3 validation issues in pages/account/Language.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.133Z","level":"WARN","message":"Stage 3 validation issues in pages/admin/brand-config.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.218Z","level":"WARN","message":"Stage 3 validation issues in pages/admin/index.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.307Z","level":"WARN","message":"Stage 3 validation issues in pages/admin/moderation.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.396Z","level":"WARN","message":"Stage 3 validation issues in pages/admin/notifications.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.465Z","level":"WARN","message":"Stage 3 validation issues in pages/billing/AddPaymentMethod.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.536Z","level":"WARN","message":"Stage 3 validation issues in pages/business/[slug].tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.608Z","level":"WARN","message":"Stage 3 validation issues in pages/business/analytics.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.676Z","level":"WARN","message":"Stage 3 validation issues in pages/business/coupons.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.745Z","level":"WARN","message":"Stage 3 validation issues in pages/business/dashboard/LoyaltyMembers.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.816Z","level":"WARN","message":"Stage 3 validation issues in pages/business/dashboard.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.884Z","level":"WARN","message":"Stage 3 validation issues in pages/business/events.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:16.952Z","level":"WARN","message":"Stage 3 validation issues in pages/business/homepage.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.019Z","level":"WARN","message":"Stage 3 validation issues in pages/business/integrations.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.087Z","level":"WARN","message":"Stage 3 validation issues in pages/business/loyalty.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.155Z","level":"WARN","message":"Stage 3 validation issues in pages/business/profile/edit.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.224Z","level":"WARN","message":"Stage 3 validation issues in pages/business/promotions.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.371Z","level":"WARN","message":"Stage 3 validation issues in pages/profile/Rewards.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.441Z","level":"WARN","message":"Stage 3 validation issues in pages/profile/[username].tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.514Z","level":"WARN","message":"Stage 3 validation issues in pages/profile/edit.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.582Z","level":"WARN","message":"Stage 3 validation issues in pages/review/[businessId].tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.649Z","level":"WARN","message":"Stage 3 validation issues in pages/security/ActiveSessions.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.717Z","level":"WARN","message":"Stage 3 validation issues in pages/security/ChangePassword.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.785Z","level":"WARN","message":"Stage 3 validation issues in pages/security/TwoFactorAuth.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:17.862Z","level":"WARN","message":"Stage 3 validation issues in services/BrandService.ts","data":null}
+{"timestamp":"2025-09-05T09:52:17.943Z","level":"WARN","message":"Stage 3 validation issues in services/BrandService.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:18.022Z","level":"WARN","message":"Stage 3 validation issues in services/CommunityService.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.100Z","level":"WARN","message":"Stage 3 validation issues in services/CommunityService.tsx","data":null}
+{"timestamp":"2025-09-05T09:52:18.172Z","level":"WARN","message":"Stage 3 validation issues in services/businessService.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.246Z","level":"WARN","message":"Stage 3 validation issues in types/business.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.328Z","level":"WARN","message":"Stage 3 validation issues in utils/core/api.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.409Z","level":"WARN","message":"Stage 3 validation issues in utils/core/formatting.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.484Z","level":"WARN","message":"Stage 3 validation issues in utils/core/index.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.573Z","level":"WARN","message":"Stage 3 validation issues in utils/core/storage.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.655Z","level":"WARN","message":"Stage 3 validation issues in utils/core/validation.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.732Z","level":"WARN","message":"Stage 3 validation issues in utils/dateUtils.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.807Z","level":"WARN","message":"Stage 3 validation issues in utils/errorHandling.ts","data":null}
+{"timestamp":"2025-09-05T09:52:18.810Z","level":"INFO","message":"Stage 3 complete: 3 processed, 127 errors","data":null}
+{"timestamp":"2025-09-05T09:52:18.810Z","level":"INFO","message":"=== Starting Stage 4: Route Integration ===","data":null}
+{"timestamp":"2025-09-05T09:52:18.833Z","level":"INFO","message":"Stage 4 complete: 130 processed, 0 errors","data":null}
+{"timestamp":"2025-09-05T09:52:18.833Z","level":"INFO","message":"🎉 Migration pipeline complete!","data":null}
+{"timestamp":"2025-09-05T09:52:18.833Z","level":"INFO","message":"📊 Processed 391 files in 0.17 minutes","data":null}
+{"timestamp":"2025-09-05T09:52:18.833Z","level":"INFO","message":"✅ Success rate: 67.52%","data":null}
+{"timestamp":"2025-09-05T09:52:18.833Z","level":"WARN","message":"⚠️  127 files had errors - check logs for details","data":null}

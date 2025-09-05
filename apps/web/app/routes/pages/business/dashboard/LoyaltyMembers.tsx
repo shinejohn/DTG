@@ -1,8 +1,39 @@
 import type { Route } from './+types/route';
 import React, { useState } from 'react';
-import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
+import { json, useLoaderData, useRouteError, isRouteErrorResponse, Link } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { UsersIcon, SearchIcon, FilterIcon, SortAscIcon, DownloadIcon, MailIcon, MessageSquareIcon, BellIcon, CheckSquareIcon, PercentIcon, StarIcon, CrownIcon, CalendarIcon, ChevronDownIcon, ChevronUpIcon, XIcon, SendIcon, CheckIcon } from 'lucide-react';
+
+// Mock data - replace with actual data from your backend
+const mockLoyaltyMembers = [
+  {
+    id: '1',
+    name: 'John Doe',
+    email: 'john@example.com',
+    avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
+    tier: 'Gold',
+    points: 2500,
+    totalSpent: 1250,
+    lastVisit: '2024-01-15',
+    checkIns: 45,
+    couponsUsed: 12,
+    achievements: 8
+  },
+  // Add more mock members as needed
+];
+
+const mockProgramMetrics = {
+  totalMembers: 1234,
+  activeMembers: 892,
+  newMembersThisMonth: 45,
+  averagePointsPerMember: 756,
+  redemptionRate: 65,
+  topTiers: [
+    { name: 'Bronze', percentage: 45 },
+    { name: 'Silver', percentage: 35 },
+    { name: 'Gold', percentage: 20 }
+  ]
+};
 export default function LoyaltyMembers() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortField, setSortField] = useState<string | null>(null);

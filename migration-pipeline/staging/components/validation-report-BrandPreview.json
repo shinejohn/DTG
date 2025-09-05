@@ -1,0 +1,95 @@
+{
+  "file": "BrandPreview.tsx",
+  "timestamp": "2025-09-05T09:52:08.743Z",
+  "status": "FAILED",
+  "stats": {
+    "totalIssues": 11,
+    "errors": 1,
+    "warnings": 2,
+    "autoFixable": 7
+  },
+  "issues": [
+    {
+      "type": "INCORRECT_IMPORT",
+      "line": 6,
+      "current": "import type { Route } from './+types/brand-preview'",
+      "correct": "import type { Route } from './+types/route'",
+      "autoFix": true
+    },
+    {
+      "type": "INCORRECT_IMPORT",
+      "line": 7,
+      "current": "import { getSupabaseServerClient } from '@/lib/supabase/server.ts'",
+      "correct": "import { getSupabaseServerClient } from '@kit/supabase/server-client'",
+      "autoFix": true
+    },
+    {
+      "type": "INCORRECT_JOIN_SYNTAX",
+      "line": 106,
+      "current": "!user_id (",
+      "message": "Supabase join syntax might be incorrect. Consider using standard joins.",
+      "autoFix": false
+    },
+    {
+      "type": "INCORRECT_JOIN_SYNTAX",
+      "line": 110,
+      "current": "!business_id (",
+      "message": "Supabase join syntax might be incorrect. Consider using standard joins.",
+      "autoFix": false
+    },
+    {
+      "type": "INCORRECT_JOIN_SYNTAX",
+      "line": 149,
+      "current": "!author_id (",
+      "message": "Supabase join syntax might be incorrect. Consider using standard joins.",
+      "autoFix": false
+    },
+    {
+      "type": "MISSING_REQUIRED_EXPORT",
+      "export": "default",
+      "severity": "error"
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 95,
+      "statement": "console.error(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 118,
+      "statement": "console.error(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 137,
+      "statement": "console.error(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 158,
+      "statement": "console.error(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 213,
+      "statement": "console.error(",
+      "autoFix": true
+    }
+  ],
+  "warnings": [
+    {
+      "type": "MISSING_RECOMMENDED_EXPORT",
+      "export": "ErrorBoundary",
+      "message": "Consider adding 'ErrorBoundary' export for better error handling and SEO"
+    },
+    {
+      "type": "MISSING_RECOMMENDED_EXPORT",
+      "export": "meta",
+      "message": "Consider adding 'meta' export for better error handling and SEO"
+    }
+  ]
+}

@@ -1,7 +1,4 @@
-import type { Route } from './+types/route';
 import React from 'react';
-import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
-import { getSupabaseServerClient } from '@kit/supabase/server-client';
 // Define icon paths in a central location
 const iconPaths: Record<string, string> = {
   home: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6',
@@ -27,52 +24,4 @@ export default function Icon({
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <path d={path} />
     </svg>;
-}
-export async function loader({ params, request }: Route.LoaderArgs) {
-  const { supabase, headers } = getSupabaseServerClient(request);
-  
-  try {
-    const { data: items, error } = await supabase
-      .from('businesses')
-      .select('*')
-      .limit(10);
-
-    if (error) {
-      console.error('Error fetching data:', error);
-    }
-
-    return json({
-      items: items || []
-    }, { headers });
-  } catch (error) {
-    console.error('Loader error:', error);
-    return json({
-      items: []
-    }, { headers });
-  }
-}
-export function ErrorBoundary() {
-  const error = useRouteError();
-  
-  if (isRouteErrorResponse(error)) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-red-600">{error.status}</h1>
-          <h2 className="text-xl font-semibold mt-2">{error.statusText}</h2>
-          <p className="text-gray-600 mt-4">{error.data}</p>
-        </div>
-      </div>
-    );
-  }
-  
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-red-600">Error</h1>
-        <p className="text-gray-600 mt-4">Something went wrong</p>
-        <p className="text-sm text-gray-500 mt-2">{error?.message}</p>
-      </div>
-    </div>
-  );
 }

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { SearchIcon, MapPinIcon } from 'lucide-react';
-import { useBrand } from '../contexts/BrandContext';
+import { useBrand } from '../../components/dtg/contexts/BrandContext';
 import { Layout } from '@/components/dtg/Layout';
 import { CategorySection } from '@/components/dtg/CategorySection';
 import { FeaturedPlaces } from '@/components/dtg/FeaturedPlaces';
@@ -11,7 +11,7 @@ import { TrendingNow } from '@/components/dtg/TrendingNow';
 import { CommunityActivity } from '@/components/dtg/CommunityActivity';
 import { NewsAndEvents } from '@/components/dtg/NewsAndEvents';
 import { SEOContent } from '@/components/dtg/SEOContent';
-import { getAllCommunities, getCommunityById } from '../services/CommunityService';
+import { getAllCommunities, getCommunityById } from '../../components/dtg/services/CommunityService';
 export default function Home() {
   const {
     currentBrand

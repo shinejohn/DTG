@@ -2,8 +2,8 @@ import type { Route } from './+types/route';
 import React, { useEffect, useState } from 'react';
 import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
+import { Header } from '../../../components/dtg/Header';
+import { Footer } from '../../../components/dtg/Footer';
 import { LayoutDashboardIcon, BuildingIcon, TagIcon, BarChart2Icon, UsersIcon, SettingsIcon, StarIcon, GiftIcon, CrownIcon, PercentIcon, TrendingUpIcon, TrendingDownIcon, RefreshCwIcon, DollarSignIcon, UserPlusIcon, ChevronDownIcon, ChevronRightIcon, CreditCardIcon, CoffeeIcon, ShoppingBagIcon, ZapIcon, ClipboardIcon, XIcon, CheckIcon, PlusIcon, MinusIcon, EditIcon, AlertTriangleIcon, InfoIcon, ClockIcon, UserIcon, CalendarIcon, SearchIcon, FilterIcon, SlidersIcon, ArrowUpIcon, ArrowDownIcon, ArrowRightIcon, BellIcon, HeartIcon, CheckCircleIcon, CakeIcon, AwardIcon, LayersIcon, PenToolIcon, ShieldIcon, MessageSquareIcon, WifiIcon, UploadIcon } from 'lucide-react';
 // Types
 interface LoyaltyProgram {

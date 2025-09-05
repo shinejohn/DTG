@@ -2,9 +2,9 @@ import type { Route } from './+types/route';
 import React from 'react';
 import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { AdminLayout } from '../../components/layouts/AdminLayout';
-import { BrandConfiguration } from '../../components/admin/BrandConfiguration';
-import { useBrand } from '../../contexts/BrandContext';
+import AdminLayout from '../../../components/dtg/layouts/AdminLayout';
+import BrandConfiguration from '../../../components/dtg/admin/BrandConfiguration';
+import { useBrand } from '../../../components/dtg/contexts/BrandContext';
 export default function BrandConfigPage() {
   return <AdminLayout title="Brand Configuration" subtitle="Manage your brand settings and appearance">
       <div className="space-y-6">

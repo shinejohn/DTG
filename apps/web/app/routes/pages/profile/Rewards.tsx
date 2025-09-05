@@ -2,8 +2,8 @@ import type { Route } from './+types/route';
 import React, { useState } from 'react';
 import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
+import { Header } from '../../../components/dtg/Header';
+import { Footer } from '../../../components/dtg/Footer';
 import { CrownIcon, GiftIcon, PercentIcon, TrophyIcon, ZapIcon, StarIcon, CheckIcon, BookmarkIcon, ClipboardIcon, TicketIcon, ChevronRightIcon, CopyIcon, QrCodeIcon, FilterIcon, SearchIcon, BellIcon, ArrowRightIcon, BadgeIcon, AwardIcon, LayersIcon, CheckSquareIcon, BarChart2Icon } from 'lucide-react';
 export default function Rewards() {
   const [activeTab, setActiveTab] = useState<'programs' | 'coupons' | 'achievements' | 'history'>('programs');

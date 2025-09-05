@@ -1,0 +1,114 @@
+import React from 'react';
+import { getBrandById } from './BrandService';
+// Types
+interface Community {
+  id: string;
+  name: string;
+  brandId?: string;
+}
+// Mock data for communities
+const communities: Community[] = [{
+  id: 'nyc',
+  name: 'New York City'
+}, {
+  id: 'sf',
+  name: 'San Francisco'
+}, {
+  id: 'chi',
+  name: 'Chicago'
+}, {
+  id: 'la',
+  name: 'Los Angeles'
+}, {
+  id: 'mia',
+  name: 'Miami'
+}, {
+  id: 'sea',
+  name: 'Seattle'
+}, {
+  id: 'aus',
+  name: 'Austin'
+}, {
+  id: 'den',
+  name: 'Denver'
+}, {
+  id: 'bos',
+  name: 'Boston'
+}, {
+  id: 'por',
+  name: 'Portland'
+},
+// Brand-specific communities
+{
+  id: 'foodie-quest-nyc',
+  name: 'New York Food Scene',
+  brandId: 'foodie-quest'
+}, {
+  id: 'foodie-quest-la',
+  name: 'LA Dining',
+  brandId: 'foodie-quest'
+}, {
+  id: 'foodie-quest-chi',
+  name: 'Chicago Eats',
+  brandId: 'foodie-quest'
+}, {
+  id: 'international-pub-crawl-nyc',
+  name: 'NYC Pub Scene',
+  brandId: 'international-pub-crawl'
+}, {
+  id: 'international-pub-crawl-dub',
+  name: 'Dublin',
+  brandId: 'international-pub-crawl'
+}, {
+  id: 'international-pub-crawl-lon',
+  name: 'London',
+  brandId: 'international-pub-crawl'
+}];
+// Get all communities
+export function getAllCommunities(): Community[] {
+  return communities;
+}
+// Mock function to detect community from IP address
+export async function detectCommunityFromIP(brandId?: string): Promise<Community> {
+  // In a real app, this would make an API call to detect the user's location
+  // For now, return a default community or filter by brand if provided
+  return new Promise(resolve => {
+    setTimeout(() => {
+      if (brandId) {
+        // If brand ID is provided, try to find a matching community
+        const brandCommunity = communities.find(c => c.brandId === brandId);
+        if (brandCommunity) {
+          resolve(brandCommunity);
+          return;
+        }
+      }
+      // Default to NYC if no brand-specific community is found
+      resolve(communities[0]); // Returns NYC
+    }, 500); // Add slight delay to simulate API call
+  });
+}
+// Get communities for a specific brand
+export function getBrandCommunitiesData(brandId: string): Community[] {
+  const brand = getBrandById(brandId);
+  if (!brand || !brand.communities) return [];
+  // Filter communities based on the brand's community IDs
+  return brand.communities.map(communityId => {
+    // First try to find an exact match
+    const community = communities.find(c => c.id === communityId);
+    if (community) return community;
+    // If no exact match, create a placeholder
+    return {
+      id: communityId,
+      name: communityId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+    };
+  }).filter(Boolean) as Community[];
+}
+// Get community by ID
+export function getCommunityById(id: string): Community | null {
+  return communities.find(community => community.id === id) || null;
+}
+// Get community name by ID
+export function getCommunityName(id: string): string {
+  const community = getCommunityById(id);
+  return community ? community.name : id.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+}

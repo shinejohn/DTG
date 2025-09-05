@@ -1,0 +1,43 @@
+{
+  "file": "BrandPreview.tsx",
+  "timestamp": "2025-09-05T09:04:25.591Z",
+  "stats": {
+    "totalChecks": 26,
+    "passed": 20,
+    "failed": 2,
+    "warnings": 4
+  },
+  "passed": [
+    "No mock data found",
+    "Required import found: Route types",
+    "Loader function found",
+    "Loader has correct parameters",
+    "Loader returns data",
+    "Loader includes headers in response",
+    "Supabase client import found",
+    "Supabase client initialized",
+    "Supabase queries found",
+    "Supabase error handling present",
+    "Found 4 interfaces and 0 type definitions",
+    "useLoaderData is properly typed",
+    "Component properly exported",
+    "Try-catch error handling found",
+    "Loader data properly destructured",
+    "Null/undefined safety checks found",
+    "No client-side data fetching detected",
+    "loader export found",
+    "Component export found",
+    "Imports are organized"
+  ],
+  "warnings": [
+    "Consider importing: useNavigate",
+    "Consider importing: Link component",
+    "Consider adding ErrorBoundary export for better error handling",
+    "Found 6 console statements - consider removing for production"
+  ],
+  "errors": [
+    "Missing required import: useLoaderData",
+    "Component not using useLoaderData hook"
+  ],
+  "status": "FAILED"
+}

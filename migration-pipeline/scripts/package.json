@@ -1,0 +1,25 @@
+{
+  "name": "dtg-migration-scripts",
+  "version": "1.0.0",
+  "description": "Migration pipeline scripts for Downtown Guide React Router 7 conversion",
+  "scripts": {
+    "validate": "node validate-rr7-conversion.js",
+    "validate:fix": "node validate-rr7-conversion.js --fix",
+    "process:all": "node process-all-files.js",
+    "process:dry-run": "node process-all-files.js --dry-run",
+    "process:debug": "node process-all-files.js --log-level DEBUG",
+    "process:stage1": "node process-stage.js 1",
+    "process:stage2": "node process-stage.js 2", 
+    "process:stage3": "node process-stage.js 3",
+    "process:stage4": "node process-stage.js 4"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "@babel/types": "^7.23.0",
+    "@babel/generator": "^7.23.0"
+  },
+  "devDependencies": {
+    "recast": "^0.23.0"
+  }
+}

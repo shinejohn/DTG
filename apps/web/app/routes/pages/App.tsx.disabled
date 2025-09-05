@@ -1,0 +1,186 @@
+import type { Route } from './+types/route';
+import React, { useEffect } from 'react';
+import { json, useLoaderData, useRouteError, isRouteErrorResponse, BrowserRouter, Routes, Route as RouterRoute } from 'react-router';
+import { getSupabaseServerClient } from '@kit/supabase/server-client';
+import { ErrorBoundary } from '../components/dtg/ErrorBoundary';
+// import { Home } from './Home';
+// import { Login } from './Login';
+// import { Register } from './Register';
+// import { Explore } from './Explore';
+// import { Search } from './Search';
+// import { BusinessProfile } from './business/[slug]';
+// import { BusinessHomepage } from './business/homepage';
+// import { ForgotPassword } from './ForgotPassword';
+// import { ResetPassword } from './ResetPassword';
+// import { VerifyEmail } from './VerifyEmail';
+// import { UserProfile } from './profile/[username]';
+// import { EditProfile } from './profile/edit';
+// import { Settings } from './Settings';
+// import { WriteReview } from './review/[businessId]';
+// import { Favorites } from './Favorites';
+// import { BusinessDashboard } from './business/dashboard';
+// import { BusinessProfileEditor } from './business/profile/edit';
+// import { BusinessAnalytics } from './business/analytics';
+// import { BusinessPromotions } from './business/promotions';
+// import { BusinessIntegrations } from './business/integrations';
+// import { BusinessEvents } from './business/events';
+// import { BusinessCoupons } from './business/coupons';
+// import { BusinessLoyalty } from './business/loyalty';
+// import { Pricing } from './Pricing';
+// import { Billing } from './Billing';
+// import { AdminDashboard } from './admin/index';
+// import { ContentModerationPage } from './admin/moderation';
+// import { Rewards } from './Rewards';
+// import { Deals } from './Deals';
+// import { DealDetail } from './DealDetail';
+// import { Achievements } from './Achievements';
+// import { Leaderboards } from './Leaderboards';
+// import { Challenges } from './Challenges';
+// import { Referrals } from './Referrals';
+// import { Language } from './account/Language';
+// import { DeactivateAccount } from './account/Deactivate';
+// import { ChangePassword } from './security/ChangePassword';
+// import { TwoFactorAuth } from './security/TwoFactorAuth';
+// import { ActiveSessions } from './security/ActiveSessions';
+// import { AddPaymentMethod } from './billing/AddPaymentMethod';
+// import { Trending } from './Trending';
+// import { News } from './News';
+// import { NewsDetail } from './NewsDetail';
+// import { Events } from './Events';
+// import { EventDetail } from './EventDetail';
+// import { BrandConfigPage } from './admin/brand-config';
+// import { AdminNotificationsPage } from './admin/notifications';
+// import { BrandPreview } from '../components/dtg/BrandPreview';
+import { BrandProvider } from '../components/dtg/contexts/BrandContext';
+import { AppProvider } from '../components/dtg/contexts/AppContext';
+export default function App() {
+  useEffect(() => {
+    // Add global error handlers
+    const handleError = (event: ErrorEvent) => {
+      // Prevent the default "Script error" message
+      event.preventDefault();
+      console.error('Global error:', event.error);
+    };
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      // Prevent unhandled promise rejection errors
+      event.preventDefault();
+      console.error('Unhandled promise rejection:', event.reason);
+    };
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, []);
+  return <ErrorBoundary>
+      <AppProvider>
+        <BrandProvider>
+          <div className="w-full min-h-screen bg-white">
+            <BrowserRouter>
+              <Routes>
+                <RouterRoute path="/" element={<Home />} />
+                <RouterRoute path="/login" element={<Login />} />
+                <RouterRoute path="/register" element={<Register />} />
+                <RouterRoute path="/explore" element={<Explore />} />
+                <RouterRoute path="/search" element={<Search />} />
+                <RouterRoute path="/trending" element={<Trending />} />
+                <RouterRoute path="/news" element={<News />} />
+                <RouterRoute path="/news/:id" element={<NewsDetail />} />
+                <RouterRoute path="/events" element={<Events />} />
+                <RouterRoute path="/events/:id" element={<EventDetail />} />
+                <RouterRoute path="/business/:slug" element={<BusinessProfile />} />
+                <RouterRoute path="/business/homepage" element={<BusinessHomepage />} />
+                <RouterRoute path="/forgot-password" element={<ForgotPassword />} />
+                <RouterRoute path="/reset-password/:token" element={<ResetPassword />} />
+                <RouterRoute path="/verify-email/:token" element={<VerifyEmail />} />
+                <RouterRoute path="/profile/:username" element={<UserProfile />} />
+                <RouterRoute path="/profile/edit" element={<EditProfile />} />
+                <RouterRoute path="/settings" element={<Settings />} />
+                <RouterRoute path="/account/language" element={<Language />} />
+                <RouterRoute path="/account/deactivate" element={<DeactivateAccount />} />
+                <RouterRoute path="/security/password" element={<ChangePassword />} />
+                <RouterRoute path="/security/2fa" element={<TwoFactorAuth />} />
+                <RouterRoute path="/security/sessions" element={<ActiveSessions />} />
+                <RouterRoute path="/billing/add-payment-method" element={<AddPaymentMethod />} />
+                <RouterRoute path="/review/:businessId" element={<WriteReview />} />
+                <RouterRoute path="/favorites" element={<Favorites />} />
+                <RouterRoute path="/business/dashboard" element={<BusinessDashboard />} />
+                <RouterRoute path="/business/profile/edit" element={<BusinessProfileEditor />} />
+                <RouterRoute path="/business/analytics" element={<BusinessAnalytics />} />
+                <RouterRoute path="/business/promotions" element={<BusinessPromotions />} />
+                <RouterRoute path="/business/integrations" element={<BusinessIntegrations />} />
+                <RouterRoute path="/business/events" element={<BusinessEvents />} />
+                <RouterRoute path="/business/coupons" element={<BusinessCoupons />} />
+                <RouterRoute path="/business/loyalty" element={<BusinessLoyalty />} />
+                <RouterRoute path="/pricing" element={<Pricing />} />
+                <RouterRoute path="/billing" element={<Billing />} />
+                <RouterRoute path="/admin" element={<AdminDashboard />} />
+                <RouterRoute path="/admin/moderation" element={<ContentModerationPage />} />
+                <RouterRoute path="/admin/brand-config" element={<BrandConfigPage />} />
+                <RouterRoute path="/admin/notifications" element={<AdminNotificationsPage />} />
+                <RouterRoute path="/rewards" element={<Rewards />} />
+                <RouterRoute path="/deals" element={<Deals />} />
+                <RouterRoute path="/deals/:id" element={<DealDetail />} />
+                <RouterRoute path="/achievements" element={<Achievements />} />
+                <RouterRoute path="/leaderboards" element={<Leaderboards />} />
+                <RouterRoute path="/challenges" element={<Challenges />} />
+                <RouterRoute path="/referrals" element={<Referrals />} />
+                {/* Brand Preview Route */}
+                <RouterRoute path="/preview/brand/:brandId" element={<BrandPreview />} />
+                {/* Add more routes as they are created */}
+              </Routes>
+            </BrowserRouter>
+          </div>
+        </BrandProvider>
+      </AppProvider>
+    </ErrorBoundary>;
+}
+export async function loader({ params, request }: Route.LoaderArgs) {
+  const { supabase, headers } = getSupabaseServerClient(request);
+  
+  try {
+    const { data: items, error } = await supabase
+      .from('businesses')
+      .select('*')
+      .limit(10);
+
+    if (error) {
+      console.error('Error fetching data:', error);
+    }
+
+    return json({
+      items: items || []
+    }, { headers });
+  } catch (error) {
+    console.error('Loader error:', error);
+    return json({
+      items: []
+    }, { headers });
+  }
+}
+export function ErrorBoundary() {
+  const error = useRouteError();
+  
+  if (isRouteErrorResponse(error)) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-red-600">{error.status}</h1>
+          <h2 className="text-xl font-semibold mt-2">{error.statusText}</h2>
+          <p className="text-gray-600 mt-4">{error.data}</p>
+        </div>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-red-600">Error</h1>
+        <p className="text-gray-600 mt-4">Something went wrong</p>
+        <p className="text-sm text-gray-500 mt-2">{error?.message}</p>
+      </div>
+    </div>
+  );
+}

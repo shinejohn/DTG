@@ -1,0 +1,462 @@
+{
+  "timestamp": "2025-09-04T14:44:20.279Z",
+  "totalComponents": 76,
+  "components": [
+    {
+      "name": "BusinessProfile",
+      "filePath": "./magic/src/components/BusinessProfile.tsx",
+      "hasProps": true,
+      "dataTypesCount": 8
+    },
+    {
+      "name": "CitySearchBar",
+      "filePath": "./magic/src/components/CitySearchBar.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "CommunityHero",
+      "filePath": "./magic/src/components/CommunityHero.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "CommunitySelector",
+      "filePath": "./magic/src/components/CommunitySelector.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "ErrorBoundary",
+      "filePath": "./magic/src/components/ErrorBoundary.tsx",
+      "hasProps": true,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "EventsCalendar",
+      "filePath": "./magic/src/components/EventsCalendar.tsx",
+      "hasProps": true,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "Header",
+      "filePath": "./magic/src/components/Header.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Icon",
+      "filePath": "./magic/src/components/Icon.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Layout",
+      "filePath": "./magic/src/components/Layout.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "MetaTags",
+      "filePath": "./magic/src/components/MetaTags.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "NextLink",
+      "filePath": "./magic/src/components/NextLink.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "PlanUpgradeButton",
+      "filePath": "./magic/src/components/PlanUpgradeButton.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "SEOContent",
+      "filePath": "./magic/src/components/SEOContent.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "SocialShareModal",
+      "filePath": "./magic/src/components/SocialShareModal.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "AppContext",
+      "filePath": "./magic/src/contexts/AppContext.tsx",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "AppState",
+      "filePath": "./magic/src/contexts/AppState.tsx",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "BrandContext",
+      "filePath": "./magic/src/contexts/BrandContext.tsx",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "useAsync",
+      "filePath": "./magic/src/hooks/useAsync.ts",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "useForm",
+      "filePath": "./magic/src/hooks/useForm.ts",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "useOnClickOutside",
+      "filePath": "./magic/src/hooks/useOnClickOutside.ts",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "Achievements",
+      "filePath": "./magic/src/pages/Achievements.tsx",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "Billing",
+      "filePath": "./magic/src/pages/Billing.tsx",
+      "hasProps": false,
+      "dataTypesCount": 6
+    },
+    {
+      "name": "Challenges",
+      "filePath": "./magic/src/pages/Challenges.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "DealDetail",
+      "filePath": "./magic/src/pages/DealDetail.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "Deals",
+      "filePath": "./magic/src/pages/Deals.tsx",
+      "hasProps": false,
+      "dataTypesCount": 3
+    },
+    {
+      "name": "Favorites",
+      "filePath": "./magic/src/pages/Favorites.tsx",
+      "hasProps": true,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "Leaderboards",
+      "filePath": "./magic/src/pages/Leaderboards.tsx",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "Pricing",
+      "filePath": "./magic/src/pages/Pricing.tsx",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "Referrals",
+      "filePath": "./magic/src/pages/Referrals.tsx",
+      "hasProps": false,
+      "dataTypesCount": 3
+    },
+    {
+      "name": "Rewards",
+      "filePath": "./magic/src/pages/Rewards.tsx",
+      "hasProps": false,
+      "dataTypesCount": 6
+    },
+    {
+      "name": "Search",
+      "filePath": "./magic/src/pages/Search.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "Settings",
+      "filePath": "./magic/src/pages/Settings.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "BrandService",
+      "filePath": "./magic/src/services/BrandService.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "CommunityService",
+      "filePath": "./magic/src/services/CommunityService.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "business",
+      "filePath": "./magic/src/types/business.ts",
+      "hasProps": false,
+      "dataTypesCount": 3
+    },
+    {
+      "name": "BrandConfiguration",
+      "filePath": "./magic/src/components/admin/BrandConfiguration.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "BusinessManagement",
+      "filePath": "./magic/src/components/admin/BusinessManagement.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "ContentModeration",
+      "filePath": "./magic/src/components/admin/ContentModeration.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "Sidebar",
+      "filePath": "./magic/src/components/admin/Sidebar.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "UserManagement",
+      "filePath": "./magic/src/components/admin/UserManagement.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "BusinessCard",
+      "filePath": "./magic/src/components/business/BusinessCard.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "PageLayout",
+      "filePath": "./magic/src/components/layout/PageLayout.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "AdminLayout",
+      "filePath": "./magic/src/components/layouts/AdminLayout.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "ReviewCard",
+      "filePath": "./magic/src/components/review/ReviewCard.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "AchievementCard",
+      "filePath": "./magic/src/components/rewards/AchievementCard.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "FilterControls",
+      "filePath": "./magic/src/components/search/FilterControls.tsx",
+      "hasProps": true,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "Alert",
+      "filePath": "./magic/src/components/ui/Alert.tsx",
+      "hasProps": true,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "Avatar",
+      "filePath": "./magic/src/components/ui/Avatar.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Badge",
+      "filePath": "./magic/src/components/ui/Badge.tsx",
+      "hasProps": true,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "Button",
+      "filePath": "./magic/src/components/ui/Button.tsx",
+      "hasProps": true,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "Card",
+      "filePath": "./magic/src/components/ui/Card.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "EmptyState",
+      "filePath": "./magic/src/components/ui/EmptyState.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Input",
+      "filePath": "./magic/src/components/ui/Input.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Modal",
+      "filePath": "./magic/src/components/ui/Modal.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Pagination",
+      "filePath": "./magic/src/components/ui/Pagination.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Rating",
+      "filePath": "./magic/src/components/ui/Rating.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Skeleton",
+      "filePath": "./magic/src/components/ui/Skeleton.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Spinner",
+      "filePath": "./magic/src/components/ui/Spinner.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Tabs",
+      "filePath": "./magic/src/components/ui/Tabs.tsx",
+      "hasProps": true,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "Typography",
+      "filePath": "./magic/src/components/ui/Typography.tsx",
+      "hasProps": true,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "WalletCoupon",
+      "filePath": "./magic/src/components/wallet/WalletCoupon.tsx",
+      "hasProps": true,
+      "dataTypesCount": 0
+    },
+    {
+      "name": "Language",
+      "filePath": "./magic/src/pages/account/Language.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "notifications",
+      "filePath": "./magic/src/pages/admin/notifications.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "analytics",
+      "filePath": "./magic/src/pages/business/analytics.tsx",
+      "hasProps": false,
+      "dataTypesCount": 10
+    },
+    {
+      "name": "coupons",
+      "filePath": "./magic/src/pages/business/coupons.tsx",
+      "hasProps": false,
+      "dataTypesCount": 3
+    },
+    {
+      "name": "dashboard",
+      "filePath": "./magic/src/pages/business/dashboard.tsx",
+      "hasProps": false,
+      "dataTypesCount": 10
+    },
+    {
+      "name": "events",
+      "filePath": "./magic/src/pages/business/events.tsx",
+      "hasProps": false,
+      "dataTypesCount": 5
+    },
+    {
+      "name": "integrations",
+      "filePath": "./magic/src/pages/business/integrations.tsx",
+      "hasProps": false,
+      "dataTypesCount": 6
+    },
+    {
+      "name": "loyalty",
+      "filePath": "./magic/src/pages/business/loyalty.tsx",
+      "hasProps": false,
+      "dataTypesCount": 5
+    },
+    {
+      "name": "promotions",
+      "filePath": "./magic/src/pages/business/promotions.tsx",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "[username]",
+      "filePath": "./magic/src/pages/profile/[username].tsx",
+      "hasProps": false,
+      "dataTypesCount": 11
+    },
+    {
+      "name": "edit",
+      "filePath": "./magic/src/pages/profile/edit.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "[businessId]",
+      "filePath": "./magic/src/pages/review/[businessId].tsx",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "ActiveSessions",
+      "filePath": "./magic/src/pages/security/ActiveSessions.tsx",
+      "hasProps": false,
+      "dataTypesCount": 1
+    },
+    {
+      "name": "api",
+      "filePath": "./magic/src/utils/core/api.ts",
+      "hasProps": false,
+      "dataTypesCount": 2
+    },
+    {
+      "name": "edit",
+      "filePath": "./magic/src/pages/business/profile/edit.tsx",
+      "hasProps": false,
+      "dataTypesCount": 7
+    }
+  ]
+}

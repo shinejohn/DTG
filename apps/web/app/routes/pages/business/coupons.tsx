@@ -2,8 +2,8 @@ import type { Route } from './+types/route';
 import React, { useEffect, useState, memo } from 'react';
 import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
+import { Header } from '../../../components/dtg/Header';
+import { Footer } from '../../../components/dtg/Footer';
 import { LayoutDashboardIcon, BuildingIcon, TagIcon, BarChart2Icon, UsersIcon, SettingsIcon, PlusIcon, FilterIcon, SearchIcon, CalendarIcon, ArrowRightIcon, CheckIcon, XIcon, EyeIcon, ShoppingBagIcon, PercentIcon, TrendingUpIcon, TrendingDownIcon, RefreshCwIcon, DollarSignIcon, UserPlusIcon, ChevronDownIcon, ChevronRightIcon, ChevronLeftIcon, QrCodeIcon, CopyIcon, DownloadIcon, EditIcon, TrashIcon, SlidersIcon, AlertTriangleIcon, ZapIcon, ClipboardIcon, PrinterIcon, CheckCircleIcon, ChevronUpIcon, ImageIcon, LayersIcon, CreditCardIcon, GiftIcon, InfoIcon } from 'lucide-react';
 // Types
 interface Coupon {

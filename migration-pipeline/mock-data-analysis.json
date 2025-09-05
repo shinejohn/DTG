@@ -1,0 +1,2538 @@
+{
+  "totalFiles": 130,
+  "filesWithMockData": 49,
+  "totalMockDeclarations": 9,
+  "totalMockLines": 701,
+  "totalHardcodedImages": 386,
+  "files": {
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/BrandPreview.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/BrandPreview.tsx",
+      "relativePath": "magic/src/components/BrandPreview.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 49,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 60,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 68,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 76,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 84,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 92,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 100,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 110,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 118,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 126,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 134,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 142,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 153,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 163,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 174,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 188,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 195,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 202,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 211,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 218,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 225,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 687,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/CommunityActivity.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/CommunityActivity.tsx",
+      "relativePath": "magic/src/components/CommunityActivity.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 11,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 16,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 32,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 41,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 46,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 57,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 62,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 115,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/CommunityHero.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/CommunityHero.tsx",
+      "relativePath": "magic/src/components/CommunityHero.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 30,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 55,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 62,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 69,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 76,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 83,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 90,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 97,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 104,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 111,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 147,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/FeaturedPlaces.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/FeaturedPlaces.tsx",
+      "relativePath": "magic/src/components/FeaturedPlaces.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 8,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 18,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 28,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 38,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 48,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 58,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 101,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/FloatingNavigation.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/FloatingNavigation.tsx",
+      "relativePath": "magic/src/components/FloatingNavigation.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 191,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 193,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/MetaTags.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/MetaTags.tsx",
+      "relativePath": "magic/src/components/MetaTags.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 17,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 40,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/NewsAndEvents.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/NewsAndEvents.tsx",
+      "relativePath": "magic/src/components/NewsAndEvents.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 9,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 18,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 36,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 92,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/SEOContent.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/SEOContent.tsx",
+      "relativePath": "magic/src/components/SEOContent.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 285,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 294,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 321,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/TrendingNow.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/TrendingNow.tsx",
+      "relativePath": "magic/src/components/TrendingNow.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 8,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 17,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 26,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 35,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 44,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 53,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 91,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/admin/BrandConfiguration.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/admin/BrandConfiguration.tsx",
+      "relativePath": "magic/src/components/admin/BrandConfiguration.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 14,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 30,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 37,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 53,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 60,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 76,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 83,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 99,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 106,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 122,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 131,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 147,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 385,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 393,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 401,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 409,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 417,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 425,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 433,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 441,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 449,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 457,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 856,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 1498,
+      "mockLines": 0,
+      "category": "admin-component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/admin/BusinessManagement.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/admin/BusinessManagement.tsx",
+      "relativePath": "magic/src/components/admin/BusinessManagement.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 34,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 49,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 64,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 79,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 94,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 109,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 493,
+      "mockLines": 0,
+      "category": "admin-component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/admin/ContentModeration.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/admin/ContentModeration.tsx",
+      "relativePath": "magic/src/components/admin/ContentModeration.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 22,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 32,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 37,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 43,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 53,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 62,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        }
+      ],
+      "totalLines": 412,
+      "mockLines": 0,
+      "category": "admin-component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/admin/UserManagement.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/admin/UserManagement.tsx",
+      "relativePath": "magic/src/components/admin/UserManagement.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 22,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 31,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 40,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 49,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 58,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 67,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 76,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        }
+      ],
+      "totalLines": 421,
+      "mockLines": 0,
+      "category": "admin-component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/wallet/WalletCouponExample.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/components/wallet/WalletCouponExample.tsx",
+      "relativePath": "magic/src/components/wallet/WalletCouponExample.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 21,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 56,
+      "mockLines": 0,
+      "category": "component"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/contexts/BrandContext.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/contexts/BrandContext.tsx",
+      "relativePath": "magic/src/contexts/BrandContext.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 91,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 108,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 118,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 135,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 145,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 162,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 172,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 189,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 199,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 216,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 226,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 243,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 253,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 270,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 280,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 297,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 307,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 324,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 334,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 351,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 388,
+      "mockLines": 0,
+      "category": "context"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Achievements.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Achievements.tsx",
+      "relativePath": "magic/src/pages/Achievements.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 93,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 153,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 189,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 215,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 242,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 279,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 322,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 339,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 348,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 365,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 376,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 393,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 1211,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Billing.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Billing.tsx",
+      "relativePath": "magic/src/pages/Billing.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 96,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        }
+      ],
+      "totalLines": 1790,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Challenges.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Challenges.tsx",
+      "relativePath": "magic/src/pages/Challenges.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 73,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 84,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 92,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 100,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 126,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 131,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 136,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 153,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 205,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 220,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 244,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 262,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 1027,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/DealDetail.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/DealDetail.tsx",
+      "relativePath": "magic/src/pages/DealDetail.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 68,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 80,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 89,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 511,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Deals.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Deals.tsx",
+      "relativePath": "magic/src/pages/Deals.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 60,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 80,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 92,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 110,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 122,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 140,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 152,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 169,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 181,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 200,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 212,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 230,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 242,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 261,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 273,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 291,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 1016,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/EventDetail.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/EventDetail.tsx",
+      "relativePath": "magic/src/pages/EventDetail.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 15,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 41,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 67,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 93,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 282,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Events.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Events.tsx",
+      "relativePath": "magic/src/pages/Events.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 14,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 34,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 54,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 70,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 86,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 106,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 126,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 142,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 345,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Explore.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Explore.tsx",
+      "relativePath": "magic/src/pages/Explore.tsx",
+      "mocks": [
+        {
+          "line": 53,
+          "endLine": 85,
+          "name": "mockResults",
+          "type": "array",
+          "size": 33
+        }
+      ],
+      "images": [
+        {
+          "line": 58,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 66,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 74,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 82,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 219,
+      "mockLines": 33,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Favorites.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Favorites.tsx",
+      "relativePath": "magic/src/pages/Favorites.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 34,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 46,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 58,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 70,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 82,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 94,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 536,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Home.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Home.tsx",
+      "relativePath": "magic/src/pages/Home.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 45,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 201,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Leaderboards.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Leaderboards.tsx",
+      "relativePath": "magic/src/pages/Leaderboards.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 62,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 76,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 90,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 104,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 118,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 132,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 146,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 160,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 174,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 188,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        }
+      ],
+      "totalLines": 989,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/News.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/News.tsx",
+      "relativePath": "magic/src/pages/News.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 12,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 20,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 28,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 36,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 44,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 52,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 60,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 68,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 201,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/NewsDetail.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/NewsDetail.tsx",
+      "relativePath": "magic/src/pages/NewsDetail.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 14,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 28,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 43,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 58,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 185,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Rewards.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Rewards.tsx",
+      "relativePath": "magic/src/pages/Rewards.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 115,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 127,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 139,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 192,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 200,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 208,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 216,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 224,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        }
+      ],
+      "totalLines": 1009,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Search.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Search.tsx",
+      "relativePath": "magic/src/pages/Search.tsx",
+      "mocks": [
+        {
+          "line": 206,
+          "endLine": 290,
+          "name": "mockResults",
+          "type": "array",
+          "size": 85
+        }
+      ],
+      "images": [
+        {
+          "line": 214,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 228,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 242,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 256,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 270,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 284,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 673,
+      "mockLines": 85,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Trending.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/Trending.tsx",
+      "relativePath": "magic/src/pages/Trending.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 13,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 23,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 33,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 43,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 53,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 63,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 73,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 83,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 240,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/admin/moderation.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/admin/moderation.tsx",
+      "relativePath": "magic/src/pages/admin/moderation.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 252,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 259,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 266,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 499,
+      "mockLines": 0,
+      "category": "admin-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/[slug].tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/[slug].tsx",
+      "relativePath": "magic/src/pages/business/[slug].tsx",
+      "mocks": [
+        {
+          "line": 5,
+          "endLine": 170,
+          "name": "mockBusiness",
+          "type": "object",
+          "size": 166
+        }
+      ],
+      "images": [
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 36,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 44,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 49,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 62,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 70,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 75,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        }
+      ],
+      "totalLines": 742,
+      "mockLines": 166,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/analytics.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/analytics.tsx",
+      "relativePath": "magic/src/pages/business/analytics.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 72,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 348,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 354,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 360,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 366,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 1214,
+      "mockLines": 0,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/coupons.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/coupons.tsx",
+      "relativePath": "magic/src/pages/business/coupons.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 110,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 151,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 191,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 231,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 271,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 280,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 291,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 302,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 313,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 324,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 335,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 1796,
+      "mockLines": 0,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/dashboard/LoyaltyMembers.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/dashboard/LoyaltyMembers.tsx",
+      "relativePath": "magic/src/pages/business/dashboard/LoyaltyMembers.tsx",
+      "mocks": [
+        {
+          "line": 5,
+          "endLine": 75,
+          "name": "mockLoyaltyMembers",
+          "type": "array",
+          "size": 71
+        },
+        {
+          "line": 77,
+          "endLine": 98,
+          "name": "mockProgramMetrics",
+          "type": "object",
+          "size": 22
+        }
+      ],
+      "images": [
+        {
+          "line": 8,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 22,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 36,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 50,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 64,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        }
+      ],
+      "totalLines": 530,
+      "mockLines": 93,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/dashboard.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/dashboard.tsx",
+      "relativePath": "magic/src/pages/business/dashboard.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 165,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 166,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 247,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 252,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 262,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 272,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 277,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 2678,
+      "mockLines": 0,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/events.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/events.tsx",
+      "relativePath": "magic/src/pages/business/events.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 85,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 94,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 112,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 128,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 144,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 161,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 176,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 189,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 198,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 212,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 240,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 268,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 2292,
+      "mockLines": 0,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/homepage.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/homepage.tsx",
+      "relativePath": "magic/src/pages/business/homepage.tsx",
+      "mocks": [
+        {
+          "line": 5,
+          "endLine": 187,
+          "name": "mockBusiness",
+          "type": "object",
+          "size": 183
+        }
+      ],
+      "images": [
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 27,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 36,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 44,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 49,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 62,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 70,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 146,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 151,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 156,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 165,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 172,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 177,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 181,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 185,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 921,
+      "mockLines": 183,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/integrations.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/integrations.tsx",
+      "relativePath": "magic/src/pages/business/integrations.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 77,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 137,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 146,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 155,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 164,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 174,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 183,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 193,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 202,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 1263,
+      "mockLines": 0,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/loyalty.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/loyalty.tsx",
+      "relativePath": "magic/src/pages/business/loyalty.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 149,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 162,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 175,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 188,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 200,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 215,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 2121,
+      "mockLines": 0,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/profile/edit.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/profile/edit.tsx",
+      "relativePath": "magic/src/pages/business/profile/edit.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 130,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 136,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 141,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 146,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 151,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 156,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 166,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 174,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 182,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 189,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 196,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 204,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 1542,
+      "mockLines": 0,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/promotions.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/business/promotions.tsx",
+      "relativePath": "magic/src/pages/business/promotions.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 41,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 59,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 76,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 91,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 108,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 125,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 140,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 954,
+      "mockLines": 0,
+      "category": "business-page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/profile/Rewards.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/profile/Rewards.tsx",
+      "relativePath": "magic/src/pages/profile/Rewards.tsx",
+      "mocks": [
+        {
+          "line": 7,
+          "endLine": 141,
+          "name": "mockUserRewards",
+          "type": "object",
+          "size": 135
+        }
+      ],
+      "images": [
+        {
+          "line": 14,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 26,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 39,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 50,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 62,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 74,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 85,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 96,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 108,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 117,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 126,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 135,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 611,
+      "mockLines": 135,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/profile/[username].tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/profile/[username].tsx",
+      "relativePath": "magic/src/pages/profile/[username].tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 136,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 137,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 202,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 207,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 212,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 217,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 223,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 226,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 233,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 243,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 246,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 252,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 259,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 266,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 273,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 283,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 290,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 297,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 304,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 311,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 421,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 430,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 439,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 455,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 460,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 466,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 471,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        }
+      ],
+      "totalLines": 1416,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/profile/edit.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/profile/edit.tsx",
+      "relativePath": "magic/src/pages/profile/edit.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 34,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        },
+        {
+          "line": 35,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 360,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/review/[businessId].tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/review/[businessId].tsx",
+      "relativePath": "magic/src/pages/review/[businessId].tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 39,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 398,
+          "url": "https://randomuser.me",
+          "source": "randomuser"
+        }
+      ],
+      "totalLines": 483,
+      "mockLines": 0,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/security/TwoFactorAuth.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/pages/security/TwoFactorAuth.tsx",
+      "relativePath": "magic/src/pages/security/TwoFactorAuth.tsx",
+      "mocks": [
+        {
+          "line": 19,
+          "endLine": 20,
+          "name": "mockQRCode",
+          "type": "string",
+          "size": 2
+        },
+        {
+          "line": 20,
+          "endLine": 23,
+          "name": "mockSecret",
+          "type": "string",
+          "size": 4
+        }
+      ],
+      "images": [],
+      "totalLines": 412,
+      "mockLines": 6,
+      "category": "page"
+    },
+    "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/services/BrandService.tsx": {
+      "path": "/Users/johnshine/Dropbox/Fibonacco/downtown-guide/Code/DTG/magic/src/services/BrandService.tsx",
+      "relativePath": "magic/src/services/BrandService.tsx",
+      "mocks": [],
+      "images": [
+        {
+          "line": 32,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        },
+        {
+          "line": 48,
+          "url": "https://images.unsplash.com",
+          "source": "unsplash"
+        }
+      ],
+      "totalLines": 144,
+      "mockLines": 0,
+      "category": "service"
+    }
+  },
+  "summary": {
+    "byCategory": {
+      "component": {
+        "files": 10,
+        "mocks": 0,
+        "images": 60
+      },
+      "admin-component": {
+        "files": 4,
+        "mocks": 0,
+        "images": 42
+      },
+      "context": {
+        "files": 1,
+        "mocks": 0,
+        "images": 20
+      },
+      "page": {
+        "files": 21,
+        "mocks": 5,
+        "images": 154
+      },
+      "admin-page": {
+        "files": 1,
+        "mocks": 0,
+        "images": 3
+      },
+      "business-page": {
+        "files": 11,
+        "mocks": 4,
+        "images": 105
+      },
+      "service": {
+        "files": 1,
+        "mocks": 0,
+        "images": 2
+      }
+    },
+    "byFileType": {}
+  }
+}

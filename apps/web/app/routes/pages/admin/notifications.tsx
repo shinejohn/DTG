@@ -2,9 +2,9 @@ import type { Route } from './+types/route';
 import React, { useState } from 'react';
 import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
-import { AdminSidebar } from '../../components/admin/Sidebar';
+import { Header } from '../../../components/dtg/Header';
+import { Footer } from '../../../components/dtg/Footer';
+import { AdminSidebar } from '../../../components/dtg/admin/Sidebar';
 import { BellIcon, CheckIcon, XIcon, EyeIcon, SettingsIcon, AlertTriangleIcon, UserIcon, BuildingIcon, FlagIcon, ShieldIcon, ServerIcon } from 'lucide-react';
 interface Notification {
   id: string;

@@ -1,12 +1,43 @@
 import type { Route } from './+types/route';
 import React, { useEffect, useState } from 'react';
-import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
+import { json, useLoaderData, useRouteError, isRouteErrorResponse, useNavigate, Link } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Layout } from '@/components/dtg/Layout';
 import { SearchIcon, MapPinIcon, FilterIcon, ListFilterIcon, GlobeIcon, ChevronRightIcon } from 'lucide-react';
-import { getAllCommunities, getCommunityById } from '../services/CommunityService';
+import { getAllCommunities, getCommunityById } from '../../components/dtg/services/CommunityService';
 export default function Explore() {
   const navigate = useNavigate();
+  
+  // Mock results data
+  const mockResults = [
+    {
+      id: '1',
+      name: 'Downtown Pizza',
+      category: 'Restaurant',
+      rating: 4.5,
+      address: '123 Main St',
+      image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500',
+      description: 'Best pizza in downtown with authentic Italian recipes.'
+    },
+    {
+      id: '2',
+      name: 'City Books',
+      category: 'Shopping',
+      rating: 4.8,
+      address: '456 Oak Ave',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500',
+      description: 'Independent bookstore with a great selection of local authors.'
+    },
+    {
+      id: '3',
+      name: 'Urban Fitness',
+      category: 'Services',
+      rating: 4.7,
+      address: '789 Park St',
+      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500',
+      description: 'Modern gym with personal training and group classes.'
+    }
+  ];
   const [searchQuery, setSearchQuery] = useState('');
   const [category, setCategory] = useState('all');
   const [citySearchQuery, setCitySearchQuery] = useState('');

@@ -1,0 +1,37 @@
+{
+  "file": "notifications.tsx",
+  "timestamp": "2025-09-05T09:52:16.380Z",
+  "status": "FAILED",
+  "stats": {
+    "totalIssues": 3,
+    "errors": 1,
+    "warnings": 1,
+    "autoFixable": 2
+  },
+  "issues": [
+    {
+      "type": "MISSING_REQUIRED_EXPORT",
+      "export": "default",
+      "severity": "error"
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 239,
+      "statement": "console.error(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 249,
+      "statement": "console.error(",
+      "autoFix": true
+    }
+  ],
+  "warnings": [
+    {
+      "type": "MISSING_RECOMMENDED_EXPORT",
+      "export": "meta",
+      "message": "Consider adding 'meta' export for better error handling and SEO"
+    }
+  ]
+}

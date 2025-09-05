@@ -1,8 +1,4 @@
-import type { Route } from './+types/route';
 import React, { useState } from 'react';
-import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
-import { getSupabaseServerClient } from '@kit/supabase/server-client';
-
 import { HomeIcon, SearchIcon, UserIcon, BuildingIcon, SettingsIcon, ShareIcon, ChevronUpIcon, PlusIcon, XIcon, CompassIcon, StarIcon, HeartIcon, GiftIcon, PercentIcon, CrownIcon, TrophyIcon, TargetIcon, UsersIcon, CreditCardIcon, ShieldIcon, MessageSquareIcon, CalendarIcon, BarChartIcon, TagIcon, LayoutDashboardIcon, PencilIcon, DollarSignIcon, LinkIcon, StoreIcon } from 'lucide-react';
 import { SocialShareModal } from './SocialShareModal';
 export default function FloatingNavigation() {
@@ -193,52 +189,4 @@ export default function FloatingNavigation() {
       </div>
       <SocialShareModal isOpen={isShareModalOpen} onClose={closeShareModal} title="Downtown Guide" description="Check out this awesome local guide app!" url={window.location.href} imageUrl="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" />
     </>;
-}
-export async function loader({ params, request }: Route.LoaderArgs) {
-  const { supabase, headers } = getSupabaseServerClient(request);
-  
-  try {
-    const { data: items, error } = await supabase
-      .from('businesses')
-      .select('*')
-      .limit(10);
-
-    if (error) {
-      console.error('Error fetching data:', error);
-    }
-
-    return json({
-      items: items || []
-    }, { headers });
-  } catch (error) {
-    console.error('Loader error:', error);
-    return json({
-      items: []
-    }, { headers });
-  }
-}
-export function ErrorBoundary() {
-  const error = useRouteError();
-  
-  if (isRouteErrorResponse(error)) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-red-600">{error.status}</h1>
-          <h2 className="text-xl font-semibold mt-2">{error.statusText}</h2>
-          <p className="text-gray-600 mt-4">{error.data}</p>
-        </div>
-      </div>
-    );
-  }
-  
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-red-600">Error</h1>
-        <p className="text-gray-600 mt-4">Something went wrong</p>
-        <p className="text-sm text-gray-500 mt-2">{error?.message}</p>
-      </div>
-    </div>
-  );
 }

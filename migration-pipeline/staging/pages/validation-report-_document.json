@@ -1,0 +1,32 @@
+{
+  "file": "_document.tsx",
+  "timestamp": "2025-09-05T09:52:15.904Z",
+  "status": "WARNING",
+  "stats": {
+    "totalIssues": 2,
+    "errors": 0,
+    "warnings": 1,
+    "autoFixable": 2
+  },
+  "issues": [
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 18,
+      "statement": "console.error(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 28,
+      "statement": "console.error(",
+      "autoFix": true
+    }
+  ],
+  "warnings": [
+    {
+      "type": "MISSING_RECOMMENDED_EXPORT",
+      "export": "meta",
+      "message": "Consider adding 'meta' export for better error handling and SEO"
+    }
+  ]
+}

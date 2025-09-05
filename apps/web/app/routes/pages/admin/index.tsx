@@ -2,15 +2,15 @@ import type { Route } from './+types/route';
 import React, { useState } from 'react';
 import { json, useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
-import { AdminSidebar } from '../../components/admin/Sidebar';
-import { UserManagement } from '../../components/admin/UserManagement';
-import { BusinessManagement } from '../../components/admin/BusinessManagement';
-import { ContentModeration } from '../../components/admin/ContentModeration';
-import { Analytics } from '../../components/admin/Analytics';
-import { SystemHealth } from '../../components/admin/SystemHealth';
-import { BrandConfiguration } from '../../components/admin/BrandConfiguration';
+import { Header } from '../../../components/dtg/Header';
+import { Footer } from '../../../components/dtg/Footer';
+import { AdminSidebar } from '../../../components/dtg/admin/Sidebar';
+import { UserManagement } from '../../../components/dtg/admin/UserManagement';
+import { BusinessManagement } from '../../../components/dtg/admin/BusinessManagement';
+import { ContentModeration } from '../../../components/dtg/admin/ContentModeration';
+import { Analytics } from '../../../components/dtg/admin/Analytics';
+import { SystemHealth } from '../../../components/dtg/admin/SystemHealth';
+import BrandConfiguration from '../../../components/dtg/admin/BrandConfiguration';
 export default function AdminDashboard() {
   const [activePanel, setActivePanel] = useState<'users' | 'businesses' | 'content' | 'analytics' | 'system' | 'brands'>('users');
   return <div className="min-h-screen flex flex-col bg-gray-50">

@@ -1,0 +1,52 @@
+{
+  "file": "useLocalStorage.ts",
+  "timestamp": "2025-09-05T09:52:13.792Z",
+  "status": "FAILED",
+  "stats": {
+    "totalIssues": 5,
+    "errors": 3,
+    "warnings": 2,
+    "autoFixable": 2
+  },
+  "issues": [
+    {
+      "type": "MISSING_REQUIRED_EXPORT",
+      "export": "loader",
+      "severity": "error"
+    },
+    {
+      "type": "MISSING_REQUIRED_EXPORT",
+      "export": "default",
+      "severity": "error"
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 16,
+      "statement": "console.warn(",
+      "autoFix": true
+    },
+    {
+      "type": "CONSOLE_STATEMENT",
+      "line": 34,
+      "statement": "console.warn(",
+      "autoFix": true
+    },
+    {
+      "type": "MISSING_LOADER",
+      "severity": "error",
+      "message": "React Router 7 route files must export a loader function"
+    }
+  ],
+  "warnings": [
+    {
+      "type": "MISSING_RECOMMENDED_EXPORT",
+      "export": "ErrorBoundary",
+      "message": "Consider adding 'ErrorBoundary' export for better error handling and SEO"
+    },
+    {
+      "type": "MISSING_RECOMMENDED_EXPORT",
+      "export": "meta",
+      "message": "Consider adding 'meta' export for better error handling and SEO"
+    }
+  ]
+}

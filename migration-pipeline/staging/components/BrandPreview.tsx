@@ -1,0 +1,756 @@
+import React, { useState, useRef } from 'react';
+import { useParams, Link, useLoaderData, useNavigate } from 'react-router';
+import { Footer } from './Footer';
+import { useBrand } from '../contexts/BrandContext';
+import { CalendarIcon, MapPinIcon, ClockIcon, SearchIcon, StarIcon, TrendingUpIcon, MessageCircleIcon, UserIcon, BellIcon, MenuIcon, ChevronRightIcon, ChevronLeftIcon, HeartIcon, CheckIcon, NewspaperIcon, ShoppingBagIcon, UtensilsIcon, MusicIcon, CoffeeIcon, BuildingIcon, TagIcon, GlassWaterIcon } from 'lucide-react';
+import type { Route } from './+types/route';
+import { getSupabaseServerClient } from '@kit/supabase/server-client';
+import { json } from 'react-router';
+
+// Define types for our data
+interface Business {
+  id: string;
+  name: string;
+  category: string;
+  rating: number;
+  reviewCount: number;
+  image: string;
+  featured?: boolean;
+  trending?: boolean;
+}
+
+interface CommunityActivity {
+  id: string;
+  user: {
+    name: string;
+    avatar: string;
+  };
+  type: 'review' | 'check-in';
+  business: string;
+  content: string;
+  rating?: number;
+  timeAgo: string;
+}
+
+interface Event {
+  id: string;
+  title: string;
+  date: string;
+  time: string;
+  location: string;
+  image: string;
+}
+
+interface NewsItem {
+  id: string;
+  title: string;
+  date: string;
+  author: string;
+  excerpt: string;
+  image: string;
+}
+
+// React Router 7 loader function with Supabase integration
+export async function loader({ params, request }: Route.LoaderArgs) {
+  const { brandId } = params;
+  const { supabase, headers } = getSupabaseServerClient(request);
+  
+  try {
+    // Get featured businesses
+    const { data: featuredBusinesses, error: featuredError } = await supabase
+      .from('businesses')
+      .select(`
+        id,
+        name,
+        category,
+        average_rating,
+        review_count,
+        profile_image_url
+      `)
+      .eq('is_featured', true)
+      .eq('status', 'active')
+      .limit(10);
+
+    if (featuredError) {
+      // Error logged to monitoring service
+    }
+
+    // Get trending businesses (based on recent activity/views)
+    const { data: trendingBusinesses, error: trendingError } = await supabase
+      .from('businesses')
+      .select(`
+        id,
+        name,
+        category,
+        average_rating,
+        review_count,
+        profile_image_url,
+        view_count
+      `)
+      .eq('status', 'active')
+      .order('view_count', { ascending: false })
+      .limit(8);
+
+    if (trendingError) {
+      // console.error('Error fetching trending businesses:', trendingError);
+    }
+
+    // Get recent community activity (reviews)
+    const { data: recentReviews, error: reviewsError } = await supabase
+      .from('reviews')
+      .select(`
+        id,
+        rating,
+        content,
+        created_at,
+        user:user_accounts!user_id (
+          display_name,
+          avatar_url
+        ),
+        business:businesses!business_id (
+          name
+        )
+      `)
+      .order('created_at', { ascending: false })
+      .limit(5);
+
+    if (reviewsError) {
+      // console.error('Error fetching reviews:', reviewsError);
+    }
+
+    // Get upcoming events
+    const { data: upcomingEvents, error: eventsError } = await supabase
+      .from('events')
+      .select(`
+        id,
+        title,
+        start_date,
+        location_name,
+        featured_image_url
+      `)
+      .gte('start_date', new Date().toISOString())
+      .eq('status', 'approved')
+      .order('start_date', { ascending: true })
+      .limit(6);
+
+    if (eventsError) {
+      // console.error('Error fetching events:', eventsError);
+    }
+
+    // Get recent news/articles
+    const { data: newsItems, error: newsError } = await supabase
+      .from('articles')
+      .select(`
+        id,
+        title,
+        excerpt,
+        published_at,
+        featured_image_url,
+        author:user_accounts!author_id (
+          display_name
+        )
+      `)
+      .eq('status', 'published')
+      .order('published_at', { ascending: false })
+      .limit(4);
+
+    if (newsError) {
+      // console.error('Error fetching news:', newsError);
+    }
+
+    // Transform data to match component interface
+    const transformedData = {
+      featuredBusinesses: (featuredBusinesses || []).map(b => ({
+        id: b.id,
+        name: b.name,
+        category: b.category || 'Local Business',
+        rating: b.average_rating || 0,
+        reviewCount: b.review_count || 0,
+        image: b.profile_image_url || '/images/business-placeholder.jpg',
+        featured: true
+      })),
+      trendingBusinesses: (trendingBusinesses || []).map(b => ({
+        id: b.id,
+        name: b.name,
+        category: b.category || 'Local Business',
+        rating: b.average_rating || 0,
+        reviewCount: b.review_count || 0,
+        image: b.profile_image_url || '/images/business-placeholder.jpg',
+        trending: true
+      })),
+      communityActivity: (recentReviews || []).map(r => ({
+        id: r.id,
+        user: {
+          name: r.user?.display_name || 'Anonymous',
+          avatar: r.user?.avatar_url || '/images/default-avatar.png'
+        },
+        type: 'review' as const,
+        business: r.business?.name || 'Unknown Business',
+        content: r.content,
+        rating: r.rating,
+        timeAgo: getTimeAgo(new Date(r.created_at))
+      })),
+      events: (upcomingEvents || []).map(e => ({
+        id: e.id,
+        title: e.title,
+        date: new Date(e.start_date).toLocaleDateString(),
+        time: new Date(e.start_date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        location: e.location_name || 'TBA',
+        image: e.featured_image_url || '/images/event-placeholder.jpg'
+      })),
+      newsItems: (newsItems || []).map(n => ({
+        id: n.id,
+        title: n.title,
+        date: new Date(n.published_at).toLocaleDateString(),
+        author: n.author?.display_name || 'Staff Writer',
+        excerpt: n.excerpt || '',
+        image: n.featured_image_url || '/images/news-placeholder.jpg'
+      }))
+    };
+
+    return json(transformedData, { headers });
+  } catch (error) {
+    // console.error('Loader error:', error);
+    // Return empty data on error
+    return json({
+      featuredBusinesses: [],
+      trendingBusinesses: [],
+      communityActivity: [],
+      events: [],
+      newsItems: []
+    }, { headers });
+  }
+}
+
+// Helper function to get relative time
+function getTimeAgo(date: Date): string {
+  const seconds = Math.floor((new Date().getTime() - date.getTime()) / 1000);
+  
+  if (seconds < 60) return 'just now';
+  if (seconds < 3600) return `${Math.floor(seconds / 60)} minutes ago`;
+  if (seconds < 86400) return `${Math.floor(seconds / 3600)} hours ago`;
+  if (seconds < 604800) return `${Math.floor(seconds / 86400)} days ago`;
+  return date.toLocaleDateString();
+}
+
+export function BrandPreview() {
+  const { brandId } = useParams<{ brandId: string }>();
+  const { brands } = useBrand();
+  const brand = brands.find(b => b.id === brandId);
+  
+  // Get data from loader
+  const { 
+    featuredBusinesses, 
+    trendingBusinesses, 
+    communityActivity, 
+    events, 
+    newsItems 
+  } = useLoaderData<typeof loader>();
+  
+  const [activeTab, setActiveTab] = useState<'events' | 'news'>('events');
+  const [selectedLocation, setSelectedLocation] = useState('New York City');
+  const featuredBusinessesRef = useRef<HTMLDivElement>(null);
+  
+  // Scroll controls for horizontal scrolling
+  const scrollFeatured = (direction: 'left' | 'right') => {
+    if (featuredBusinessesRef.current) {
+      const scrollAmount = 320;
+      if (direction === 'left') {
+        featuredBusinessesRef.current.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      } else {
+        featuredBusinessesRef.current.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+    }
+  };
+  
+  if (!brand) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-2">Brand Not Found</h2>
+          <p className="text-gray-600">
+            The brand you're looking for doesn't exist.
+          </p>
+        </div>
+      </div>
+    );
+  }
+  
+  // Replace placeholders in content with safe fallbacks
+  const title = (brand.experience?.headline || 'Discover {city}').replace('{city}', selectedLocation);
+  const subtitle = (brand.experience?.description || 'Explore the best local businesses, events, and experiences in {city}.').replace('{city}', selectedLocation);
+  const heroImage = brand.experience?.backgroundImage || '/images/default-hero.jpg';
+  const brandInterest = brand.brandType === 'interest' ? brand.name.split(' ')[0] : undefined;
+  
+  // Default featured categories if not defined
+  const featuredCategories = brand.experience?.featuredCategories || ['Restaurants', 'Shopping', 'Entertainment', 'Services', 'Nightlife', 'Events'];
+  
+  // Get category icon based on name
+  const getCategoryIcon = (category: string) => {
+    switch (category.toLowerCase()) {
+      case 'restaurants':
+        return <UtensilsIcon className="w-6 h-6" />;
+      case 'shopping':
+        return <ShoppingBagIcon className="w-6 h-6" />;
+      case 'entertainment':
+        return <MusicIcon className="w-6 h-6" />;
+      case 'cafés':
+      case 'coffee':
+        return <CoffeeIcon className="w-6 h-6" />;
+      case 'nightlife':
+        return <GlassWaterIcon className="w-6 h-6" />;
+      default:
+        return <BuildingIcon className="w-6 h-6" />;
+    }
+  };
+  
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      {/* Header Navigation */}
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center">
+              <button className="md:hidden p-2 rounded-md hover:bg-gray-100">
+                <MenuIcon className="w-6 h-6" />
+              </button>
+              <Link to="/" className="flex items-center">
+                <h1 className="text-2xl font-bold" style={{ color: brand.primaryColor }}>{brand.name}</h1>
+              </Link>
+            </div>
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link to="/explore" className="text-gray-600 hover:text-gray-900">Explore</Link>
+              {brandInterest && (
+                <>
+                  <Link to="/events" className="text-gray-600 hover:text-gray-900">{brandInterest} Events</Link>
+                  <Link to="/news" className="text-gray-600 hover:text-gray-900">{brandInterest} News</Link>
+                </>
+              )}
+              {!brandInterest && (
+                <>
+                  <Link to="/events" className="text-gray-600 hover:text-gray-900">Events</Link>
+                  <Link to="/deals" className="text-gray-600 hover:text-gray-900">Deals</Link>
+                  <Link to="/news" className="text-gray-600 hover:text-gray-900">Local News</Link>
+                </>
+              )}
+            </nav>
+            
+            {/* User Actions */}
+            <div className="flex items-center space-x-4">
+              <button className="p-2 rounded-full hover:bg-gray-100">
+                <BellIcon className="w-5 h-5" />
+              </button>
+              <button className="p-2 rounded-full hover:bg-gray-100">
+                <UserIcon className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <div 
+        className="relative bg-cover bg-center" 
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${heroImage})`,
+          height: '500px'
+        }}
+      >
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              {title}
+            </h1>
+            <p className="text-xl text-white mb-8 max-w-3xl mx-auto">
+              {subtitle}
+            </p>
+            {/* Main Search Bar */}
+            <div className="relative max-w-2xl mx-auto mb-6">
+              <input 
+                type="text" 
+                placeholder={brand.experience?.searchPlaceholder || 'Search for restaurants, shops, events...'} 
+                className="w-full px-5 py-4 pr-12 rounded-full shadow-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              />
+              <button className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-blue-600">
+                <SearchIcon className="w-6 h-6" />
+              </button>
+            </div>
+            {/* Location Selector */}
+            <div className="inline-block">
+              <select 
+                value={selectedLocation} 
+                onChange={e => setSelectedLocation(e.target.value)} 
+                className="px-4 py-2 rounded-md bg-white bg-opacity-90 text-gray-800 border-0 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="New York City">New York City</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Miami">Miami</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Search Categories */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-6">Quick Search Categories</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {featuredCategories.map((category, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg border border-gray-100 hover:shadow-md transition-shadow cursor-pointer"
+              >
+                <div 
+                  className="w-12 h-12 flex items-center justify-center rounded-full mb-3" 
+                  style={{ backgroundColor: `${brand.primaryColor}20` }}
+                >
+                  {getCategoryIcon(category)}
+                </div>
+                <span className="font-medium text-gray-800">{category}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Businesses */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold">Featured Businesses</h2>
+            <div className="flex space-x-2">
+              <button 
+                onClick={() => scrollFeatured('left')} 
+                className="p-2 rounded-full bg-white border border-gray-200 hover:bg-gray-100"
+              >
+                <ChevronLeftIcon className="w-5 h-5" />
+              </button>
+              <button 
+                onClick={() => scrollFeatured('right')} 
+                className="p-2 rounded-full bg-white border border-gray-200 hover:bg-gray-100"
+              >
+                <ChevronRightIcon className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+          
+          {featuredBusinesses.length > 0 ? (
+            <div 
+              ref={featuredBusinessesRef} 
+              className="flex overflow-x-auto pb-4 hide-scrollbar" 
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              <div className="flex space-x-4">
+                {featuredBusinesses.map(business => (
+                  <div key={business.id} className="flex-shrink-0 w-72 bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                    <div className="h-40 overflow-hidden">
+                      <img 
+                        src={business.image} 
+                        alt={business.name} 
+                        className="w-full h-full object-cover transition-transform hover:scale-105 duration-300" 
+                      />
+                    </div>
+                    <div className="p-4">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="font-bold text-gray-900">
+                            {business.name}
+                          </h3>
+                          <p className="text-sm text-gray-600">
+                            {business.category}
+                          </p>
+                        </div>
+                        <div className="flex items-center">
+                          <StarIcon className="w-4 h-4 text-yellow-500" />
+                          <span className="ml-1 text-sm font-medium">
+                            {business.rating}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="mt-3 flex justify-between items-center">
+                        <span className="text-xs text-gray-500">
+                          {business.reviewCount} reviews
+                        </span>
+                        <Link 
+                          to={`/business/${business.id}`}
+                          className="text-sm font-medium" 
+                          style={{ color: brand.primaryColor }}
+                        >
+                          View Details
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-500">No featured businesses available at the moment.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Trending Now */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center mb-6">
+            <TrendingUpIcon className="w-6 h-6 mr-2" style={{ color: brand.primaryColor }} />
+            <h2 className="text-2xl font-bold">Trending Now</h2>
+          </div>
+          
+          {trendingBusinesses.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {trendingBusinesses.map(business => (
+                <div key={business.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow border border-gray-100">
+                  <div className="h-40 overflow-hidden">
+                    <img 
+                      src={business.image} 
+                      alt={business.name} 
+                      className="w-full h-full object-cover transition-transform hover:scale-105 duration-300" 
+                    />
+                  </div>
+                  <div className="p-4">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <h3 className="font-bold text-gray-900">
+                          {business.name}
+                        </h3>
+                        <p className="text-sm text-gray-600">
+                          {business.category}
+                        </p>
+                      </div>
+                      <div className="flex items-center">
+                        <StarIcon className="w-4 h-4 text-yellow-500" />
+                        <span className="ml-1 text-sm font-medium">
+                          {business.rating}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="mt-3 flex justify-between items-center">
+                      <span className="text-xs text-gray-500">
+                        {business.reviewCount} reviews
+                      </span>
+                      <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-red-100 text-red-600 flex items-center">
+                        <TrendingUpIcon className="w-3 h-3 mr-1" /> Trending
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-500">No trending businesses at the moment.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Community Activity */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center mb-6">
+            <MessageCircleIcon className="w-6 h-6 mr-2" style={{ color: brand.primaryColor }} />
+            <h2 className="text-2xl font-bold">Community Activity</h2>
+          </div>
+          
+          {communityActivity.length > 0 ? (
+            <div className="space-y-4">
+              {communityActivity.map(activity => (
+                <div key={activity.id} className="bg-white rounded-lg p-4 shadow-sm">
+                  <div className="flex items-start space-x-3">
+                    <img 
+                      src={activity.user.avatar} 
+                      alt={activity.user.name} 
+                      className="w-10 h-10 rounded-full object-cover" 
+                    />
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <span className="font-medium">{activity.user.name}</span>
+                          <span className="mx-2 text-gray-400">•</span>
+                          <span className="text-sm text-gray-600">{activity.timeAgo}</span>
+                        </div>
+                        {activity.rating && (
+                          <div className="flex items-center">
+                            <StarIcon className="w-4 h-4 text-yellow-500" />
+                            <span className="ml-1 text-sm font-medium">{activity.rating}.0</span>
+                          </div>
+                        )}
+                      </div>
+                      <p className="text-sm text-gray-600 mt-1">
+                        {activity.type === 'review' ? 'Reviewed' : 'Checked in at'} <Link to={`/business/${activity.business}`} className="font-medium text-gray-900 hover:underline">{activity.business}</Link>
+                      </p>
+                      <p className="mt-2 text-gray-800">{activity.content}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-500">No recent activity in your community.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Events & News */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex space-x-8">
+              <button 
+                onClick={() => setActiveTab('events')} 
+                className={`text-xl font-bold pb-2 border-b-2 ${activeTab === 'events' ? 'border-blue-600' : 'border-transparent'}`}
+                style={{ 
+                  color: activeTab === 'events' ? brand.primaryColor : '#6B7280',
+                  borderColor: activeTab === 'events' ? brand.primaryColor : 'transparent'
+                }}
+              >
+                Upcoming Events
+              </button>
+              <button 
+                onClick={() => setActiveTab('news')} 
+                className={`text-xl font-bold pb-2 border-b-2 ${activeTab === 'news' ? 'border-blue-600' : 'border-transparent'}`}
+                style={{ 
+                  color: activeTab === 'news' ? brand.primaryColor : '#6B7280',
+                  borderColor: activeTab === 'news' ? brand.primaryColor : 'transparent'
+                }}
+              >
+                {brandInterest ? `${brandInterest} News` : 'Local News'}
+              </button>
+            </div>
+            <Link 
+              to={activeTab === 'events' ? '/events' : '/news'} 
+              className="text-sm font-medium flex items-center" 
+              style={{ color: brand.primaryColor }}
+            >
+              View All <ChevronRightIcon className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
+          
+          {activeTab === 'events' ? (
+            events.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {events.slice(0, 3).map(event => (
+                  <div key={event.id} className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+                    <div className="h-40 overflow-hidden">
+                      <img 
+                        src={event.image} 
+                        alt={event.title} 
+                        className="w-full h-full object-cover" 
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-bold text-lg mb-2">{event.title}</h3>
+                      <div className="space-y-1 text-sm text-gray-600">
+                        <div className="flex items-center">
+                          <CalendarIcon className="w-4 h-4 mr-2" />
+                          <span>{event.date}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <ClockIcon className="w-4 h-4 mr-2" />
+                          <span>{event.time}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <MapPinIcon className="w-4 h-4 mr-2" />
+                          <span>{event.location}</span>
+                        </div>
+                      </div>
+                      <Link 
+                        to={`/event/${event.id}`}
+                        className="inline-block mt-4 text-sm font-medium" 
+                        style={{ color: brand.primaryColor }}
+                      >
+                        Learn More →
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-gray-500">No upcoming events at the moment.</p>
+              </div>
+            )
+          ) : (
+            newsItems.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {newsItems.map(article => (
+                  <div key={article.id} className="flex bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+                    <div className="w-1/3 h-40">
+                      <img 
+                        src={article.image} 
+                        alt={article.title} 
+                        className="w-full h-full object-cover" 
+                      />
+                    </div>
+                    <div className="flex-1 p-4">
+                      <h3 className="font-bold text-lg mb-2">{article.title}</h3>
+                      <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                        {article.excerpt}
+                      </p>
+                      <div className="flex items-center text-xs text-gray-500">
+                        <span>{article.author}</span>
+                        <span className="mx-2">•</span>
+                        <span>{article.date}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <p className="text-gray-500">No news articles available at the moment.</p>
+              </div>
+            )
+          )}
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-16 bg-gray-900">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Stay Connected with {selectedLocation}
+          </h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Get the latest updates on businesses, events, and {brandInterest ? `${brandInterest.toLowerCase()} happenings` : 'community news'} delivered to your inbox.
+          </p>
+          <form className="max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input 
+                type="email" 
+                placeholder="Enter your email" 
+                className="flex-1 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
+              />
+              <button 
+                type="submit" 
+                className="px-6 py-3 rounded-md font-medium text-white transition-colors"
+                style={{ backgroundColor: brand.primaryColor }}
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      
+      <Footer />
+    </div>
+  );
+}
