@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef, useState } from 'react';
 import { Link } from 'react-router';
 import { BellIcon, SearchIcon, UserIcon, MenuIcon, XIcon } from 'lucide-react';
 
@@ -14,7 +14,7 @@ interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const Header = forwardRef<HTMLDivElement, HeaderProps>(
-  function HeaderComponent(
+  function DTGHeaderComponent(
     { 
       className, 
       siteName = 'Downtown Guide',
@@ -28,6 +28,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
   ) {
     const { currentBrand } = useBrand();
     const primaryColor = currentBrand?.primaryColor || '#3B82F6';
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
       <div
@@ -94,8 +95,68 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
             <Link to="/profile" className="text-white p-1 rounded-full hover:bg-white hover:bg-opacity-20">
               <UserIcon className="w-5 h-5" />
             </Link>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button 
+                className="text-white p-1 rounded-full hover:bg-white hover:bg-opacity-20" 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                {mobileMenuOpen ? <XIcon className="w-5 h-5" /> : <MenuIcon className="w-5 h-5" />}
+              </button>
+            </div>
           </div>
         </nav>
+
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-b shadow-sm">
+            <div className="px-4 py-3 space-y-2">
+              <Link 
+                to="/explore" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Food
+              </Link>
+              <Link 
+                to="/events" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Fun
+              </Link>
+              <Link 
+                to="/trending" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Nightlife
+              </Link>
+              <Link 
+                to="/register" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Sign-up
+              </Link>
+              <Link 
+                to="/rewards" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Awards
+              </Link>
+              <Link 
+                to="/deals" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Coupons
+              </Link>
+            </div>
+          </div>
+        )}
 
         {/* Hero Section */}
         {showHero && (
@@ -121,5 +182,3 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
     );
   },
 );
-
-export default Header;
