@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-export default function Footer() {
+export function Footer() {
   return <footer className="bg-gray-800 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

@@ -4,7 +4,7 @@ interface SEOContentProps {
   communityDescription: string;
   brandInterest: string;
 }
-export default function SEOContent({
+export function SEOContent({
   communityName,
   communityDescription,
   brandInterest

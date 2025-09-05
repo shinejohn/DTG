@@ -64,7 +64,7 @@ const featuredBusinesses = [{
   distance: '0.8 mi',
   priceLevel: '$$'
 }];
-export default function FeaturedPlaces() {
+export function FeaturedPlaces() {
   return <div className="flex overflow-x-auto pb-4 space-x-4 scrollbar-hide">
       {featuredBusinesses.map(business => <Link key={business.id} to={`/business/${business.id}`} className="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="h-36 overflow-hidden">

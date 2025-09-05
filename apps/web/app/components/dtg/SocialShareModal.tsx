@@ -8,7 +8,7 @@ interface SocialShareModalProps {
   url: string;
   imageUrl?: string;
 }
-export default function SocialShareModal({
+export function SocialShareModal({
   isOpen,
   onClose,
   title,

@@ -64,7 +64,7 @@ const communityActivity = [{
   },
   timestamp: '1 day ago'
 }];
-export default function CommunityActivity() {
+export function CommunityActivity() {
   return <div className="space-y-4">
       {communityActivity.map(activity => <div key={activity.id} className="bg-white rounded-lg shadow-md p-4">
           <div className="flex items-center mb-3">

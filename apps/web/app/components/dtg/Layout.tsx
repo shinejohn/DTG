@@ -13,7 +13,7 @@ interface LayoutProps {
   hideFooter?: boolean;
 }
 
-export default function Layout({
+export function Layout({
   children,
   showHero = false,
   title,

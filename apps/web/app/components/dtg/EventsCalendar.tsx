@@ -26,7 +26,7 @@ interface EventsCalendarProps {
   events: Event[];
   onFilterChange: (filters: any) => void;
 }
-export default function EventsCalendar({
+export function EventsCalendar({
   events,
   onFilterChange
 }: EventsCalendarProps) {

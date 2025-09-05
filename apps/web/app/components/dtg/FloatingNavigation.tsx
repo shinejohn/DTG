@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { HomeIcon, SearchIcon, UserIcon, BuildingIcon, SettingsIcon, ShareIcon, ChevronUpIcon, PlusIcon, XIcon, CompassIcon, StarIcon, HeartIcon, GiftIcon, PercentIcon, CrownIcon, TrophyIcon, TargetIcon, UsersIcon, CreditCardIcon, ShieldIcon, MessageSquareIcon, CalendarIcon, BarChartIcon, TagIcon, LayoutDashboardIcon, PencilIcon, DollarSignIcon, LinkIcon, StoreIcon } from 'lucide-react';
 import { SocialShareModal } from './SocialShareModal';
-export default function FloatingNavigation() {
+export function FloatingNavigation() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState('main');

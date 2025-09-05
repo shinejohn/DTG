@@ -39,7 +39,7 @@ const newsAndEvents = [{
   location: 'Arts District',
   url: '/events/e2'
 }];
-export default function NewsAndEvents() {
+export function NewsAndEvents() {
   return <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {newsAndEvents.map(item => <Link key={item.id} to={item.url} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
           <div className="h-48 overflow-hidden">
