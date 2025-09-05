@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import React, { useEffect, useState } from 'react';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import Header from '@/components/dtg/Header';
+import { Header } from '@/components/dtg/Header';
 import Footer from '@/components/dtg/Footer';
 import { TrophyIcon, StarIcon, TicketIcon, ChevronRightIcon, UserIcon, UsersIcon, BadgeCheckIcon, GiftIcon, HeartIcon, ClockIcon, CheckCircleIcon, ArrowUpIcon, ArrowRightIcon, MapPinIcon, ZapIcon, CalendarIcon, CrownIcon, AwardIcon, BarChart2Icon, PercentIcon, TagIcon } from 'lucide-react';
 // Types

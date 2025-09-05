@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import React, { useEffect, useState, useRef } from 'react';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import Header from '@/components/dtg/Header';
+import { Header } from '@/components/dtg/Header';
 import Footer from '@/components/dtg/Footer';
 import { SearchIcon, FilterIcon, MapPinIcon, TagIcon, CalendarIcon, StarIcon, HeartIcon, PercentIcon, ShoppingBagIcon, CoffeeIcon, UtensilsIcon, MusicIcon, ShoppingCartIcon, HomeIcon, GlassWaterIcon, HeartPulseIcon, ChevronDownIcon, XIcon, ClockIcon, CheckIcon, ArrowUpIcon, ArrowDownIcon, ListIcon, GridIcon, MapIcon, BuildingIcon, ZapIcon, InfoIcon, ExternalLinkIcon, ChevronRightIcon, BookmarkIcon, ShareIcon, GiftIcon } from 'lucide-react';
 // Types

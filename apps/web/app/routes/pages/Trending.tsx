@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import React, { useEffect, useState } from 'react';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import Header from '@/components/dtg/Header';
+import { Header } from '@/components/dtg/Header';
 import Footer from '@/components/dtg/Footer';
 import { TrendingUpIcon, StarIcon, MapPinIcon, UsersIcon, FilterIcon, SearchIcon, ChevronDownIcon } from 'lucide-react';
 const allTrendingBusinesses = [{
