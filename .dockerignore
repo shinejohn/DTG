@@ -1,0 +1,45 @@
+# Dependencies
+node_modules
+**/node_modules
+
+# Build outputs
+build
+dist
+.turbo
+**/.turbo
+
+# Git
+.git
+.gitignore
+
+# Env files (copy manually in Dockerfile)
+.env
+.env.*
+
+# Development files
+.vscode
+.idea
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Test files
+coverage
+.nyc_output
+
+# Documentation
+*.md
+docs
+
+# Temporary files
+tmp
+temp
+
+# Supabase local files
+supabase/.temp
+supabase/.branches
+
+# Magic patterns source (not needed for production)
+magic/
