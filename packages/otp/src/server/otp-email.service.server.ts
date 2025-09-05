@@ -9,14 +9,14 @@ const EMAIL_SENDER = z
     required_error: 'EMAIL_SENDER is required',
   })
   .min(1)
-  .parse(process.env.EMAIL_SENDER);
+  .parse(process.env.EMAIL_SENDER || 'noreply@dtg.com');
 
 const PRODUCT_NAME = z
   .string({
     required_error: 'VITE_PRODUCT_NAME is required',
   })
   .min(1)
-  .parse(import.meta.env.VITE_PRODUCT_NAME);
+  .parse(import.meta.env.VITE_PRODUCT_NAME || 'DTG');
 
 /**
  * @name createOtpEmailService

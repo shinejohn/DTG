@@ -12,7 +12,7 @@ const invitePath = '/join';
 
 const siteURL = import.meta.env.VITE_SITE_URL;
 const productName = import.meta.env.VITE_PRODUCT_NAME ?? '';
-const emailSender = process.env.EMAIL_SENDER;
+const emailSender = process.env.EMAIL_SENDER || 'noreply@dtg.com';
 
 const vars = z
   .object({

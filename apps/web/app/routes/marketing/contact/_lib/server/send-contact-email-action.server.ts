@@ -12,7 +12,7 @@ const contactEmail = z
     required_error:
       'Contact email is required. Please use the environment variable CONTACT_EMAIL.',
   })
-  .parse(process.env.CONTACT_EMAIL);
+  .parse(process.env.CONTACT_EMAIL || 'contact@dtg.com');
 
 const emailFrom = z
   .string({
@@ -20,7 +20,7 @@ const emailFrom = z
     required_error:
       'Sender email is required. Please use the environment variable EMAIL_SENDER.',
   })
-  .parse(process.env.EMAIL_SENDER);
+  .parse(process.env.EMAIL_SENDER || 'noreply@dtg.com');
 
 export const sendContactEmailAction = async (
   data: z.infer<typeof ContactEmailSchema>,

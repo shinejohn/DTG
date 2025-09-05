@@ -80,7 +80,7 @@ function getEmailSettingsFromEnvironment() {
         .min(1),
     })
     .parse({
-      fromEmail: process.env.EMAIL_SENDER,
-      productName: import.meta.env.VITE_PRODUCT_NAME,
+      fromEmail: process.env.EMAIL_SENDER || 'noreply@dtg.com',
+      productName: import.meta.env.VITE_PRODUCT_NAME || 'DTG',
     });
 }

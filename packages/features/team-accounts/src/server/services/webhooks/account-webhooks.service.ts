@@ -70,8 +70,8 @@ class AccountWebhooksService {
   }
 
   private getEmailSettings() {
-    const productName = import.meta.env.VITE_PRODUCT_NAME;
-    const fromEmail = process.env.EMAIL_SENDER;
+    const productName = import.meta.env.VITE_PRODUCT_NAME || 'DTG';
+    const fromEmail = process.env.EMAIL_SENDER || 'noreply@dtg.com';
 
     return z
       .object({
