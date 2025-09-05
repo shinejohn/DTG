@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router';
 import { Header } from '@/components/dtg/Header';
-import Footer from '@/components/dtg/Footer';
+import { Footer } from '@/components/dtg/Footer';
 import { CalendarIcon, ArrowLeftIcon, ClockIcon, MapPinIcon, UsersIcon, TagIcon, ShareIcon, HeartIcon, CheckIcon, ExternalLinkIcon } from 'lucide-react';
 const allEventItems = [{
   id: 101,

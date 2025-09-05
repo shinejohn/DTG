@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import React, { useEffect, useState } from 'react';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Header } from '@/components/dtg/Header';
-import Footer from '@/components/dtg/Footer';
+import { Footer } from '@/components/dtg/Footer';
 import { LockIcon, EyeIcon, EyeOffIcon, CheckIcon, XIcon } from 'lucide-react';
 export default function ResetPassword() {
   const {

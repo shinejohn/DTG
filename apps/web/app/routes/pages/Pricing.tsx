@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import React, { useState } from 'react';
 import { Header } from '@/components/dtg/Header';
-import Footer from '@/components/dtg/Footer';
+import { Footer } from '@/components/dtg/Footer';
 import {
   CheckIcon,
   XIcon,

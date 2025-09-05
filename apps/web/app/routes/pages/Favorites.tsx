@@ -2,7 +2,7 @@ import React, { useEffect, useState, Component } from 'react';
 import { useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Header } from '@/components/dtg/Header';
-import Footer from '@/components/dtg/Footer';
+import { Footer } from '@/components/dtg/Footer';
 import { SearchIcon, FilterIcon, HeartIcon, XIcon, PlusIcon, FolderIcon, ListIcon, GridIcon, MoreHorizontalIcon, EditIcon, TrashIcon } from 'lucide-react';
 // Types
 interface Business {

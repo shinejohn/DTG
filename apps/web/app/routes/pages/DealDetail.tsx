@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import React, { useEffect, useState, createElement } from 'react';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Header } from '@/components/dtg/Header';
-import Footer from '@/components/dtg/Footer';
+import { Footer } from '@/components/dtg/Footer';
 import { SocialShareModal } from '@/components/dtg/SocialShareModal';
 import { ArrowLeftIcon, MapPinIcon, StarIcon, ClockIcon, CalendarIcon, TagIcon, PercentIcon, ShoppingCartIcon, GiftIcon, HeartIcon, ShareIcon, ExternalLinkIcon, CheckIcon, PhoneIcon, BuildingIcon, InfoIcon, ChevronRightIcon, MapIcon, UsersIcon, CopyIcon, XIcon } from 'lucide-react';
 // Types

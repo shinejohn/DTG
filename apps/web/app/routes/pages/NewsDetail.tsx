@@ -1,7 +1,7 @@
 import React from 'react';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Header } from '@/components/dtg/Header';
-import Footer from '@/components/dtg/Footer';
+import { Footer } from '@/components/dtg/Footer';
 import { NewspaperIcon, ArrowLeftIcon, CalendarIcon, ShareIcon, BookmarkIcon } from 'lucide-react';
 const allNewsItems = [{
   id: 1,

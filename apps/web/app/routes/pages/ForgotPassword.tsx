@@ -2,7 +2,7 @@ import { Link } from "react-router";
 import React, { useState } from 'react';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Header } from '@/components/dtg/Header';
-import Footer from '@/components/dtg/Footer';
+import { Footer } from '@/components/dtg/Footer';
 import { MailIcon, CheckIcon, ArrowLeftIcon } from 'lucide-react';
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
