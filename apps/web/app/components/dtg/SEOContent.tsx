@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { Helmet } from 'react-helmet';
 interface SEOContentProps {
   communityName: string;
   communityDescription: string;
@@ -266,44 +265,6 @@ export default function SEOContent({
       </>;
   };
   return <>
-      <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{`${brandInterest} in ${communityName} | Global Explorer`}</title>
-        <meta name="description" content={metaDescription} />
-        <meta name="keywords" content={`${brandInterest.toLowerCase()}, ${communityName}, local, guide, recommendations, reviews, best ${brandInterest.toLowerCase()} in ${communityName}, explore ${communityName}, ${communityName} ${brandInterest.toLowerCase()}`} />
-        {/* Language and Locale */}
-        <meta name="language" content="English" />
-        <meta property="og:locale" content="en_US" />
-        {/* Canonical URL */}
-        <link rel="canonical" href={`https://globalexplorer.com/${communityName.toLowerCase().replace(/\s+/g, '-')}/${brandInterest.toLowerCase().replace(/\s+/g, '-')}`} />
-        {/* Open Graph Meta Tags */}
-        <meta property="og:site_name" content="Global Explorer" />
-        <meta property="og:title" content={`${brandInterest} in ${communityName} | Global Explorer`} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://globalexplorer.com/${communityName.toLowerCase().replace(/\s+/g, '-')}/${brandInterest.toLowerCase().replace(/\s+/g, '-')}`} />
-        <meta property="og:image" content="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content={`${brandInterest} in ${communityName}`} />
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@globalexplorer" />
-        <meta name="twitter:title" content={`${brandInterest} in ${communityName} | Global Explorer`} />
-        <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" />
-        <meta name="twitter:image:alt" content={`${brandInterest} in ${communityName}`} />
-        {/* Geo Tags */}
-        <meta name="geo.region" content="US" />
-        <meta name="geo.placename" content={communityName} />
-        {/* Mobile Specific */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <meta name="theme-color" content="#3B82F6" />
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
       {/* Visually distinct SEO content section with brand-specific information */}
       <section className="bg-gray-50 py-12 border-t border-gray-200">
         <div className="container mx-auto px-4">
