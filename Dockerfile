@@ -24,7 +24,9 @@ COPY tooling/ ./tooling/
 RUN pnpm install --frozen-lockfile
 
 # Copy application source
-COPY . .
+COPY apps/ ./apps/
+COPY packages/ ./packages/
+COPY tooling/ ./tooling/
 
 # Generate types and build the application
 WORKDIR /app/apps/web
