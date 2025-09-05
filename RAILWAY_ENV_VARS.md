@@ -36,6 +36,7 @@ VITE_REALTIME_NOTIFICATIONS=false
 VITE_ENABLE_VERSION_UPDATER=false
 VITE_SUPABASE_URL=your-supabase-url
 VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+SUPABASE_SECRET_KEY=your-supabase-service-role-key
 SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
 SUPABASE_DB_WEBHOOK_SECRET=your-webhook-secret
 EMAIL_SENDER=noreply@dtg.com
