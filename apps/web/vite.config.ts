@@ -17,8 +17,17 @@ export default defineConfig(({ command }) => ({
   },
   build: {
     sourcemap: false, // Disable sourcemaps in production to fix resolution errors
+    chunkSizeWarningLimit: 1000, // Increase warning limit to 1MB
     rollupOptions: {
       external: ['fsevents'],
+      output: {
+        manualChunks: {
+          // Split vendor chunks for better caching
+          'react-vendor': ['react', 'react-dom', 'react-router'],
+          'ui-vendor': ['@radix-ui/react-icons', 'lucide-react', 'recharts'],
+          'supabase-vendor': ['@supabase/supabase-js'],
+        },
+      },
     },
   },
   optimizeDeps: {
