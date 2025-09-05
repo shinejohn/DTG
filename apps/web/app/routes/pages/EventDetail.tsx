@@ -1,9 +1,7 @@
-import type { Route } from './+types/route';
-import React, { useState, Children, Component } from 'react';
-import { json, useLoaderData, useRouteError, isRouteErrorResponse, useNavigate } from 'react-router';
-import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '@/components/dtg/Header';
-import { Footer } from '@/components/dtg/Footer';
+import React, { useState } from 'react';
+import { useParams, Link, useNavigate } from 'react-router';
+import Header from '@/components/dtg/Header';
+import Footer from '@/components/dtg/Footer';
 import { CalendarIcon, ArrowLeftIcon, ClockIcon, MapPinIcon, UsersIcon, TagIcon, ShareIcon, HeartIcon, CheckIcon, ExternalLinkIcon } from 'lucide-react';
 const allEventItems = [{
   id: 101,
@@ -15,7 +13,6 @@ const allEventItems = [{
   address: '123 Main Street, Downtown',
   image: 'https://images.unsplash.com/photo-1533900298318-6b8da08a523e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
   description: `<p>Join us for the Summer Night Market featuring local vendors, artisans, food trucks, and live music. A perfect evening out for the whole family.</p>
-    <p>The Summer Night Market brings together the best of our local community - from handcrafted goods and unique artwork to delicious food and live entertainment. Stroll through the market while enjoying the warm summer evening and discovering treasures from over 50 local vendors.</p>
     <h3>What to Expect:</h3>
     <ul>
       <li>Artisan crafts and handmade goods</li>
@@ -280,52 +277,4 @@ export default function EventDetail() {
       </main>
       <Footer />
     </div>;
-}
-export async function loader({ params, request }: Route.LoaderArgs) {
-  const { supabase, headers } = getSupabaseServerClient(request);
-  
-  try {
-    const { data: items, error } = await supabase
-      .from('businesses')
-      .select('*')
-      .limit(10);
-
-    if (error) {
-      console.error('Error fetching data:', error);
-    }
-
-    return json({
-      items: items || []
-    }, { headers });
-  } catch (error) {
-    console.error('Loader error:', error);
-    return json({
-      items: []
-    }, { headers });
-  }
-}
-export function ErrorBoundary() {
-  const error = useRouteError();
-  
-  if (isRouteErrorResponse(error)) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-red-600">{error.status}</h1>
-          <h2 className="text-xl font-semibold mt-2">{error.statusText}</h2>
-          <p className="text-gray-600 mt-4">{error.data}</p>
-        </div>
-      </div>
-    );
-  }
-  
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-red-600">Error</h1>
-        <p className="text-gray-600 mt-4">Something went wrong</p>
-        <p className="text-sm text-gray-500 mt-2">{error?.message}</p>
-      </div>
-    </div>
-  );
 }

@@ -57,4 +57,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({
             {helperText}
           </p> : null}
       </div>;
-}
+});
+
+Input.displayName = 'Input';

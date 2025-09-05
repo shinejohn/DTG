@@ -1,4 +1,3 @@
-import type { Route } from './+types/layout';
 import { Outlet } from 'react-router';
 import React from 'react';
 // DTG Layout wrapper for all Downtown Guide pages

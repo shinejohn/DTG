@@ -16,6 +16,7 @@ export default defineConfig(({ command }) => ({
     allowedHosts: ALLOWED_HOSTS,
   },
   build: {
+    sourcemap: false, // Disable sourcemaps in production to fix resolution errors
     rollupOptions: {
       external: ['fsevents'],
     },

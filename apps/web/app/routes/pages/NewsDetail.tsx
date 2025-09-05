@@ -1,9 +1,7 @@
-import type { Route } from './+types/route';
 import React from 'react';
-import { json, useLoaderData, useRouteError, isRouteErrorResponse, useNavigate } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '@/components/dtg/Header';
-import { Footer } from '@/components/dtg/Footer';
+import Header from '@/components/dtg/Header';
+import Footer from '@/components/dtg/Footer';
 import { NewspaperIcon, ArrowLeftIcon, CalendarIcon, ShareIcon, BookmarkIcon } from 'lucide-react';
 const allNewsItems = [{
   id: 1,
@@ -14,7 +12,6 @@ const allNewsItems = [{
   publishedDate: 'May 15, 2023',
   image: 'https://images.unsplash.com/photo-1577720580479-7d839d829c59?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
   content: `<p>The new Downtown Art Gallery is set to open this weekend with an exhibition featuring local artists. The gallery aims to showcase contemporary art and provide a platform for emerging artists in the community.</p>
-    <p>Located in the heart of the Arts District, the gallery will feature rotating exhibitions, artist talks, and workshops. The opening exhibition, titled "Local Perspectives," includes works from 15 local artists working in various media, from painting and sculpture to digital art and installations.</p>
     <p>"We wanted to create a space that celebrates the incredible artistic talent in our community," said gallery director Emma Chen. "This opening exhibition is just the beginning of what we hope will be a vibrant cultural hub for years to come."</p>
     <p>The gallery will be open Tuesday through Sunday, with free admission on the first Saturday of each month. The opening reception will be held this Saturday from 6-9 PM and is open to the public.</p>`,
   category: 'Arts & Culture',
@@ -43,7 +40,6 @@ const allNewsItems = [{
   publishedDate: 'May 13, 2023',
   image: 'https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80',
   content: `<p>Due to popular demand, the Downtown Farmers Market will now be held twice weekly. Starting next month, the market will be open on both Saturdays and Wednesdays, giving residents more opportunities to purchase fresh, local produce.</p>
-    <p>The Saturday market will continue to operate from 8 AM to 1 PM, while the new Wednesday market will run from 4 PM to 7 PM, catering to after-work shoppers.</p>
     <p>"We've seen such tremendous growth in attendance over the past year that expanding to a second day made perfect sense," said market manager David Thompson. "The Wednesday evening hours will make it easier for people who work during the day to shop for fresh, local food."</p>
     <p>In addition to the usual vendors selling produce, meats, and baked goods, the Wednesday market will feature a rotating selection of food trucks and live music.</p>
     <p>"As a farmer, having another day to sell directly to customers is a huge benefit," said Maria Garcia, who runs Sunshine Organic Farm. "It helps us move more product and connect with customers who might not be able to make it on Saturdays."</p>`,
@@ -183,52 +179,4 @@ export default function NewsDetail() {
       </main>
       <Footer />
     </div>;
-}
-export async function loader({ params, request }: Route.LoaderArgs) {
-  const { supabase, headers } = getSupabaseServerClient(request);
-  
-  try {
-    const { data: items, error } = await supabase
-      .from('businesses')
-      .select('*')
-      .limit(10);
-
-    if (error) {
-      console.error('Error fetching data:', error);
-    }
-
-    return json({
-      items: items || []
-    }, { headers });
-  } catch (error) {
-    console.error('Loader error:', error);
-    return json({
-      items: []
-    }, { headers });
-  }
-}
-export function ErrorBoundary() {
-  const error = useRouteError();
-  
-  if (isRouteErrorResponse(error)) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-red-600">{error.status}</h1>
-          <h2 className="text-xl font-semibold mt-2">{error.statusText}</h2>
-          <p className="text-gray-600 mt-4">{error.data}</p>
-        </div>
-      </div>
-    );
-  }
-  
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-red-600">Error</h1>
-        <p className="text-gray-600 mt-4">Something went wrong</p>
-        <p className="text-sm text-gray-500 mt-2">{error?.message}</p>
-      </div>
-    </div>
-  );
 }
