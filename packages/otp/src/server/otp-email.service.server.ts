@@ -4,19 +4,22 @@ import { renderOtpEmail } from '@kit/email-templates';
 import { getMailer } from '@kit/mailers';
 import { getLogger } from '@kit/shared/logger';
 
-const EMAIL_SENDER = z
-  .string({
-    required_error: 'EMAIL_SENDER is required',
-  })
-  .min(1)
-  .parse(process.env.EMAIL_SENDER || 'noreply@dtg.com');
-
-const PRODUCT_NAME = z
-  .string({
-    required_error: 'VITE_PRODUCT_NAME is required',
-  })
-  .min(1)
-  .parse(import.meta.env.VITE_PRODUCT_NAME || 'DTG');
+function getEmailSettings() {
+  return {
+    emailSender: z
+      .string({
+        required_error: 'EMAIL_SENDER is required',
+      })
+      .min(1)
+      .parse(process.env.EMAIL_SENDER || 'noreply@dtg.com'),
+    productName: z
+      .string({
+        required_error: 'VITE_PRODUCT_NAME is required',
+      })
+      .min(1)
+      .parse(import.meta.env.VITE_PRODUCT_NAME || 'DTG'),
+  };
+}
 
 /**
  * @name createOtpEmailService
@@ -37,9 +40,10 @@ class OtpEmailService {
     const { email, otp } = params;
     const mailer = await getMailer();
 
+    const settings = getEmailSettings();
     const { html, subject } = await renderOtpEmail({
       otp,
-      productName: PRODUCT_NAME,
+      productName: settings.productName,
     });
 
     try {
@@ -49,7 +53,7 @@ class OtpEmailService {
         to: email,
         subject,
         html,
-        from: EMAIL_SENDER,
+        from: settings.emailSender,
       });
 
       logger.info({ otp }, 'OTP email sent');

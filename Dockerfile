@@ -116,6 +116,10 @@ RUN pnpm build
 # Production stage
 FROM node:20-alpine AS production
 
+# Accept runtime environment variables
+ARG EMAIL_SENDER
+ENV EMAIL_SENDER=$EMAIL_SENDER
+
 # Install pnpm
 RUN corepack enable && corepack prepare pnpm@10.15.0 --activate
 
