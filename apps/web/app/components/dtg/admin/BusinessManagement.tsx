@@ -16,7 +16,7 @@ interface Business {
   createdDate: string;
   logo?: string;
 }
-export default function BusinessManagement() {
+export function BusinessManagement() {
   const [businesses, setBusinesses] = useState<Business[]>([{
     id: 'b1',
     name: 'Urban Bites Café',

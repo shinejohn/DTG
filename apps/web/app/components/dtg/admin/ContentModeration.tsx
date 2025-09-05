@@ -13,7 +13,7 @@ interface ModerationItem {
   flagReason?: string;
   image?: string;
 }
-export default function ContentModeration() {
+export function ContentModeration() {
   const [items, setItems] = useState<ModerationItem[]>([{
     id: 'm1',
     type: 'review',

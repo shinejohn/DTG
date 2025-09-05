@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import { BarChart2Icon, TrendingUpIcon, UsersIcon, BuildingIcon, MessageSquareIcon, EyeIcon, SearchIcon, MapPinIcon, CalendarIcon, RefreshCwIcon, DownloadIcon, FilterIcon, ChevronDownIcon } from 'lucide-react';
-export default function Analytics() {
+export function Analytics() {
   const [dateRange, setDateRange] = useState('30d');
   const [showDropdown, setShowDropdown] = useState(false);
   // Safely handle date range changes with error boundary

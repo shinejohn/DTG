@@ -1,6 +1,6 @@
 import React from 'react';
 import { ServerIcon, DatabaseIcon, HardDriveIcon, CpuIcon, AlertTriangleIcon, CheckCircleIcon, ClockIcon, RefreshCwIcon, TrendingUpIcon, TrendingDownIcon, DownloadIcon, FileTextIcon, XCircleIcon } from 'lucide-react';
-export default function SystemHealth() {
+export function SystemHealth() {
   return <div>
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
         <div>
