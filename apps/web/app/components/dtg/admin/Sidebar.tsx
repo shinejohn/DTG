@@ -5,7 +5,7 @@ interface AdminSidebarProps {
   activePanel?: string;
   setActivePanel?: (panel: any) => void;
 }
-export default function AdminSidebar({
+export function AdminSidebar({
   activePanel,
   setActivePanel
 }: AdminSidebarProps) {
