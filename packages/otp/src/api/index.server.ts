@@ -63,11 +63,17 @@ export function createOtpApi(client: SupabaseClient<Database>) {
  */
 class OtpApi {
   private readonly service: ReturnType<typeof createOtpService>;
-  private readonly emailService: ReturnType<typeof createOtpEmailService>;
+  private emailService?: ReturnType<typeof createOtpEmailService>;
 
   constructor(client: SupabaseClient<Database>) {
     this.service = createOtpService(client);
-    this.emailService = createOtpEmailService();
+  }
+
+  private getEmailService() {
+    if (!this.emailService) {
+      this.emailService = createOtpEmailService();
+    }
+    return this.emailService;
   }
 
   /**
@@ -76,7 +82,7 @@ class OtpApi {
    * @param params
    */
   sendOtpEmail(params: SendOtpEmailParams) {
-    return this.emailService.sendOtpEmail(params);
+    return this.getEmailService().sendOtpEmail(params);
   }
 
   /**
