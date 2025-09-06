@@ -6,7 +6,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   padding?: 'none' | 'small' | 'medium' | 'large';
   isHoverable?: boolean;
 }
-export default function Card({
+export function Card({
   children,
   className = '',
   variant = 'default',
@@ -43,3 +43,5 @@ export default function Card({
       {children}
     </div>;
 }
+
+export default Card;

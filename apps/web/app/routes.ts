@@ -39,9 +39,9 @@ const marketingLayout = layout('routes/marketing/layout.tsx', [
 ]);
 
 const authLayout = layout('routes/auth/layout.tsx', [
-  route('auth/sign-in', 'routes/auth/sign-in.tsx'),
-  route('auth/sign-up', 'routes/auth/sign-up.tsx'),
-  route('auth/password-reset', 'routes/auth/password-reset.tsx'),
+  route('auth/sign-in', 'routes/auth/dtg-sign-in.tsx'),
+  route('auth/sign-up', 'routes/auth/dtg-sign-up.tsx'),
+  route('auth/password-reset', 'routes/auth/dtg-password-reset.tsx'),
   route('auth/verify', 'routes/auth/verify.tsx'),
   route('auth/callback', 'routes/auth/callback.tsx'),
   route('auth/callback/error', 'routes/auth/callback-error.tsx'),
@@ -72,8 +72,8 @@ const teamAccountLayout = layout('routes/home/account/layout.tsx', [
   ),
 ]);
 
-// Downtown Guide (DTG) Routes - Migrated from Magic Patterns
-const dtgLayout = layout('routes/pages/layout.tsx', [
+// DEPRECATED - DTG routes are now primary
+// const dtgLayout = layout('routes/pages/layout.tsx', [
   // Main DTG app routes
   route('dtg', 'routes/pages/Home.tsx'),
   route('dtg/search', 'routes/pages/Search.tsx'),
@@ -119,8 +119,8 @@ const dtgLayout = layout('routes/pages/layout.tsx', [
   route('dtg/verify-email', 'routes/pages/VerifyEmail.tsx'),
 ]);
 
-// Extended User Account Routes (DTG features)
-const extendedUserAccountLayout = layout('routes/home/user/layout.tsx', [
+// DEPRECATED - Integrated into main routes
+// const extendedUserAccountLayout = layout('routes/home/user/layout.tsx', [
   route('home', 'routes/home/user/index.tsx'),
   route('home/settings', 'routes/home/user/settings.tsx'),
   route('home/billing', 'routes/home/user/billing.tsx'),
@@ -148,9 +148,9 @@ const extendedUserAccountLayout = layout('routes/home/user/layout.tsx', [
 
 // Extended Auth Routes (DTG specific)
 const extendedAuthLayout = layout('routes/auth/layout.tsx', [
-  route('auth/sign-in', 'routes/auth/sign-in.tsx'),
-  route('auth/sign-up', 'routes/auth/sign-up.tsx'),
-  route('auth/password-reset', 'routes/auth/password-reset.tsx'),
+  route('auth/sign-in', 'routes/auth/dtg-sign-in.tsx'),
+  route('auth/sign-up', 'routes/auth/dtg-sign-up.tsx'),
+  route('auth/password-reset', 'routes/auth/dtg-password-reset.tsx'),
   route('auth/verify', 'routes/auth/verify.tsx'),
   route('auth/callback', 'routes/auth/callback.tsx'),
   route('auth/callback/error', 'routes/auth/callback-error.tsx'),
@@ -171,12 +171,69 @@ const extendedAdminLayout = layout('routes/admin/layout.tsx', [
 ]);
 
 export default [
-  ...rootRoutes,
-  ...apiRoutes,
-  extendedAdminLayout,
-  marketingLayout,
+  // DTG (Magic Patterns) is now the primary UI
+  layout('routes/pages/layout.tsx', [
+    // Home page is DTG home, not MakerKit marketing
+    index('routes/pages/Home.tsx'),
+    
+    // All DTG routes
+    route('search', 'routes/pages/Search.tsx'),
+    route('explore', 'routes/pages/Explore.tsx'),
+    route('restaurants', 'routes/pages/Restaurants.tsx'),
+    route('deals', 'routes/pages/Deals.tsx'),
+    route('deals/:id', 'routes/pages/DealDetail.tsx'),
+    route('events', 'routes/pages/Events.tsx'),
+    route('events/:id', 'routes/pages/EventDetail.tsx'),
+    route('news', 'routes/pages/News.tsx'),
+    route('news/:id', 'routes/pages/NewsDetail.tsx'),
+    route('trending', 'routes/pages/Trending.tsx'),
+    route('favorites', 'routes/pages/Favorites.tsx'),
+    route('pricing', 'routes/pages/Pricing.tsx'),
+    route('settings', 'routes/pages/Settings.tsx'),
+    
+    // Business routes
+    route('business/:slug', 'routes/pages/business/[slug].tsx'),
+    route('business/analytics', 'routes/pages/business/analytics.tsx'),
+    route('business/dashboard', 'routes/pages/business/dashboard.tsx'),
+    route('business/coupons', 'routes/pages/business/coupons.tsx'),
+    route('business/events', 'routes/pages/business/events.tsx'),
+    route('business/homepage', 'routes/pages/business/homepage.tsx'),
+    route('business/integrations', 'routes/pages/business/integrations.tsx'),
+    route('business/loyalty', 'routes/pages/business/loyalty.tsx'),
+    route('business/promotions', 'routes/pages/business/promotions.tsx'),
+    route('business/profile/edit', 'routes/pages/business/profile/edit.tsx'),
+    
+    // Profile routes
+    route('profile/:username', 'routes/pages/profile/[username].tsx'),
+    route('profile/edit', 'routes/pages/profile/edit.tsx'),
+    route('profile/rewards', 'routes/pages/profile/Rewards.tsx'),
+    
+    // Review routes
+    route('review/:businessId', 'routes/pages/review/[businessId].tsx'),
+  ]),
+  
+  // Auth routes with DTG styling (keep for backend auth)
   authLayout,
-  extendedUserAccountLayout,
+  
+  // User account routes (integrated with DTG)
+  layout('routes/home/user/layout.tsx', [
+    route('account', 'routes/home/user/index.tsx'),
+    route('account/settings', 'routes/home/user/settings.tsx'),
+    route('account/billing', 'routes/home/user/billing.tsx'),
+    route('account/achievements', 'routes/pages/Achievements.tsx'),
+    route('account/challenges', 'routes/pages/Challenges.tsx'),
+    route('account/rewards', 'routes/pages/Rewards.tsx'),
+    route('account/leaderboards', 'routes/pages/Leaderboards.tsx'),
+    route('account/referrals', 'routes/pages/Referrals.tsx'),
+  ]),
+  
+  // Admin routes (if needed)
+  extendedAdminLayout,
+  
+  // API routes (keep all MakerKit backend)
+  ...apiRoutes,
+  ...rootRoutes,
+  
+  // Team accounts if needed
   teamAccountLayout,
-  dtgLayout,
 ] satisfies RouteConfig;

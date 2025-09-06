@@ -10,7 +10,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   fullWidth?: boolean;
   children: React.ReactNode;
 }
-export default function Button({
+export function Button({
   variant = 'primary',
   size = 'md',
   isLoading = false,
@@ -66,3 +66,5 @@ export default function Button({
         </div>}
     </button>;
 }
+
+export default Button;

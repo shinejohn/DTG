@@ -5,6 +5,21 @@ import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Layout } from '@/components/dtg/Layout';
 import { SearchIcon, FilterIcon, MapPinIcon } from 'lucide-react';
 
+interface SearchItem {
+  id?: string;
+  name: string;
+  category: string;
+  location: string;
+  description?: string;
+  rating?: number;
+}
+
+interface LoaderData {
+  query: string;
+  category: string;
+  items: SearchItem[];
+}
+
 export async function loader({ request }: LoaderFunctionArgs) {
   const url = new URL(request.url);
   const query = url.searchParams.get('q') || '';
@@ -19,7 +34,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 }
 
 export default function Search() {
-  const data = useLoaderData<typeof loader>();
+  const data = useLoaderData<LoaderData>();
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(data.query);
   const [selectedCategory, setSelectedCategory] = useState(data.category);
@@ -85,7 +100,7 @@ export default function Search() {
               </div>
             ) : (
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {data.items.map((item: any, index: number) => (
+                {data.items.map((item, index) => (
                   <div key={index} className="bg-white rounded-lg shadow-md p-6">
                     <h3 className="text-lg font-semibold mb-2">{item.name || 'Business Name'}</h3>
                     <p className="text-gray-600 mb-4">{item.category || 'Category'}</p>
