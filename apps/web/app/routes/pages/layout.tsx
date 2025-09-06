@@ -1,11 +1,16 @@
 import { Outlet } from 'react-router';
 import React from 'react';
+import { Layout } from '~/components/dtg/Layout';
+import { BrandProvider } from '~/components/dtg/contexts/BrandContext';
+
 // DTG Layout wrapper for all Downtown Guide pages
 export default function DTGLayout() {
   return (
-    <div className="min-h-screen bg-background">
-      <Outlet />
-    </div>
+    <BrandProvider>
+      <Layout showHero={false}>
+        <Outlet />
+      </Layout>
+    </BrandProvider>
   );
 }
 

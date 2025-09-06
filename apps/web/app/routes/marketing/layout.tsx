@@ -3,9 +3,10 @@ import { LoaderFunctionArgs, Outlet, useLoaderData } from 'react-router';
 import { requireUser } from '@kit/supabase/require-user';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 
-// local imports
-import { SiteFooter } from './_components/site-footer';
-import { SiteHeader } from './_components/site-header';
+// DTG/Magic Patterns components
+import { Header } from '~/components/dtg/Header';
+import { Footer } from '~/components/dtg/Footer';
+import { BrandProvider } from '~/components/dtg/contexts/BrandContext';
 
 export async function loader(args: LoaderFunctionArgs) {
   const supabase = getSupabaseServerClient(args.request);
@@ -20,10 +21,17 @@ export default function MarketingLayout() {
   const { user } = useLoaderData<typeof loader>();
 
   return (
-    <div className={'flex min-h-[100vh] flex-col'}>
-      <SiteHeader user={user} />
-      <Outlet />
-      <SiteFooter />
-    </div>
+    <BrandProvider>
+      <div className={'flex min-h-[100vh] flex-col bg-white'}>
+        <Header 
+          siteName="Downtown Guide" 
+          showHero={false}
+        />
+        <main className="flex-grow">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </BrandProvider>
   );
 }
