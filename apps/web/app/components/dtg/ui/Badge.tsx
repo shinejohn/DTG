@@ -7,7 +7,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   rounded?: boolean;
   icon?: React.ReactNode;
 }
-export default function Badge({
+export function Badge({
   children,
   variant = 'default',
   size = 'md',
@@ -49,3 +49,5 @@ export default function Badge({
       {children}
     </span>;
 }
+
+export default Badge;
