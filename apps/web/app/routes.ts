@@ -78,6 +78,7 @@ const dtgLayout = layout('routes/pages/layout.tsx', [
   route('dtg', 'routes/pages/Home.tsx'),
   route('dtg/search', 'routes/pages/Search.tsx'),
   route('dtg/explore', 'routes/pages/Explore.tsx'),
+  route('dtg/restaurants', 'routes/pages/Restaurants.tsx'),
   route('dtg/deals', 'routes/pages/Deals.tsx'),
   route('dtg/deals/:id', 'routes/pages/DealDetail.tsx'),
   route('dtg/events', 'routes/pages/Events.tsx'),

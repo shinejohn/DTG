@@ -57,6 +57,9 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
 
           {/* Navigation */}
           <div className="hidden md:flex items-center justify-center space-x-6">
+            <Link to="/dtg/restaurants" className="text-white hover:text-white hover:opacity-80">
+              Restaurants
+            </Link>
             <Link to="/dtg/explore" className="text-white hover:text-white hover:opacity-80">
               Food
             </Link>
@@ -112,6 +115,13 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-b shadow-sm">
             <div className="px-4 py-3 space-y-2">
+              <Link 
+                to="/dtg/restaurants" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Restaurants
+              </Link>
               <Link 
                 to="/dtg/explore" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
