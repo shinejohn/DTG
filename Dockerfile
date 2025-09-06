@@ -155,9 +155,6 @@ USER nodejs
 # Expose the port the app runs on
 EXPOSE 3000
 
-# Copy the custom server file
-COPY --from=builder --chown=nodejs:nodejs /app/apps/web/server-with-warming.js ./apps/web/server-with-warming.js
-
 # Start the application
 WORKDIR /app/apps/web
-CMD ["node", "server-with-warming.js"]
+CMD ["pnpm", "run", "start"]
