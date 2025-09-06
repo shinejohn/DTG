@@ -95,7 +95,7 @@ export default function Explore() {
     console.log(`Selected community: ${community.name}`);
     setCitySearchQuery('');
     setShowSuggestions(false);
-    navigate('/');
+    navigate('/dtg');
   };
   return <Layout>
       {/* Search Header */}
@@ -203,7 +203,7 @@ export default function Explore() {
                 <p className="text-sm text-gray-600 mb-3">{result.address}</p>
                 <p className="text-sm text-gray-700">{result.description}</p>
                 <div className="mt-4 flex justify-between">
-                  <Link to={`/business/${result.id} `} className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                  <Link to={`/dtg/business/${result.id}`} className="text-blue-600 hover:text-blue-800 text-sm font-medium">
                     View Details
                   </Link>
                   <button className="text-blue-600 hover:text-blue-800 text-sm font-medium">

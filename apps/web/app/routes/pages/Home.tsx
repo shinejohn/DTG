@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
+import type { LoaderFunctionArgs } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { SearchIcon, MapPinIcon } from 'lucide-react';
 import { useBrand } from '../../components/dtg/contexts/BrandContext';
@@ -10,27 +11,52 @@ import { TrendingNow } from '@/components/dtg/TrendingNow';
 import { CommunityActivity } from '@/components/dtg/CommunityActivity';
 import { NewsAndEvents } from '@/components/dtg/NewsAndEvents';
 import { SEOContent } from '@/components/dtg/SEOContent';
-import { getAllCommunities, getCommunityById } from '../../components/dtg/services/CommunityService';
+
+interface Community {
+  id: string;
+  name: string;
+  slug: string;
+  state: string;
+}
+
+export async function loader({ request }: LoaderFunctionArgs) {
+  const client = getSupabaseServerClient(request);
+  
+  // Fetch active communities
+  const { data: communities, error } = await client
+    .from('communities')
+    .select('id, name, slug, state')
+    .eq('is_active', true)
+    .order('name');
+
+  if (error) {
+    console.error('Error fetching communities:', error);
+  }
+
+  return {
+    communities: communities || []
+  };
+}
 export default function Home() {
+  const { communities } = useLoaderData<typeof loader>();
   const {
     currentBrand
   } = useBrand();
-  const [selectedCommunity, setSelectedCommunity] = useState('nyc');
-  const [communityName, setCommunityName] = useState('New York City');
-  const [communities, setCommunities] = useState<Array<{
-    id: string;
-    name: string;
-  }>>([]);
+  const [selectedCommunity, setSelectedCommunity] = useState(() => {
+    // Default to NYC if available, otherwise first community
+    const nyc = communities.find(c => c.slug === 'nyc');
+    return nyc ? nyc.id : communities[0]?.id || '';
+  });
+  const [communityName, setCommunityName] = useState(() => {
+    const selected = communities.find(c => c.id === selectedCommunity);
+    return selected?.name || 'New York City';
+  });
   const [searchQuery, setSearchQuery] = useState('');
-  // Load communities
-  useEffect(() => {
-    const allCommunities = getAllCommunities();
-    setCommunities(allCommunities);
-  }, []);
+  
   // Handle community selection
   const handleCommunityChange = (communityId: string) => {
     setSelectedCommunity(communityId);
-    const community = getCommunityById(communityId);
+    const community = communities.find(c => c.id === communityId);
     if (community) {
       setCommunityName(community.name);
     }
@@ -38,8 +64,9 @@ export default function Home() {
   // Handle search submission
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Searching for:', searchQuery, 'in', communityName);
-    // In a real app, this would redirect to search results page
+    if (searchQuery.trim()) {
+      window.location.href = `/dtg/search?q=${encodeURIComponent(searchQuery)}&community=${encodeURIComponent(selectedCommunity)}`;
+    }
   };
   // Generate SEO content based on community and brand type
   const brandInterest = currentBrand?.brandType === 'interest' ? currentBrand.name : 'local businesses';

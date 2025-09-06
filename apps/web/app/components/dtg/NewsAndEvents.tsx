@@ -10,7 +10,7 @@ const newsAndEvents = [{
   source: 'Day.News',
   date: 'May 15, 2023',
   excerpt: 'The city has approved plans for a new restaurant development featuring 12 unique dining concepts...',
-  url: '/news/n1'
+  url: '/dtg/news/n1'
 }, {
   id: 'e1',
   type: 'event',
@@ -19,7 +19,7 @@ const newsAndEvents = [{
   date: 'June 24-26, 2023',
   time: '11:00 AM - 8:00 PM',
   location: 'Downtown Plaza',
-  url: '/events/e1'
+  url: '/dtg/events/e1'
 }, {
   id: 'n2',
   type: 'news',
@@ -28,7 +28,7 @@ const newsAndEvents = [{
   source: 'Day.News',
   date: 'May 10, 2023',
   excerpt: 'Hometown Brewing Co. has been recognized for their innovative craft beer at the National Beer Competition...',
-  url: '/news/n2'
+  url: '/dtg/news/n2'
 }, {
   id: 'e2',
   type: 'event',
@@ -37,7 +37,7 @@ const newsAndEvents = [{
   date: 'June 3, 2023',
   time: '5:00 PM - 9:00 PM',
   location: 'Arts District',
-  url: '/events/e2'
+  url: '/dtg/events/e2'
 }];
 export function NewsAndEvents() {
   return <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -80,10 +80,10 @@ export function NewsAndEvents() {
         </Link>)}
       <div className="md:col-span-2 text-center mt-4">
         <div className="flex justify-center space-x-4">
-          <Link to="/news" className="text-blue-600 font-medium hover:underline">
+          <Link to="/dtg/news" className="text-blue-600 font-medium hover:underline">
             View All News
           </Link>
-          <Link to="/events" className="text-blue-600 font-medium hover:underline">
+          <Link to="/dtg/events" className="text-blue-600 font-medium hover:underline">
             View All Events
           </Link>
         </div>

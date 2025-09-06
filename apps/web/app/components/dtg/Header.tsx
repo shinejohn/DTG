@@ -43,7 +43,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
         >
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/dtg" className="flex items-center space-x-2">
               <img 
                 src="/dtg-logo.jpg" 
                 alt="Downtown Guide" 
@@ -57,22 +57,22 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
 
           {/* Navigation */}
           <div className="hidden md:flex items-center justify-center space-x-6">
-            <Link to="/explore" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/dtg/explore" className="text-white hover:text-white hover:opacity-80">
               Food
             </Link>
-            <Link to="/events" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/dtg/events" className="text-white hover:text-white hover:opacity-80">
               Fun
             </Link>
-            <Link to="/trending" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/dtg/trending" className="text-white hover:text-white hover:opacity-80">
               Nightlife
             </Link>
-            <Link to="/register" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/auth/sign-up" className="text-white hover:text-white hover:opacity-80">
               Sign-up
             </Link>
-            <Link to="/rewards" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/dtg/rewards" className="text-white hover:text-white hover:opacity-80">
               Awards
             </Link>
-            <Link to="/deals" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/dtg/deals" className="text-white hover:text-white hover:opacity-80">
               Coupons
             </Link>
           </div>
@@ -89,10 +89,10 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
                 <SearchIcon className="w-4 h-4 text-white" />
               </div>
             </div>
-            <Link to="/notifications" className="text-white p-1 rounded-full hover:bg-white hover:bg-opacity-20">
+            <Link to="/dtg/notifications" className="text-white p-1 rounded-full hover:bg-white hover:bg-opacity-20">
               <BellIcon className="w-5 h-5" />
             </Link>
-            <Link to="/profile" className="text-white p-1 rounded-full hover:bg-white hover:bg-opacity-20">
+            <Link to="/home" className="text-white p-1 rounded-full hover:bg-white hover:bg-opacity-20">
               <UserIcon className="w-5 h-5" />
             </Link>
             
@@ -113,42 +113,42 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
           <div className="md:hidden bg-white border-b shadow-sm">
             <div className="px-4 py-3 space-y-2">
               <Link 
-                to="/explore" 
+                to="/dtg/explore" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Food
               </Link>
               <Link 
-                to="/events" 
+                to="/dtg/events" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Fun
               </Link>
               <Link 
-                to="/trending" 
+                to="/dtg/trending" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Nightlife
               </Link>
               <Link 
-                to="/register" 
+                to="/auth/sign-up" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Sign-up
               </Link>
               <Link 
-                to="/rewards" 
+                to="/dtg/rewards" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Awards
               </Link>
               <Link 
-                to="/deals" 
+                to="/dtg/deals" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >

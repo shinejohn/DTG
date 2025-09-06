@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router';
 import { HomeIcon, SearchIcon, UserIcon, BuildingIcon, SettingsIcon, ShareIcon, ChevronUpIcon, PlusIcon, XIcon, CompassIcon, StarIcon, HeartIcon, GiftIcon, PercentIcon, CrownIcon, TrophyIcon, TargetIcon, UsersIcon, CreditCardIcon, ShieldIcon, MessageSquareIcon, CalendarIcon, BarChartIcon, TagIcon, LayoutDashboardIcon, PencilIcon, DollarSignIcon, LinkIcon, StoreIcon } from 'lucide-react';
 import { SocialShareModal } from './SocialShareModal';
 export function FloatingNavigation() {
@@ -19,31 +20,31 @@ export function FloatingNavigation() {
     id: 'main',
     label: 'Main',
     items: [{
-      to: '/',
+      to: '/dtg',
       icon: <HomeIcon className="w-5 h-5 text-blue-600 mb-1" />,
       label: 'Home'
     }, {
-      to: '/explore',
+      to: '/dtg/explore',
       icon: <CompassIcon className="w-5 h-5 text-blue-600 mb-1" />,
       label: 'Explore'
     }, {
-      to: '/search',
+      to: '/dtg/search',
       icon: <SearchIcon className="w-5 h-5 text-blue-600 mb-1" />,
       label: 'Search'
     }, {
-      to: '/business/urban-bites-cafe',
+      to: '/dtg/business/urban-bites-cafe',
       icon: <StoreIcon className="w-5 h-5 text-blue-600 mb-1" />,
       label: 'Business Detail'
     }, {
-      to: '/profile/sarahjohnson',
+      to: '/home',
       icon: <UserIcon className="w-5 h-5 text-blue-600 mb-1" />,
       label: 'Profile'
     }, {
-      to: '/favorites',
+      to: '/dtg/favorites',
       icon: <HeartIcon className="w-5 h-5 text-blue-600 mb-1" />,
       label: 'Favorites'
     }, {
-      to: '/settings',
+      to: '/home/settings',
       icon: <SettingsIcon className="w-5 h-5 text-blue-600 mb-1" />,
       label: 'Settings'
     }]
@@ -51,27 +52,27 @@ export function FloatingNavigation() {
     id: 'rewards',
     label: 'Rewards',
     items: [{
-      to: '/rewards',
+      to: '/home/rewards',
       icon: <GiftIcon className="w-5 h-5 text-purple-600 mb-1" />,
       label: 'Rewards'
     }, {
-      to: '/deals',
+      to: '/dtg/deals',
       icon: <PercentIcon className="w-5 h-5 text-purple-600 mb-1" />,
       label: 'Deals'
     }, {
-      to: '/achievements',
+      to: '/home/achievements',
       icon: <TrophyIcon className="w-5 h-5 text-purple-600 mb-1" />,
       label: 'Achievements'
     }, {
-      to: '/leaderboards',
+      to: '/home/leaderboards',
       icon: <CrownIcon className="w-5 h-5 text-purple-600 mb-1" />,
       label: 'Leaderboards'
     }, {
-      to: '/challenges',
+      to: '/home/challenges',
       icon: <TargetIcon className="w-5 h-5 text-purple-600 mb-1" />,
       label: 'Challenges'
     }, {
-      to: '/referrals',
+      to: '/home/referrals',
       icon: <UsersIcon className="w-5 h-5 text-purple-600 mb-1" />,
       label: 'Referrals'
     }]
@@ -79,35 +80,35 @@ export function FloatingNavigation() {
     id: 'business',
     label: 'Business',
     items: [{
-      to: '/business/dashboard',
+      to: '/dtg/business/dashboard',
       icon: <LayoutDashboardIcon className="w-5 h-5 text-green-600 mb-1" />,
       label: 'Dashboard'
     }, {
-      to: '/business/profile/edit',
+      to: '/dtg/business/profile/edit',
       icon: <BuildingIcon className="w-5 h-5 text-green-600 mb-1" />,
       label: 'Profile'
     }, {
-      to: '/business/analytics',
+      to: '/dtg/business/analytics',
       icon: <BarChartIcon className="w-5 h-5 text-green-600 mb-1" />,
       label: 'Analytics'
     }, {
-      to: '/business/events',
+      to: '/dtg/business/events',
       icon: <CalendarIcon className="w-5 h-5 text-green-600 mb-1" />,
       label: 'Events'
     }, {
-      to: '/business/promotions',
+      to: '/dtg/business/promotions',
       icon: <TagIcon className="w-5 h-5 text-green-600 mb-1" />,
       label: 'Promotions'
     }, {
-      to: '/business/coupons',
+      to: '/dtg/business/coupons',
       icon: <PercentIcon className="w-5 h-5 text-green-600 mb-1" />,
       label: 'Coupons'
     }, {
-      to: '/business/loyalty',
+      to: '/dtg/business/loyalty',
       icon: <CrownIcon className="w-5 h-5 text-green-600 mb-1" />,
       label: 'Loyalty'
     }, {
-      to: '/business/integrations',
+      to: '/dtg/business/integrations',
       icon: <LinkIcon className="w-5 h-5 text-green-600 mb-1" />,
       label: 'Integrations'
     }]
@@ -115,19 +116,19 @@ export function FloatingNavigation() {
     id: 'account',
     label: 'Account',
     items: [{
-      to: '/login',
+      to: '/auth/sign-in',
       icon: <UserIcon className="w-5 h-5 text-orange-600 mb-1" />,
       label: 'Login'
     }, {
-      to: '/register',
+      to: '/auth/sign-up',
       icon: <PencilIcon className="w-5 h-5 text-orange-600 mb-1" />,
       label: 'Register'
     }, {
-      to: '/pricing',
+      to: '/dtg/pricing',
       icon: <DollarSignIcon className="w-5 h-5 text-orange-600 mb-1" />,
       label: 'Pricing'
     }, {
-      to: '/billing',
+      to: '/home/billing',
       icon: <CreditCardIcon className="w-5 h-5 text-orange-600 mb-1" />,
       label: 'Billing'
     }, {
@@ -139,11 +140,11 @@ export function FloatingNavigation() {
     id: 'admin',
     label: 'Admin',
     items: [{
-      to: '/admin',
+      to: '/admin/dtg',
       icon: <ShieldIcon className="w-5 h-5 text-red-600 mb-1" />,
       label: 'Dashboard'
     }, {
-      to: '/admin/moderation',
+      to: '/admin/dtg/moderation',
       icon: <MessageSquareIcon className="w-5 h-5 text-red-600 mb-1" />,
       label: 'Moderation'
     }]

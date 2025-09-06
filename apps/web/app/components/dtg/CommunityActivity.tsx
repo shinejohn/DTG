@@ -70,7 +70,7 @@ export function CommunityActivity() {
           <div className="flex items-center mb-3">
             <img src={activity.user.avatar} alt={activity.user.name} className="w-10 h-10 rounded-full object-cover mr-3" />
             <div>
-              <Link to={`/profile/${activity.user.id}`} className="font-medium text-blue-600 hover:underline">
+              <Link to={`/dtg/profile/${activity.user.id}`} className="font-medium text-blue-600 hover:underline">
                 {activity.user.name}
               </Link>
               <div className="flex items-center text-sm text-gray-500">
@@ -81,7 +81,7 @@ export function CommunityActivity() {
                     <CheckIcon className="w-3 h-3 mr-1" />
                     <span>checked in at</span>
                   </>}
-                <Link to={`/business/${activity.business.id}`} className="ml-1 text-blue-600 hover:underline">
+                <Link to={`/dtg/business/${activity.business.id}`} className="ml-1 text-blue-600 hover:underline">
                   {activity.business.name}
                 </Link>
                 <span className="mx-1">•</span>
@@ -90,7 +90,7 @@ export function CommunityActivity() {
             </div>
           </div>
           <div className="flex">
-            <Link to={`/business/${activity.business.id}`} className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
+            <Link to={`/dtg/business/${activity.business.id}`} className="w-16 h-16 rounded-md overflow-hidden flex-shrink-0">
               <img src={activity.business.image} alt={activity.business.name} className="w-full h-full object-cover" />
             </Link>
             <div className="ml-3 flex-grow">
@@ -108,7 +108,7 @@ export function CommunityActivity() {
           </div>
         </div>)}
       <div className="text-center mt-6">
-        <Link to="/community" className="text-blue-600 font-medium hover:underline">
+        <Link to="/dtg" className="text-blue-600 font-medium hover:underline">
           View More Community Activity
         </Link>
       </div>

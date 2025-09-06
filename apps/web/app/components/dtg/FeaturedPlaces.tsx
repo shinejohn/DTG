@@ -66,7 +66,7 @@ const featuredBusinesses = [{
 }];
 export function FeaturedPlaces() {
   return <div className="flex overflow-x-auto pb-4 space-x-4 scrollbar-hide">
-      {featuredBusinesses.map(business => <Link key={business.id} to={`/business/${business.id}`} className="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+      {featuredBusinesses.map(business => <Link key={business.id} to={`/dtg/business/${business.id}`} className="flex-none w-64 bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="h-36 overflow-hidden">
             <img src={business.image} alt={business.name} className="w-full h-full object-cover" />
           </div>

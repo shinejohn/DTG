@@ -52,7 +52,7 @@ export function CategorySection() {
   const categories = currentBrand?.experience?.featuredCategories?.length ? defaultCategories.filter(cat => currentBrand.experience?.featuredCategories?.some(brandCat => brandCat.toLowerCase().includes(cat.id.toLowerCase()))).slice(0, 8) // Ensure we don't exceed 8 categories
   : defaultCategories;
   return <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-      {categories.map(category => <Link key={category.id} to={`/search?category=${category.id}`} className="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+      {categories.map(category => <Link key={category.id} to={`/dtg/explore?category=${category.id}`} className="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
           <div className={`w-12 h-12 rounded-full ${category.color} flex items-center justify-center mb-3`}>
             {category.icon}
           </div>

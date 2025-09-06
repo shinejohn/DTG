@@ -1,7 +1,69 @@
-import { Link } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 import { MapPin, Calendar, TrendingUp, Users, Search, Star } from 'lucide-react';
+import type { LoaderFunctionArgs } from 'react-router';
+import { getSupabaseServerClient } from '@kit/supabase/server-client';
+
+interface Business {
+  id: string;
+  name: string;
+  slug: string;
+  category_id: string;
+  short_description: string;
+  average_rating: number;
+  review_count: number;
+  price_range: string;
+  logo_url: string | null;
+  cover_image_url: string | null;
+  address_city: string;
+  category: {
+    name: string;
+  };
+}
+
+export async function loader({ request }: LoaderFunctionArgs) {
+  const client = getSupabaseServerClient(request);
+  
+  // Fetch featured businesses with their categories
+  const { data: businesses, error } = await client
+    .from('businesses')
+    .select(`
+      id,
+      name,
+      slug,
+      category_id,
+      short_description,
+      average_rating,
+      review_count,
+      price_range,
+      logo_url,
+      cover_image_url,
+      address_city,
+      category:business_categories(name)
+    `)
+    .eq('is_featured', true)
+    .eq('status', 'active')
+    .limit(6);
+
+  if (error) {
+    console.error('Error fetching featured businesses:', error);
+  }
+
+  return {
+    featuredBusinesses: businesses || []
+  };
+}
 
 export default function Index() {
+  const { featuredBusinesses } = useLoaderData<typeof loader>();
+
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const query = formData.get('search') as string;
+    if (query?.trim()) {
+      window.location.href = `/dtg/search?q=${encodeURIComponent(query)}`;
+    }
+  };
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -16,19 +78,20 @@ export default function Index() {
             </p>
             
             {/* Search Bar */}
-            <div className="bg-white rounded-lg shadow-xl p-2 max-w-2xl mx-auto">
+            <form onSubmit={handleSearch} className="bg-white rounded-lg shadow-xl p-2 max-w-2xl mx-auto">
               <div className="flex items-center">
                 <Search className="h-6 w-6 text-gray-400 ml-4" />
                 <input
                   type="text"
+                  name="search"
                   placeholder="Search businesses, events, or categories..."
                   className="flex-1 px-4 py-3 text-gray-800 focus:outline-none"
                 />
-                <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+                <button type="submit" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
                   Search
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -37,18 +100,22 @@ export default function Index() {
       <div className="container mx-auto px-4 -mt-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
-            { icon: MapPin, title: 'Find Places', description: 'Discover local businesses', color: 'bg-red-500' },
-            { icon: Calendar, title: 'Events', description: 'Upcoming community events', color: 'bg-green-500' },
-            { icon: TrendingUp, title: 'Trending', description: "What's popular now", color: 'bg-purple-500' },
-            { icon: Users, title: 'Community', description: 'Connect with locals', color: 'bg-orange-500' }
+            { icon: MapPin, title: 'Find Places', description: 'Discover local businesses', color: 'bg-red-500', href: '/dtg/explore' },
+            { icon: Calendar, title: 'Events', description: 'Upcoming community events', color: 'bg-green-500', href: '/dtg/events' },
+            { icon: TrendingUp, title: 'Trending', description: "What's popular now", color: 'bg-purple-500', href: '/dtg/trending' },
+            { icon: Users, title: 'Community', description: 'Connect with locals', color: 'bg-orange-500', href: '/dtg' }
           ].map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition cursor-pointer">
+            <Link 
+              key={index} 
+              to={item.href}
+              className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition block"
+            >
               <div className={`${item.color} w-12 h-12 rounded-lg flex items-center justify-center mb-4`}>
                 <item.icon className="h-6 w-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
               <p className="text-gray-600 text-sm">{item.description}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -58,42 +125,24 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Featured Local Businesses</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Downtown Coffee House',
-                category: 'Coffee Shop',
-                rating: 4.5,
-                image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&h=300&fit=crop',
-                description: 'Cozy atmosphere with the best coffee in town'
-              },
-              {
-                name: 'Main Street Pizzeria',
-                category: 'Restaurant',
-                rating: 4.8,
-                image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop',
-                description: 'Authentic Italian pizza made with love'
-              },
-              {
-                name: 'City Fitness Center',
-                category: 'Gym',
-                rating: 4.6,
-                image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=300&fit=crop',
-                description: 'State-of-the-art equipment and expert trainers'
-              }
-            ].map((business, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
-                <img src={business.image} alt={business.name} className="w-full h-48 object-cover" />
+            {featuredBusinesses.map((business) => (
+              <div key={business.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                <img 
+                  src={business.cover_image_url || business.logo_url || 'https://via.placeholder.com/400x300?text=No+Image'} 
+                  alt={business.name} 
+                  className="w-full h-48 object-cover" 
+                />
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-xl font-semibold">{business.name}</h3>
                     <div className="flex items-center">
                       <Star className="h-4 w-4 text-yellow-500 fill-current" />
-                      <span className="ml-1 text-sm font-medium">{business.rating}</span>
+                      <span className="ml-1 text-sm font-medium">{business.average_rating || 0}</span>
                     </div>
                   </div>
-                  <p className="text-gray-500 text-sm mb-2">{business.category}</p>
-                  <p className="text-gray-600">{business.description}</p>
-                  <Link to="#" className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">
+                  <p className="text-gray-500 text-sm mb-2">{business.category?.name || 'Business'}</p>
+                  <p className="text-gray-600">{business.short_description || 'Visit us to learn more!'}</p>
+                  <Link to={`/dtg/business/${business.slug}`} className="mt-4 inline-block text-blue-600 hover:text-blue-800 font-medium">
                     Learn More →
                   </Link>
                 </div>
@@ -116,7 +165,7 @@ export default function Index() {
             <Link to="/auth/sign-up" className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
               Get Started
             </Link>
-            <Link to="/businesses" className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
+            <Link to="/dtg/explore" className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition">
               Browse Businesses
             </Link>
           </div>

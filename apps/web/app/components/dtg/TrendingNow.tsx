@@ -60,7 +60,7 @@ const trendingPlaces = [{
 }];
 export function TrendingNow() {
   return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {trendingPlaces.map(place => <Link key={place.id} to={`/business/${place.id}`} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+      {trendingPlaces.map(place => <Link key={place.id} to={`/dtg/business/${place.id}`} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="relative h-48">
             <img src={place.image} alt={place.name} className="w-full h-full object-cover" />
             <div className="absolute top-3 left-3 flex items-center bg-red-500 text-white text-xs font-medium px-2 py-1 rounded-full">

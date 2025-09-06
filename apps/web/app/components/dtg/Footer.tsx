@@ -14,22 +14,22 @@ export function Footer() {
             <h4 className="text-md font-bold mb-4">Explore</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/explore" className="text-gray-300 hover:text-white">
+                <Link to="/dtg/explore" className="text-gray-300 hover:text-white">
                   Cities
                 </Link>
               </li>
               <li>
-                <Link to="/trending" className="text-gray-300 hover:text-white">
+                <Link to="/dtg/trending" className="text-gray-300 hover:text-white">
                   Trending
                 </Link>
               </li>
               <li>
-                <Link to="/events" className="text-gray-300 hover:text-white">
+                <Link to="/dtg/events" className="text-gray-300 hover:text-white">
                   Events
                 </Link>
               </li>
               <li>
-                <Link to="/deals" className="text-gray-300 hover:text-white">
+                <Link to="/dtg/deals" className="text-gray-300 hover:text-white">
                   Deals
                 </Link>
               </li>
@@ -39,22 +39,22 @@ export function Footer() {
             <h4 className="text-md font-bold mb-4">Account</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/login" className="text-gray-300 hover:text-white">
+                <Link to="/auth/sign-in" className="text-gray-300 hover:text-white">
                   Sign In
                 </Link>
               </li>
               <li>
-                <Link to="/register" className="text-gray-300 hover:text-white">
+                <Link to="/auth/sign-up" className="text-gray-300 hover:text-white">
                   Register
                 </Link>
               </li>
               <li>
-                <Link to="/rewards" className="text-gray-300 hover:text-white">
+                <Link to="/home/rewards" className="text-gray-300 hover:text-white">
                   Rewards
                 </Link>
               </li>
               <li>
-                <Link to="/settings" className="text-gray-300 hover:text-white">
+                <Link to="/home/settings" className="text-gray-300 hover:text-white">
                   Settings
                 </Link>
               </li>
@@ -64,9 +64,9 @@ export function Footer() {
             <h4 className="text-md font-bold mb-4">Company</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">
+                <Link to="/about" className="text-gray-300 hover:text-white">
                   About
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">
@@ -79,9 +79,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-300 hover:text-white">
+                <Link to="/contact" className="text-gray-300 hover:text-white">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -92,15 +92,15 @@ export function Footer() {
             reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white">
+            <Link to="/terms-of-service" className="text-gray-400 hover:text-white">
               Terms
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            </Link>
+            <Link to="/privacy-policy" className="text-gray-400 hover:text-white">
               Privacy
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white">
+            </Link>
+            <Link to="/cookie-policy" className="text-gray-400 hover:text-white">
               Cookies
-            </a>
+            </Link>
           </div>
         </div>
       </div>

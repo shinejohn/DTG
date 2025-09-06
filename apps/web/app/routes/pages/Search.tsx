@@ -1,18 +1,36 @@
 import React, { useState } from 'react';
-import { useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
+import { useLoaderData, useRouteError, isRouteErrorResponse, useSearchParams } from 'react-router';
+import type { LoaderFunctionArgs } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Layout } from '@/components/dtg/Layout';
 import { SearchIcon, FilterIcon, MapPinIcon } from 'lucide-react';
 
+export async function loader({ request }: LoaderFunctionArgs) {
+  const url = new URL(request.url);
+  const query = url.searchParams.get('q') || '';
+  const category = url.searchParams.get('category') || '';
+  
+  // For now, return empty results until we implement proper search
+  return {
+    query,
+    category,
+    items: []
+  };
+}
+
 export default function Search() {
   const data = useLoaderData<typeof loader>();
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchQuery, setSearchQuery] = useState(data.query);
+  const [selectedCategory, setSelectedCategory] = useState(data.category);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle search logic
-    console.log('Searching for:', searchQuery, 'in category:', selectedCategory);
+    // Update URL params
+    const params = new URLSearchParams();
+    if (searchQuery) params.set('q', searchQuery);
+    if (selectedCategory) params.set('category', selectedCategory);
+    setSearchParams(params);
   };
 
   return (
