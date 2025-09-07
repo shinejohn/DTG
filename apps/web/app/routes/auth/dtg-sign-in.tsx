@@ -6,7 +6,6 @@ import { Header } from '@/components/dtg/Header';
 import { Footer } from '@/components/dtg/Footer';
 import { UserIcon, LockIcon, EyeIcon, EyeOffIcon } from 'lucide-react';
 import { Button } from '@/components/dtg/ui/Button';
-import { signInWithPassword } from '@kit/auth/sign-in';
 import { useSupabase } from '@kit/supabase/hooks/use-supabase';
 import pathsConfig from '~/config/paths.config';
 import type { LoaderFunctionArgs } from 'react-router';
@@ -43,8 +42,8 @@ export default function DTGSignIn() {
     setError(null);
 
     try {
-      // Use MakerKit's auth method
-      const { data, error } = await signInWithPassword(supabase, {
+      // Use Supabase auth method directly
+      const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });

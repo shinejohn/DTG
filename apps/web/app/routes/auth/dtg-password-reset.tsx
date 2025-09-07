@@ -6,7 +6,6 @@ import { Header } from '@/components/dtg/Header';
 import { Footer } from '@/components/dtg/Footer';
 import { UserIcon } from 'lucide-react';
 import { Button } from '@/components/dtg/ui/Button';
-import { sendPasswordResetLink } from '@kit/auth/password-reset';
 import { useSupabase } from '@kit/supabase/hooks/use-supabase';
 import pathsConfig from '~/config/paths.config';
 import type { LoaderFunctionArgs } from 'react-router';
@@ -39,9 +38,8 @@ export default function DTGPasswordReset() {
     setSuccess(false);
 
     try {
-      // Use MakerKit's auth method
-      const { error } = await sendPasswordResetLink(supabase, {
-        email,
+      // Use Supabase auth method directly
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: window.location.origin + '/update-password',
       });
 
