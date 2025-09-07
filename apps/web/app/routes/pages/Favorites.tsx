@@ -1,8 +1,6 @@
 import React, { useEffect, useState, Component } from 'react';
 import { useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '@/components/dtg/Header';
-import { Footer } from '@/components/dtg/Footer';
 import { SearchIcon, FilterIcon, HeartIcon, XIcon, PlusIcon, FolderIcon, ListIcon, GridIcon, MoreHorizontalIcon, EditIcon, TrashIcon } from 'lucide-react';
 // Types
 interface Business {
@@ -44,14 +42,17 @@ export default function Favorites() {
   const categories = Array.from(new Set(favorites.map(business => business.category)));
   // Fetch favorites data
   useEffect(() => {
-    // In a real app, this would fetch data from an API
-    setLoading(true);
-    setTimeout(() => {
-      setFavorites(mockFavorites);
-      setFilteredFavorites(mockFavorites);
-      setLists(mockLists);
-      setLoading(false);
-    }, 500);
+    // TODO: Connect to Supabase tables for user favorites
+    // For now, show empty state
+    setLoading(false);
+    setFavorites([]);
+    setFilteredFavorites([]);
+    setLists([]);
+    
+    // We need to create these tables in Supabase:
+    // - user_favorites
+    // - user_lists
+    // - list_items
   }, []);
   // Filter favorites based on search query and selected category
   useEffect(() => {
@@ -126,9 +127,7 @@ export default function Favorites() {
       return list;
     }));
   };
-  return <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header />
-      <main className="flex-grow container mx-auto px-4 py-6">
+  return <div className="container mx-auto px-4 py-6">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-bold">Your Favorites</h1>
           <div className="flex items-center space-x-2">
@@ -242,7 +241,6 @@ export default function Favorites() {
               </>}
           </div>
         </div>
-      </main>
       {/* Create List Modal */} {isCreateListModalOpen && <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6 w-full max-w-md">
             <div className="flex justify-between items-center mb-4">
@@ -271,7 +269,6 @@ export default function Favorites() {
             </div>
           </div>
         </div>}
-      <Footer />
     </div>;
 }
 // Business Card Component

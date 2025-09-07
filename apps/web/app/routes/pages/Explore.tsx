@@ -7,36 +7,8 @@ import { getAllCommunities, getCommunityById } from '../../components/dtg/servic
 export default function Explore() {
   const navigate = useNavigate();
   
-  // Mock results data
-  const mockResults = [
-    {
-      id: '1',
-      name: 'Downtown Pizza',
-      category: 'Restaurant',
-      rating: 4.5,
-      address: '123 Main St',
-      image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500',
-      description: 'Best pizza in downtown with authentic Italian recipes.'
-    },
-    {
-      id: '2',
-      name: 'City Books',
-      category: 'Shopping',
-      rating: 4.8,
-      address: '456 Oak Ave',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500',
-      description: 'Independent bookstore with a great selection of local authors.'
-    },
-    {
-      id: '3',
-      name: 'Urban Fitness',
-      category: 'Services',
-      rating: 4.7,
-      address: '789 Park St',
-      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500',
-      description: 'Modern gym with personal training and group classes.'
-    }
-  ];
+  // Live data will come from OpenStreetMap API
+  const [results, setResults] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [category, setCategory] = useState('all');
   const [citySearchQuery, setCitySearchQuery] = useState('');
@@ -188,7 +160,11 @@ export default function Explore() {
       <div className="container mx-auto px-4 py-8">
         <h2 className="text-xl font-semibold mb-6">Search Results</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mockResults.map(result => <div key={result.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+          {results.length === 0 ? (
+            <div className="col-span-3 text-center py-12">
+              <p className="text-gray-500">No businesses found. Try searching or adjusting your filters.</p>
+            </div>
+          ) : results.map(result => <div key={result.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
               <div className="h-48 overflow-hidden">
                 <img src={result.image} alt={result.name} className="w-full h-full object-cover" />
               </div>
