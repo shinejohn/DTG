@@ -1,5 +1,6 @@
-import { Link } from "react-router";
-import React, { useEffect, useState } from 'react';
+import { Link, useLoaderData } from "react-router";
+import React, { useState } from 'react';
+import type { LoaderFunctionArgs } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
 import { Header } from '@/components/dtg/Header';
 import { Footer } from '@/components/dtg/Footer';
@@ -85,23 +86,27 @@ const upcomingChallenges = [{
   endDate: '2023-12-24T23:59:59Z',
   category: 'seasonal'
 }];
+
+export async function loader({ request }: LoaderFunctionArgs) {
+  const client = getSupabaseServerClient(request);
+  
+  // Fetch challenges data
+  const { data: challenges } = await client
+    .from('challenges')
+    .select('*')
+    .order('start_date', { ascending: false });
+  
+  return {
+    challenges: challenges || []
+  };
+}
+
 export default function Challenges() {
-  const [challenges, setChallenges] = useState<Challenge[]>([]);
-  const [loading, setLoading] = useState(true);
+  const { challenges } = useLoaderData<typeof loader>();
   const [activeTab, setActiveTab] = useState<'active' | 'available' | 'past'>('active');
   const [categoryFilter, setCategoryFilter] = useState<string>('all');
   const [selectedChallenge, setSelectedChallenge] = useState<Challenge | null>(null);
   const [showModal, setShowModal] = useState(false);
-  // Fetch challenges data
-  useEffect(() => {
-    // In a real app, this would fetch data from an API
-    // For now, we'll use the mock data
-    setLoading(true);
-    setTimeout(() => {
-      setChallenges(mockChallenges);
-      setLoading(false);
-    }, 500);
-  }, []);
   const activeChallenges = challenges.filter(challenge => challenge.status === 'active');
   const availableChallenges = challenges.filter(challenge => challenge.status === 'available');
   const pastChallenges = challenges.filter(challenge => challenge.status === 'completed' || challenge.status === 'expired');

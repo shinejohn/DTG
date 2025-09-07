@@ -1,8 +1,7 @@
-import { Link } from "react-router";
-import React, { useEffect, useState, useRef } from 'react';
+import { Link, useLoaderData } from "react-router";
+import React, { useState, useRef } from 'react';
+import type { LoaderFunctionArgs } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { Header } from '@/components/dtg/Header';
-import { Footer } from '@/components/dtg/Footer';
 import { SearchIcon, FilterIcon, MapPinIcon, TagIcon, CalendarIcon, StarIcon, HeartIcon, PercentIcon, ShoppingBagIcon, CoffeeIcon, UtensilsIcon, MusicIcon, ShoppingCartIcon, HomeIcon, GlassWaterIcon, HeartPulseIcon, ChevronDownIcon, XIcon, ClockIcon, CheckIcon, ArrowUpIcon, ArrowDownIcon, ListIcon, GridIcon, MapIcon, BuildingIcon, ZapIcon, InfoIcon, ExternalLinkIcon, ChevronRightIcon, BookmarkIcon, ShareIcon, GiftIcon } from 'lucide-react';
 // Types
 interface Business {
@@ -94,10 +93,29 @@ const discountTypes = [{
   name: 'Free Items',
   icon: <GiftIcon className="w-5 h-5" />
 }];
+
+export async function loader({ request }: LoaderFunctionArgs) {
+  const client = getSupabaseServerClient(request);
+  
+  // Fetch deals with business information
+  const { data: deals } = await client
+    .from('deals')
+    .select(`
+      *,
+      business:businesses(*)
+    `)
+    .eq('is_active', true)
+    .gte('expires_at', new Date().toISOString())
+    .order('created_at', { ascending: false });
+  
+  return {
+    deals: deals || []
+  };
+}
+
 export default function Deals() {
-  const [deals, setDeals] = useState<Deal[]>([]);
+  const { deals } = useLoaderData<typeof loader>();
   const [filteredDeals, setFilteredDeals] = useState<Deal[]>([]);
-  const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'map'>('grid');
   const [showFilters, setShowFilters] = useState(false);
   const [showMobileSort, setShowMobileSort] = useState(false);
@@ -112,16 +130,10 @@ export default function Deals() {
   });
   const mapContainerRef = useRef<HTMLDivElement>(null);
   // Fetch deals data
-  useEffect(() => {
-    // In a real app, this would fetch data from an API
-    // For now, we'll use the mock data
-    setLoading(true);
-    setTimeout(() => {
-      setDeals(mockDeals);
-      setFilteredDeals(mockDeals);
-      setLoading(false);
-    }, 500);
-  }, []);
+  // Initialize filtered deals with loader data
+  React.useEffect(() => {
+    setFilteredDeals(deals);
+  }, [deals]);
   // Apply filters
   useEffect(() => {
     if (deals.length === 0) return;
@@ -262,22 +274,8 @@ export default function Deals() {
         return 'SPECIAL';
     }
   };
-  if (loading) {
-    return <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow flex items-center justify-center">
-          <div className="text-center">
-            <p className="text-gray-600 mb-2">Loading deals...</p>
-            <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
-          </div>
-        </main>
-        <Footer />
-      </div>;
-  }
-  return <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-8">
+  return <div className="bg-gray-50 py-8">
+        <div className="container mx-auto px-4">
           {/* Page Header */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
             <div>
@@ -751,7 +749,5 @@ export default function Deals() {
             </div>
           </div>
         </div>
-      </main>
-      <Footer />
     </div>;
 }

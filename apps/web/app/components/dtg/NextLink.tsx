@@ -1,18 +1,22 @@
-import React from 'react';
-import NextLink from 'next/link';
+import React, { type ReactNode } from 'react';
+import { Link as RouterLink } from 'react-router';
+
 interface LinkProps {
   to: string;
   children: ReactNode;
   className?: string;
   onClick?: () => void;
 }
+
 export default function Link({
   to,
   children,
   className,
   onClick
 }: LinkProps) {
-  return <NextLink href={to} className={className} onClick={onClick}>
+  return (
+    <RouterLink to={to} className={className} onClick={onClick}>
       {children}
-    </NextLink>;
+    </RouterLink>
+  );
 }

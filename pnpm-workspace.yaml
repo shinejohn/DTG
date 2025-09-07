@@ -2,6 +2,8 @@ packages:
   - apps/*
   - packages/**
   - tooling/*
+  - '!magic'
+  - '!migration-pipeline'
 
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'

@@ -1,7 +1,7 @@
-import { Link } from "react-router";
-import React, { useState, useEffect } from 'react';
-import { Header } from '@/components/dtg/Header';
-import { Footer } from '@/components/dtg/Footer';
+import { Link, useLoaderData } from "react-router";
+import React, { useState } from 'react';
+import type { LoaderFunctionArgs } from 'react-router';
+import { getSupabaseServerClient } from '@kit/supabase/server-client';
 
 import {
   BarChart2Icon,
@@ -55,193 +55,30 @@ interface Challenge {
   leaderboard: LeaderboardEntry[]
 }
 
-const mockLeaderboard: LeaderboardEntry[] = [
-  {
-    userId: 'u1',
-    username: 'michaelchen',
-    name: 'Michael Chen',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-    points: 4250,
-    reviewCount: 37,
-    checkInCount: 86,
-    achievementCount: 15,
-    rank: 1,
-    previousRank: 1,
-    isCurrentUser: false,
-    isFriend: true,
-  },
-  {
-    userId: 'u2',
-    username: 'emilywilson',
-    name: 'Emily Wilson',
-    avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
-    points: 3820,
-    reviewCount: 29,
-    checkInCount: 65,
-    achievementCount: 12,
-    rank: 2,
-    previousRank: 3,
-    isCurrentUser: false,
-    isFriend: true,
-  },
-  {
-    userId: 'u3',
-    username: 'sarahjohnson',
-    name: 'Sarah Johnson',
-    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-    points: 3450,
-    reviewCount: 42,
-    checkInCount: 78,
-    achievementCount: 14,
-    rank: 3,
-    previousRank: 2,
-    isCurrentUser: true,
-    isFriend: false,
-  },
-  {
-    userId: 'u4',
-    username: 'davidrodriguez',
-    name: 'David Rodriguez',
-    avatar: 'https://randomuser.me/api/portraits/men/67.jpg',
-    points: 3100,
-    reviewCount: 24,
-    checkInCount: 53,
-    achievementCount: 10,
-    rank: 4,
-    previousRank: 4,
-    isCurrentUser: false,
-    isFriend: true,
-  },
-  {
-    userId: 'u5',
-    username: 'jennifertaylor',
-    name: 'Jennifer Taylor',
-    avatar: 'https://randomuser.me/api/portraits/women/12.jpg',
-    points: 2950,
-    reviewCount: 18,
-    checkInCount: 42,
-    achievementCount: 8,
-    rank: 5,
-    previousRank: 6,
-    isCurrentUser: false,
-    isFriend: false,
-  },
-  {
-    userId: 'u6',
-    username: 'robertwilliams',
-    name: 'Robert Williams',
-    avatar: 'https://randomuser.me/api/portraits/men/45.jpg',
-    points: 2820,
-    reviewCount: 15,
-    checkInCount: 38,
-    achievementCount: 7,
-    rank: 6,
-    previousRank: 5,
-    isCurrentUser: false,
-    isFriend: false,
-  },
-  {
-    userId: 'u7',
-    username: 'lisabrown',
-    name: 'Lisa Brown',
-    avatar: 'https://randomuser.me/api/portraits/women/22.jpg',
-    points: 2730,
-    reviewCount: 21,
-    checkInCount: 45,
-    achievementCount: 9,
-    rank: 7,
-    previousRank: 7,
-    isCurrentUser: false,
-    isFriend: false,
-  },
-  {
-    userId: 'u8',
-    username: 'jameswilson',
-    name: 'James Wilson',
-    avatar: 'https://randomuser.me/api/portraits/men/2.jpg',
-    points: 2580,
-    reviewCount: 17,
-    checkInCount: 32,
-    achievementCount: 6,
-    rank: 8,
-    previousRank: 9,
-    isCurrentUser: false,
-    isFriend: false,
-  },
-  {
-    userId: 'u9',
-    username: 'amandamiller',
-    name: 'Amanda Miller',
-    avatar: 'https://randomuser.me/api/portraits/women/33.jpg',
-    points: 2430,
-    reviewCount: 14,
-    checkInCount: 28,
-    achievementCount: 5,
-    rank: 9,
-    previousRank: 8,
-    isCurrentUser: false,
-    isFriend: false,
-  },
-  {
-    userId: 'u10',
-    username: 'danieljones',
-    name: 'Daniel Jones',
-    avatar: 'https://randomuser.me/api/portraits/men/55.jpg',
-    points: 2310,
-    reviewCount: 12,
-    checkInCount: 25,
-    achievementCount: 4,
-    rank: 10,
-    previousRank: 10,
-    isCurrentUser: false,
-    isFriend: false,
-  },
-]
-const mockChallenges: Challenge[] = [
-  {
-    id: 'c1',
-    title: 'Summer Restaurant Tour',
-    description: 'Check in at the most restaurants this summer',
-    startDate: '2023-06-01T00:00:00Z',
-    endDate: '2023-08-31T23:59:59Z',
-    category: 'check-ins',
-    participants: 124,
-    leaderboard: mockLeaderboard.slice(0, 5).map((entry) => ({
-      ...entry,
-      checkInCount: entry.checkInCount + Math.floor(Math.random() * 10),
-    })),
-  },
-  {
-    id: 'c2',
-    title: 'Downtown Explorer Challenge',
-    description: 'Earn the most points visiting downtown businesses',
-    startDate: '2023-07-15T00:00:00Z',
-    endDate: '2023-08-15T23:59:59Z',
-    category: 'points',
-    participants: 87,
-    leaderboard: mockLeaderboard.slice(0, 5).map((entry) => ({
-      ...entry,
-      points: entry.points - Math.floor(Math.random() * 500),
-    })),
-  },
-  {
-    id: 'c3',
-    title: 'August Review Marathon',
-    description: 'Write the most quality reviews in August',
-    startDate: '2023-08-01T00:00:00Z',
-    endDate: '2023-08-31T23:59:59Z',
-    category: 'reviews',
-    participants: 56,
-    leaderboard: mockLeaderboard.slice(0, 5).map((entry) => ({
-      ...entry,
-      reviewCount: entry.reviewCount - Math.floor(Math.random() * 10),
-    })),
-  },
-]
+export async function loader({ request }: LoaderFunctionArgs) {
+  const client = getSupabaseServerClient(request);
+  
+  // Fetch leaderboard data
+  const { data: leaderboard } = await client
+    .from('leaderboard')
+    .select('*')
+    .order('points', { ascending: false })
+    .limit(50);
+  
+  // Fetch active challenges
+  const { data: challenges } = await client
+    .from('challenges')
+    .select('*')
+    .eq('is_active', true)
+    .order('end_date', { ascending: false });
+  
+  return {
+    leaderboard: leaderboard || [],
+    challenges: challenges || []
+  };
+}
 export default function Leaderboards() {
-  const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([])
-  const [challenges, setChallenges] = useState<Challenge[]>([])
-  const [loading, setLoading] = useState(true)
+  const { leaderboard, challenges } = useLoaderData<typeof loader>();
   const [activeCategory, setActiveCategory] = useState<
     'points' | 'reviews' | 'check-ins' | 'achievements'
   >('points')
@@ -253,17 +90,6 @@ export default function Leaderboards() {
   const [selectedChallenge, setSelectedChallenge] = useState<string | null>(
     null,
   )
-  // Fetch leaderboard data
-  useEffect(() => {
-    // In a real app, this would fetch data from an API
-    // For now, we'll use the mock data
-    setLoading(true)
-    setTimeout(() => {
-      setLeaderboard(mockLeaderboard)
-      setChallenges(mockChallenges)
-      setLoading(false)
-    }, 500)
-  }, [])
   // Filter leaderboard based on active filters
   const filteredLeaderboard = leaderboard
     .filter((entry) => {
@@ -372,20 +198,6 @@ export default function Leaderboards() {
       default:
         return 'Points'
     }
-  }
-  if (loading) {
-    return (
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow flex items-center justify-center">
-          <div className="text-center">
-            <p className="text-gray-600 mb-2">Loading leaderboards...</p>
-            <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
-          </div>
-        </main>
-        <Footer />
-      </div>
-    )
   }
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
