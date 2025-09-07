@@ -72,7 +72,8 @@ export default function Home() {
   const brandInterest = currentBrand?.brandType === 'interest' ? currentBrand.name : 'local businesses';
   const communityDescription = generateCommunityDescription(communityName, brandInterest);
   const heroBackgroundImage = currentBrand?.experience?.backgroundImage || 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80';
-  return <Layout>
+  return (
+    <>
       {/* Hero Section */}
       <section className="relative w-full bg-cover bg-center text-white" style={{
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(${heroBackgroundImage} )`,
@@ -341,7 +342,8 @@ export default function Home() {
           </div>
         </section>
       </div>
-    </Layout>;
+    </>
+  );
 }
 // Helper function to generate SEO-friendly community descriptions
 function generateCommunityDescription(communityName: string, brandInterest: string): string {
