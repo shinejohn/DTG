@@ -200,10 +200,7 @@ export default function Leaderboards() {
     }
   }
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8">
           {/* Page Header */}
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
             <div>
@@ -728,9 +725,6 @@ export default function Leaderboards() {
               </div>
             </div>
           </div>
-        </div>
-      </main>
-      <Footer />
     </div>
   )
 }
