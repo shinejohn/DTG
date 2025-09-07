@@ -43,7 +43,7 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
         >
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/dtg" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <img 
                 src="/dtg-logo.jpg" 
                 alt="Downtown Guide" 
@@ -57,25 +57,25 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
 
           {/* Navigation */}
           <div className="hidden md:flex items-center justify-center space-x-6">
-            <Link to="/dtg/restaurants" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/restaurants" className="text-white hover:text-white hover:opacity-80">
               Restaurants
             </Link>
-            <Link to="/dtg/explore" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/explore" className="text-white hover:text-white hover:opacity-80">
               Food
             </Link>
-            <Link to="/dtg/events" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/events" className="text-white hover:text-white hover:opacity-80">
               Fun
             </Link>
-            <Link to="/dtg/trending" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/trending" className="text-white hover:text-white hover:opacity-80">
               Nightlife
             </Link>
             <Link to="/auth/sign-up" className="text-white hover:text-white hover:opacity-80">
               Sign-up
             </Link>
-            <Link to="/dtg/rewards" className="text-white hover:text-white hover:opacity-80">
-              Awards
+            <Link to="/rewards" className="text-white hover:text-white hover:opacity-80">
+              Rewards
             </Link>
-            <Link to="/dtg/deals" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/deals" className="text-white hover:text-white hover:opacity-80">
               Coupons
             </Link>
           </div>

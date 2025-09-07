@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useRouteError, isRouteErrorResponse } from 'react-router';
+import { useLoaderData, useRouteError, isRouteErrorResponse, Link } from 'react-router';
 import type { LoaderFunctionArgs } from 'react-router';
 import { getSupabaseServerClient } from '@kit/supabase/server-client';
-import { SearchIcon, MapPinIcon } from 'lucide-react';
+import { SearchIcon, MapPinIcon, TrophyIcon, GiftIcon, StarIcon, TargetIcon, UsersIcon, TagIcon } from 'lucide-react';
 import { useBrand } from '../../components/dtg/contexts/BrandContext';
 import { Layout } from '@/components/dtg/Layout';
 import { CategorySection } from '@/components/dtg/CategorySection';
@@ -152,6 +152,147 @@ export default function Home() {
               See what's popular right now in {communityName}
             </p>
             <TrendingNow />
+          </div>
+        </section>
+        
+        {/* Gamification Showcase */}
+        <section className="bg-gradient-to-br from-purple-50 to-blue-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold mb-3">Earn Rewards & Have Fun!</h2>
+              <p className="text-lg text-gray-700">
+                Join our community and start earning points, unlocking achievements, and winning prizes
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Rewards Card */}
+              <Link to="/rewards" className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-orange-400 to-red-500 rounded-lg group-hover:scale-110 transition-transform">
+                    <GiftIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold ml-4">Rewards & Coupons</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Earn points for reviews, check-ins, and referrals. Redeem for exclusive discounts and perks!
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">2,450 points available</span>
+                  <span className="text-blue-600 font-medium group-hover:translate-x-1 transition-transform">
+                    Explore →
+                  </span>
+                </div>
+              </Link>
+              
+              {/* Achievements Card */}
+              <Link to="/achievements" className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg group-hover:scale-110 transition-transform">
+                    <TrophyIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold ml-4">Achievements</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Unlock badges and trophies by exploring new places and trying new experiences!
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">12 of 50 unlocked</span>
+                  <span className="text-blue-600 font-medium group-hover:translate-x-1 transition-transform">
+                    View All →
+                  </span>
+                </div>
+              </Link>
+              
+              {/* Challenges Card */}
+              <Link to="/challenges" className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg group-hover:scale-110 transition-transform">
+                    <TargetIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold ml-4">Weekly Challenges</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Complete fun challenges and compete with friends for awesome prizes!
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">3 active challenges</span>
+                  <span className="text-blue-600 font-medium group-hover:translate-x-1 transition-transform">
+                    Join Now →
+                  </span>
+                </div>
+              </Link>
+              
+              {/* Leaderboards Card */}
+              <Link to="/leaderboards" className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg group-hover:scale-110 transition-transform">
+                    <StarIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold ml-4">Leaderboards</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  See how you rank against other explorers in your community!
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Rank #47 this month</span>
+                  <span className="text-blue-600 font-medium group-hover:translate-x-1 transition-transform">
+                    View Rankings →
+                  </span>
+                </div>
+              </Link>
+              
+              {/* Referrals Card */}
+              <Link to="/referrals" className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-pink-400 to-rose-500 rounded-lg group-hover:scale-110 transition-transform">
+                    <UsersIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold ml-4">Refer Friends</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Invite friends and earn bonus points when they join the community!
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">5 friends invited</span>
+                  <span className="text-blue-600 font-medium group-hover:translate-x-1 transition-transform">
+                    Invite More →
+                  </span>
+                </div>
+              </Link>
+              
+              {/* Special Deals Card */}
+              <Link to="/deals" className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow group">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-indigo-400 to-blue-500 rounded-lg group-hover:scale-110 transition-transform">
+                    <TagIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold ml-4">Exclusive Deals</h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Access special offers and coupons available only to our community members!
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">15 deals available</span>
+                  <span className="text-blue-600 font-medium group-hover:translate-x-1 transition-transform">
+                    Browse Deals →
+                  </span>
+                </div>
+              </Link>
+            </div>
+            
+            {/* CTA Section */}
+            <div className="mt-12 text-center">
+              <Link 
+                to="/auth/sign-up" 
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full hover:shadow-lg transform hover:scale-105 transition-all"
+              >
+                Join Now & Start Earning
+              </Link>
+              <p className="mt-3 text-sm text-gray-600">
+                Free to join • No credit card required
+              </p>
+            </div>
           </div>
         </section>
         {/* Community Activity */}

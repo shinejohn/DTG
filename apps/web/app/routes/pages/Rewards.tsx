@@ -71,14 +71,37 @@ export default function Rewards() {
   // Fetch rewards data
   useEffect(() => {
     // In a real app, this would fetch data from an API
-    // For now, we'll use the mock data
+    // For now, we'll use default data
     setLoading(true);
     setTimeout(() => {
-      setUserPoints(mockUserPoints);
-      setTransactions(mockTransactions);
-      setCoupons(mockCoupons);
-      setAchievements(mockAchievements);
-      setLeaderboard(mockLeaderboard);
+      setUserPoints({
+        current: 2450,
+        lifetime: 12500,
+        level: 4,
+        nextLevelAt: 15000,
+        rank: 'Gold Explorer'
+      });
+      setTransactions([
+        { id: '1', type: 'earned', amount: 50, description: 'Review at Bella Italia', businessName: 'Bella Italia', date: '2024-01-15', iconType: 'review' },
+        { id: '2', type: 'spent', amount: -200, description: 'Redeemed 10% off coupon', businessName: 'Urban Brewery', date: '2024-01-14', iconType: 'coupon' },
+        { id: '3', type: 'achievement', amount: 100, description: 'First Foodie Badge', date: '2024-01-13', iconType: 'achievement' },
+        { id: '4', type: 'referral', amount: 500, description: 'Friend joined Downtown Guide', date: '2024-01-12', iconType: 'referral' },
+      ]);
+      setCoupons([
+        { id: '1', businessId: 'b1', businessName: 'Bella Italia', title: '20% Off Dinner', description: 'Valid Mon-Thu on orders over $50', discount: '20%', category: 'Restaurant', expiresAt: '2024-02-01', pointCost: 500, isExclusive: true },
+        { id: '2', businessId: 'b2', businessName: 'Urban Brewery', title: 'Buy 2 Get 1 Free', description: 'On all craft beers', discount: 'BOGO', category: 'Bar', expiresAt: '2024-01-31', pointCost: 300 },
+        { id: '3', businessId: 'b3', businessName: 'Sakura Sushi', title: '$10 Off Lunch', description: 'Weekday lunch specials', discount: '$10', category: 'Restaurant', expiresAt: '2024-02-15', pointCost: 200, isRecommended: true },
+      ]);
+      setAchievements([
+        { id: '1', title: 'First Review', description: 'Write your first review', icon: 'star', progress: 1, total: 1, completedAt: '2024-01-10', pointReward: 50, isCompleted: true },
+        { id: '2', title: 'Explorer', description: 'Visit 10 different businesses', icon: 'map', progress: 7, total: 10, pointReward: 200, isCompleted: false },
+        { id: '3', title: 'Foodie', description: 'Review 5 restaurants', icon: 'utensils', progress: 3, total: 5, pointReward: 150, isCompleted: false },
+      ]);
+      setLeaderboard([
+        { rank: 1, name: 'Sarah M.', points: 5420, avatar: '/api/placeholder/32/32' },
+        { rank: 2, name: 'Mike R.', points: 4890, avatar: '/api/placeholder/32/32' },
+        { rank: 3, name: 'Lisa K.', points: 4650, avatar: '/api/placeholder/32/32' },
+      ]);
       setLoading(false);
     }, 500);
   }, []);

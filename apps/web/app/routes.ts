@@ -118,6 +118,13 @@ export default [
     route('pricing', 'routes/pages/Pricing.tsx'),
     route('settings', 'routes/pages/Settings.tsx'),
     
+    // Gamification routes
+    route('rewards', 'routes/pages/Rewards.tsx'),
+    route('achievements', 'routes/pages/Achievements.tsx'),
+    route('challenges', 'routes/pages/Challenges.tsx'),
+    route('leaderboards', 'routes/pages/Leaderboards.tsx'),
+    route('referrals', 'routes/pages/Referrals.tsx'),
+    
     // Business routes
     route('business/:slug', 'routes/pages/business/[slug].tsx'),
     route('business/analytics', 'routes/pages/business/analytics.tsx'),
@@ -129,6 +136,7 @@ export default [
     route('business/loyalty', 'routes/pages/business/loyalty.tsx'),
     route('business/promotions', 'routes/pages/business/promotions.tsx'),
     route('business/profile/edit', 'routes/pages/business/profile/edit.tsx'),
+    route('business/loyalty-members', 'routes/pages/business/dashboard/LoyaltyMembers.tsx'),
     
     // Profile routes
     route('profile/:username', 'routes/pages/profile/[username].tsx'),
@@ -147,11 +155,6 @@ export default [
     route('account', 'routes/home/user/index.tsx'),
     route('account/settings', 'routes/home/user/settings.tsx'),
     route('account/billing', 'routes/home/user/billing.tsx'),
-    route('account/achievements', 'routes/pages/Achievements.tsx'),
-    route('account/challenges', 'routes/pages/Challenges.tsx'),
-    route('account/rewards', 'routes/pages/Rewards.tsx'),
-    route('account/leaderboards', 'routes/pages/Leaderboards.tsx'),
-    route('account/referrals', 'routes/pages/Referrals.tsx'),
   ]),
   
   // Admin routes (if needed)

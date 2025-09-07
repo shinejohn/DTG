@@ -4,7 +4,7 @@ export function Analytics() {
   const [dateRange, setDateRange] = useState('30d');
   const [showDropdown, setShowDropdown] = useState(false);
   // Safely handle date range changes with error boundary
-  const handleDateRangeChange = useCallback(range => {
+  const handleDateRangeChange = useCallback((range: string) => {
     try {
       setDateRange(range);
       setShowDropdown(false);
