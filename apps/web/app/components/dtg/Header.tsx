@@ -57,26 +57,26 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
 
           {/* Navigation */}
           <div className="hidden md:flex items-center justify-center space-x-6">
-            <Link to="/restaurants" className="text-white hover:text-white hover:opacity-80">
-              Restaurants
-            </Link>
-            <Link to="/explore" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/dtg/category/food" className="text-white hover:text-white hover:opacity-80">
               Food
             </Link>
-            <Link to="/events" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/dtg/category/fun" className="text-white hover:text-white hover:opacity-80">
               Fun
             </Link>
-            <Link to="/trending" className="text-white hover:text-white hover:opacity-80">
+            <Link to="/dtg/category/nightlife" className="text-white hover:text-white hover:opacity-80">
               Nightlife
             </Link>
-            <Link to="/auth/sign-up" className="text-white hover:text-white hover:opacity-80">
-              Sign-up
+            <Link to="/dtg/category/self" className="text-white hover:text-white hover:opacity-80">
+              Self
             </Link>
-            <Link to="/rewards" className="text-white hover:text-white hover:opacity-80">
-              Rewards
+            <Link to="/dtg/category/shop" className="text-white hover:text-white hover:opacity-80">
+              Shop
             </Link>
-            <Link to="/deals" className="text-white hover:text-white hover:opacity-80">
-              Coupons
+            <Link to="/dtg/events" className="text-white hover:text-white hover:opacity-80">
+              Event
+            </Link>
+            <Link to="/dtg/category/entertainment" className="text-white hover:text-white hover:opacity-80">
+              Entertainment
             </Link>
           </div>
 
@@ -110,39 +110,86 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
             </div>
           </div>
         </nav>
+        
+        {/* Submenu */}
+        <div className="bg-gray-100 border-b">
+          <div className="container mx-auto px-6">
+            <div className="flex items-center justify-center py-2 space-x-6">
+              <Link to="/auth/sign-up" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">
+                Sign-up
+              </Link>
+              <Link to="/rewards" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">
+                Rewards
+              </Link>
+              <Link to="/deals" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">
+                Coupons
+              </Link>
+              <Link to="/dtg/business/register" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">
+                Business Sign-up
+              </Link>
+              <Link to="/dtg/events/add" className="text-sm text-gray-700 hover:text-blue-600 transition-colors">
+                Add Event
+              </Link>
+            </div>
+          </div>
+        </div>
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-b shadow-sm">
             <div className="px-4 py-3 space-y-2">
+              <h3 className="text-sm font-semibold text-gray-600 px-3 pb-2">Categories</h3>
               <Link 
-                to="/dtg/restaurants" 
-                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Restaurants
-              </Link>
-              <Link 
-                to="/dtg/explore" 
+                to="/dtg/category/food" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Food
               </Link>
               <Link 
-                to="/dtg/events" 
+                to="/dtg/category/fun" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Fun
               </Link>
               <Link 
-                to="/dtg/trending" 
+                to="/dtg/category/nightlife" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Nightlife
               </Link>
+              <Link 
+                to="/dtg/category/self" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Self
+              </Link>
+              <Link 
+                to="/dtg/category/shop" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Shop
+              </Link>
+              <Link 
+                to="/dtg/events" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Event
+              </Link>
+              <Link 
+                to="/dtg/category/entertainment" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Entertainment
+              </Link>
+              <hr className="my-3 border-gray-200" />
+              <h3 className="text-sm font-semibold text-gray-600 px-3 pb-2">Quick Links</h3>
               <Link 
                 to="/auth/sign-up" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
@@ -151,18 +198,32 @@ export const Header = forwardRef<HTMLDivElement, HeaderProps>(
                 Sign-up
               </Link>
               <Link 
-                to="/dtg/rewards" 
+                to="/rewards" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Awards
+                Rewards
               </Link>
               <Link 
-                to="/dtg/deals" 
+                to="/deals" 
                 className="block px-3 py-2 rounded-md hover:bg-gray-100" 
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Coupons
+              </Link>
+              <Link 
+                to="/dtg/business/register" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Business Sign-up
+              </Link>
+              <Link 
+                to="/dtg/events/add" 
+                className="block px-3 py-2 rounded-md hover:bg-gray-100" 
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Add Event
               </Link>
             </div>
           </div>

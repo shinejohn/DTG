@@ -2,7 +2,81 @@ import React from 'react';
 import { Link } from 'react-router';
 import { TrendingUpIcon, StarIcon, MapPinIcon } from 'lucide-react';
 
-// Sample data - in a real app, this would come from an API
+interface Business {
+  id: string;
+  name: string;
+  description?: string;
+  image_url?: string;
+  category?: string;
+  rating?: number;
+  review_count?: number;
+  address?: string;
+  city?: string;
+  state?: string;
+  price_level?: string;
+  trending_reason?: string;
+}
+
+interface TrendingNowProps {
+  businesses: Business[];
+}
+
+export function TrendingNow({ businesses }: TrendingNowProps) {
+  const defaultImage = 'https://images.unsplash.com/photo-1514537099923-4c9672455d4c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80';
+  
+  return <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {businesses.map(business => (
+        <Link key={business.id} to={`/dtg/business/${business.id}`} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div className="relative h-48">
+            <img 
+              src={business.image_url || defaultImage} 
+              alt={business.name} 
+              className="w-full h-full object-cover" 
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = defaultImage;
+              }}
+            />
+            <div className="absolute top-3 left-3 flex items-center bg-red-500 text-white text-xs font-medium px-2 py-1 rounded-full">
+              <TrendingUpIcon className="w-3 h-3 mr-1" />
+              {business.trending_reason || 'Trending'}
+            </div>
+          </div>
+          <div className="p-4">
+            <div className="flex items-center justify-between mb-1">
+              {business.category && (
+                <span className="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-800 rounded-full">
+                  {business.category}
+                </span>
+              )}
+            </div>
+            <h3 className="font-bold text-gray-900 mb-1">{business.name}</h3>
+            {business.description && (
+              <p className="text-sm text-gray-600 mb-2 line-clamp-2">
+                {business.description}
+              </p>
+            )}
+            {(business.rating || business.rating === 0) && (
+              <div className="flex items-center mb-2">
+                <StarIcon className="w-4 h-4 text-yellow-500 fill-current" />
+                <span className="text-sm font-medium ml-1">{business.rating.toFixed(1)}</span>
+                {business.review_count !== undefined && (
+                  <span className="text-xs text-gray-500 ml-1">
+                    ({business.review_count} reviews)
+                  </span>
+                )}
+              </div>
+            )}
+            <div className="flex items-center text-gray-600 text-sm">
+              <MapPinIcon className="w-3 h-3 mr-1" />
+              <span>{business.city || business.address || 'Location not available'}</span>
+            </div>
+          </div>
+        </Link>
+      ))}
+    </div>;
+}
+
+// Legacy export with mock data
 const trendingPlaces = [{
   id: 't1',
   name: 'New Fusion Restaurant',
@@ -58,35 +132,15 @@ const trendingPlaces = [{
   location: 'Riverside',
   trend: 'Local favorite'
 }];
-export function TrendingNow() {
-  return <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {trendingPlaces.map(place => <Link key={place.id} to={`/dtg/business/${place.id}`} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-          <div className="relative h-48">
-            <img src={place.image} alt={place.name} className="w-full h-full object-cover" />
-            <div className="absolute top-3 left-3 flex items-center bg-red-500 text-white text-xs font-medium px-2 py-1 rounded-full">
-              <TrendingUpIcon className="w-3 h-3 mr-1" />
-              {place.trend}
-            </div>
-          </div>
-          <div className="p-4">
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-xs font-medium px-2 py-1 bg-blue-100 text-blue-800 rounded-full">
-                {place.category}
-              </span>
-            </div>
-            <h3 className="font-bold text-gray-900 mb-1">{place.name}</h3>
-            <div className="flex items-center mb-2">
-              <StarIcon className="w-4 h-4 text-yellow-500 fill-current" />
-              <span className="text-sm font-medium ml-1">{place.rating}</span>
-              <span className="text-xs text-gray-500 ml-1">
-                ({place.reviewCount} reviews)
-              </span>
-            </div>
-            <div className="flex items-center text-gray-600 text-sm">
-              <MapPinIcon className="w-3 h-3 mr-1" />
-              <span>{place.location}</span>
-            </div>
-          </div>
-        </Link>)}
-    </div>;
+export function TrendingNowLegacy() {
+  return <TrendingNow businesses={trendingPlaces.map(p => ({
+    id: p.id,
+    name: p.name,
+    image_url: p.image,
+    category: p.category,
+    rating: p.rating,
+    review_count: p.reviewCount,
+    address: p.location,
+    trending_reason: p.trend
+  }))} />;
 }
